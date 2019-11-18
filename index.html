@@ -235,11 +235,11 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-absolute vs relative" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/11/18/hello-world/" class="article-date">
-      <time datetime="2019-11-18T09:53:04.820Z" itemprop="datePublished">2019-11-18</time>
+      <a href="/2019/11/16/absolute%20vs%20relative/" class="article-date">
+      <time datetime="2019-11-15T16:00:00.000Z" itemprop="datePublished">2019-11-16</time>
 </a>
     </div>
   
@@ -252,7 +252,461 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/18/hello-world/">Hello World</a>
+      <a class="article-title" href="/2019/11/16/absolute%20vs%20relative/">absolute vs relative</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="div布局中absolute和relative的区别"><a href="#div布局中absolute和relative的区别" class="headerlink" title="div布局中absolute和relative的区别"></a>div布局中absolute和relative的区别</h2><h3 id="在正常流中的位置"><a href="#在正常流中的位置" class="headerlink" title="在正常流中的位置"></a>在正常流中的位置</h3><ul>
+<li>relative</li>
+</ul>
+<p>定位为relative的元素脱离正常的文本流中，但其在文本流中的位置依然存在。如图1：</p>
+<p><img src="http://images.51cto.com/files/uploadimg/20100909/1528450.jpg" alt="relative定位"></p>
+<p>黄色背景的层定位为relative，红色边框区域为其在正常流中的位置。在通过top、left对其定位后，从灰色背景层(下一个div)的位置可以看出其==正常位置依然存在==。</p>
+<ul>
+<li>absolute</li>
+</ul>
+<p>定位为absolute的层脱离正常文本流，但与relative的区别是其在正常流中的位置不在存在。如图2：</p>
+<p><img src="http://images.51cto.com/files/uploadimg/20100909/1528451.jpg" alt="absolute定位"></p>
+<p>可以看到，在将黄色背景层定位为absolute后，灰色背景层(下一个div)自动补上，==脱离正常文本流==。</p>
+<h3 id="相对于父元素"><a href="#相对于父元素" class="headerlink" title="相对于父元素"></a>相对于父元素</h3><ul>
+<li>relative</li>
+</ul>
+<p>relative定位的层总是相对于其==最近的父元素==，无论其父元素是何种定位方式。如图3：</p>
+<p><img src="http://images.51cto.com/files/uploadimg/20100909/1528452.jpg" alt="relative父元素"></p>
+<p>红色背景层为relative定位，其直接父元素绿色背景层为默认的static定位。红色背景层的位置为相对绿色背景层top、left个20元素。</p>
+<ul>
+<li>absolute</li>
+</ul>
+<p>absolute定位的层总是相对于其==最近的定义为absolute或relative的父层==，而这个父层并==不一定是其直接父层==，如图4:</p>
+<p><img src="http://images.51cto.com/files/uploadimg/20100909/1528453.jpg" alt="absolute父元素"></p>
+<p>红色背景层相对的元素变为定位方式为absolute或relative的黄色背景层。如果其父层中都未定义absolute或relative，则其将相对body进行定位。</p>
+
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-inline-block vs float" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2019/11/05/inline-block%20vs%20float/" class="article-date">
+      <time datetime="2019-11-04T16:00:00.000Z" itemprop="datePublished">2019-11-05</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/05/inline-block%20vs%20float/">Inline-block vs Float</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="inline-block和float的区别"><a href="#inline-block和float的区别" class="headerlink" title="inline-block和float的区别"></a>inline-block和float的区别</h2><ul>
+<li><strong>文档流（Document flow）</strong>:浮动元素会脱离文档流，并使得周围元素==环绕这个元素==。而inline-block元素仍在文档流内。因此设置inline-block不需要==清除浮动==。当然，周围元素不会环绕这个元素，你也不可能通过清除inline-block就让一个元素跑到下面去。</li>
+<li><strong>水平位置（Horizontal position）</strong>：很明显你不能通过给父元素设置<code>text-align:center</code>让浮动元素居中。事实上定位类属性设置到父元素上，均不会影响父元素内浮动的元素。但是父元素内元素如果设置了<code>display：inline-block</code>，则对父元素设置一些定位属性会影响到子元素。（这还是因为浮动元素脱离文档流的关系）。</li>
+<li><strong>垂直对齐（Vertical alignment）</strong>：inline-block元素沿着默认的基线对齐。浮动元素紧贴顶部。你可以通过vertical属性设置这个默认基线，但对浮动元素这种方法就不行了。这也是我(原作者)倾向于inline-block的主要原因。</li>
+<li><strong>空白（Whitespace）</strong>：inline-block包含html==空白节点==。如果你的html中一系列元素每个元素之间都换行了，当你对这些元素设置inline-block时，这些元素之间就会出现空白。而浮动元素会忽略空白节点，互相紧贴</li>
+<li><strong>IE6和IE7</strong>：Ie67对此属性部分支持。</li>
+</ul>
+<p>原文: <a href="https://www.w3cplus.com/css/inline-blocks.html" target="_blank" rel="noopener">https://www.w3cplus.com/css/inline-blocks.html</a> © w3cplus.com</p>
+
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-remove" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2019/08/29/remove/" class="article-date">
+      <time datetime="2019-08-28T16:00:00.000Z" itemprop="datePublished">2019-08-29</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/29/remove/">Remove</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h3 id="Push-an-existing-repository-from-the-command-line"><a href="#Push-an-existing-repository-from-the-command-line" class="headerlink" title="Push an existing repository from the command line"></a>Push an existing repository from the command line</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> &lt;file_name&gt;</span><br><span class="line">$ git init</span><br><span class="line">$ git remote add origin git@github.com:Wayne299/x.git</span><br><span class="line">$ git add &lt;file_name&gt;</span><br><span class="line">$ git push -u origin master</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="fatal-远程-origin-已经存在"><a href="#fatal-远程-origin-已经存在" class="headerlink" title="fatal: 远程 origin 已经存在"></a>fatal: 远程 origin 已经存在</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git remote rm origin</span><br><span class="line">$ git remote add origin &lt;SSH_Key&gt;</span><br></pre></td></tr></table></figure>
+
+
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-intro-to-git" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2019/08/20/intro-to-git/" class="article-date">
+      <time datetime="2019-08-19T16:00:00.000Z" itemprop="datePublished">2019-08-20</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/20/intro-to-git/">Intro to Git</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="Terminal"><a href="#Terminal" class="headerlink" title="Terminal"></a>Terminal</h2><ul>
+<li><kbd>command</kbd> + K ： clear</li>
+<li>mv ：改名 / 移动文件到文件夹</li>
+</ul>
+<h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><h3 id="Add-All"><a href="#Add-All" class="headerlink" title="Add All"></a>Add All</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git add A</span><br></pre></td></tr></table></figure>
+
+<h3 id="取消、修改、恢复"><a href="#取消、修改、恢复" class="headerlink" title="取消、修改、恢复"></a>取消、修改、恢复</h3><p>==取消已经暂存的文件==。即，撤销先前”git add”的操作</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rm --cached &lt;file&gt;...</span><br></pre></td></tr></table></figure>
+
+<p>==取消对文件的修改==。还原到最近的版本，废弃本地做的修改。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -- &lt;file&gt;</span><br></pre></td></tr></table></figure>
+
+<p>==修改最后一次提交==。用于修改上一次的提交信息，或漏提交文件等情况。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit --amend</span><br></pre></td></tr></table></figure>
+
+<h3 id="获取log"><a href="#获取log" class="headerlink" title="获取log"></a>获取log</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git log --oneline </span><br><span class="line">git log --oneline --all --graph --decorate</span><br></pre></td></tr></table></figure>
+
+<h3 id="Branch"><a href="#Branch" class="headerlink" title="Branch"></a>Branch</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git branch				// 列出有的branch</span><br><span class="line">git branch -d &lt;branch_name&gt;		// 删除分支 (⚠️一般没必要)</span><br><span class="line">git checkout -b &lt;branch_name&gt;		// 新建分支 --&gt; 自动切换到新分支</span><br><span class="line">git checkout &lt;branch_name&gt;	  	// 切换branch</span><br><span class="line">(master) git merge &lt;branch_name&gt;          // 将分支merge进master中</span><br><span class="line">(master) git merge --squash &lt;branch_name&gt; // combine为新的分支</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>git log –&gt; <kbd>enter</kbd> –&gt;<kbd>Q</kbd> –&gt; git checkout <hashcode> –&gt;新建branch进行更新(update file)</li>
+</ul>
+<h2 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add README.md</span><br><span class="line">git commit -m &quot;add README.md&quot;</span><br><span class="line">git remote add origin git@github.com:Wayne299/xxx.git</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-markdown-intro" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2019/07/30/markdown-intro/" class="article-date">
+      <time datetime="2019-07-29T16:00:00.000Z" itemprop="datePublished">2019-07-30</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/30/markdown-intro/">MarkDown Syntax Intro</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><ul>
+<li>要加粗的文字左右分别用两个*号包起来  </li>
+<li>要倾斜的文字左右分别用一个*号包起来  </li>
+<li>要倾斜和加粗的文字左右分别用三个*号包起来  </li>
+<li>要加删除线的文字左右分别用两个~号包起来 </li>
+</ul>
+<p>显示结果如下: </p>
+<ul>
+<li><strong>加粗</strong>  </li>
+<li><em>斜体</em>  </li>
+<li><strong><em>斜体加粗</em></strong>  </li>
+<li><del>删除线</del>  </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Option name</th>
+<th>Markup</th>
+<th align="center">Example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Intra-word emphasis</td>
+<td>So A*maz*ing</td>
+<td align="center">So A<em>maz</em>ing</td>
+</tr>
+<tr>
+<td>Strikethrough</td>
+<td>~~Much wow~~</td>
+<td align="center"><del>Much wow</del></td>
+</tr>
+<tr>
+<td>Underline</td>
+<td>_So doge_</td>
+<td align="center"><em>So doge</em></td>
+</tr>
+<tr>
+<td>Quote</td>
+<td>&quot;Such editor&quot;</td>
+<td align="center">“Such editor”</td>
+</tr>
+<tr>
+<td>Highlight</td>
+<td>==So good==</td>
+<td align="center">==So good==</td>
+</tr>
+</tbody></table>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><ul>
+<li>文字前加上 - + * 任何一种都可以变为无序列表，加上 1. 2. 3. 等编号则变为有序列表。</li>
+<li>列表嵌套，上一级和下一级之间敲两个空格即可。</li>
+</ul>
+<p>显示结果如下：  </p>
+<ul>
+<li>无序1<ol>
+<li>有序1</li>
+<li>有序2</li>
+<li>有序3</li>
+</ol>
+</li>
+<li>无序2<ol>
+<li>有序1</li>
+<li>有序2</li>
+<li>有序3</li>
+</ol>
+</li>
+</ul>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><ul>
+<li>引用超链接，[链接文本](链接 URL 地址),如: [Google](<a href="https://www.google.com" target="_blank" rel="noopener">https://www.google.com</a>)</li>
+<li>或者 &lt;链接地址&gt;, 如: &lt;<a href="https://www.google.com&gt;" target="_blank" rel="noopener">https://www.google.com&gt;</a></li>
+<li>或者在文档的<strong>结尾</strong>为变量赋值（网址）</li>
+</ul>
+<p>显示结果如下：</p>
+<ul>
+<li><a href="https://www.google.com" target="_blank" rel="noopener">Google</a> </li>
+<li><a href="https://www.google.com" target="_blank" rel="noopener">https://www.google.com</a> </li>
+</ul>
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><ul>
+<li>添加图片语法：![alt 属性文本](图片地址)  ![alt 属性文本](图片地址 “title属性的标题”) </li>
+</ul>
+<p>显示结果如下：<br><img src="https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwif3Yy11NzjAhXaR30KHb4oCf4QjRx6BAgBEAU&url=https%3A%2F%2Fwww.blog.google%2F&psig=AOvVaw016ik8oz3SNvau2l54VeLe&ust=1564576665173064" alt="图标"></p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><ul>
+<li>用` `包裹行内内容</li>
+<li>用 ``` 包裹多行</li>
+</ul>
+<p>显示结果如下：</p>
+<p>这是一段<code>代码</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    alert(<span class="string">'Wayne'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><ul>
+<li>三个以上的星号(*)、减号(-)、底线(_)即，但可行内不能有其他东西</li>
+</ul>
+<p>显示结果如下：  </p>
+<hr>
+<hr>
+<hr>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><ul>
+<li>“-” 有一个就行，为了美观对齐，多加了几个</li>
+<li>文字默认居左 ，“-”两边加：表示文字居中，“-”右边加：表示文字居右。</li>
+</ul>
+<p>显示结果如下：  </p>
+<table>
+<thead>
+<tr>
+<th>表头</th>
+<th align="center">表头</th>
+<th align="right">表头</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>内容</td>
+<td align="center">内容</td>
+<td align="right">内容</td>
+</tr>
+<tr>
+<td>内容</td>
+<td align="center">内容</td>
+<td align="right">内容</td>
+</tr>
+</tbody></table>
+<h2 id="html元素"><a href="#html元素" class="headerlink" title="html元素"></a>html元素</h2><ul>
+<li>包括&lt;kbd&gt; &lt;b&gt; &lt;i&gt; &lt;em&gt; &lt;sup&gt; &lt;sub&gt; &lt;br&gt;等 </li>
+</ul>
+<h2 id="剩余"><a href="#剩余" class="headerlink" title="剩余"></a>剩余</h2><ul>
+<li>流程图 / 数学公式 等</li>
+</ul>
+
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2019/07/28/hello-world/" class="article-date">
+      <time datetime="2019-07-28T14:24:34.432Z" itemprop="datePublished">2019-07-28</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/28/hello-world/">Hello World</a>
     </h1>
   
 
@@ -263,18 +717,18 @@
       
           
         <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo s</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="Generate-a-static-file"><a href="#Generate-a-static-file" class="headerlink" title="Generate a static file"></a>Generate a static file</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+
+<h3 id="Run-on-server"><a href="#Run-on-server" class="headerlink" title="Run on server"></a>Run on server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
 
       
       
