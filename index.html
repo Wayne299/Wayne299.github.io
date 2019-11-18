@@ -519,25 +519,26 @@
 <li><kbd>command</kbd> + K ： clear</li>
 <li>mv ：改名 / 移动文件到文件夹</li>
 </ul>
-<h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><h3 id="Add-All"><a href="#Add-All" class="headerlink" title="Add All"></a>Add All</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git add A</span><br></pre></td></tr></table></figure>
+<h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><h3 id="Add-All"><a href="#Add-All" class="headerlink" title="Add All"></a>Add All</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git add A</span><br></pre></td></tr></table></figure>
 
 <h3 id="取消、修改、恢复"><a href="#取消、修改、恢复" class="headerlink" title="取消、修改、恢复"></a>取消、修改、恢复</h3><p>==取消已经暂存的文件==。即，撤销先前”git add”的操作</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rm --cached &lt;file&gt;...</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rm --cached &lt;file&gt;...</span><br></pre></td></tr></table></figure>
 
 <p>==取消对文件的修改==。还原到最近的版本，废弃本地做的修改。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -- &lt;file&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -- &lt;file&gt;</span><br></pre></td></tr></table></figure>
 
 <p>==修改最后一次提交==。用于修改上一次的提交信息，或漏提交文件等情况。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit --amend</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit --amend</span><br></pre></td></tr></table></figure>
 
-<h3 id="获取log"><a href="#获取log" class="headerlink" title="获取log"></a>获取log</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git log --oneline </span><br><span class="line">git log --oneline --all --graph --decorate</span><br></pre></td></tr></table></figure>
+<h3 id="获取log"><a href="#获取log" class="headerlink" title="获取log"></a>获取log</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span> --oneline </span><br><span class="line">git <span class="built_in">log</span> --oneline --all --graph --decorate</span><br></pre></td></tr></table></figure>
 
-<h3 id="Branch"><a href="#Branch" class="headerlink" title="Branch"></a>Branch</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git branch				// 列出有的branch</span><br><span class="line">git branch -d &lt;branch_name&gt;		// 删除分支 (⚠️一般没必要)</span><br><span class="line">git checkout -b &lt;branch_name&gt;		// 新建分支 --&gt; 自动切换到新分支</span><br><span class="line">git checkout &lt;branch_name&gt;	  	// 切换branch</span><br><span class="line">(master) git merge &lt;branch_name&gt;          // 将分支merge进master中</span><br><span class="line">(master) git merge --squash &lt;branch_name&gt; // combine为新的分支</span><br></pre></td></tr></table></figure>
+<h3 id="Branch"><a href="#Branch" class="headerlink" title="Branch"></a>Branch</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git branch				// 列出有的branch</span><br><span class="line">git branch -d &lt;branch_name&gt;		// 删除分支 (⚠️一般没必要)</span><br><span class="line">git checkout -b &lt;branch_name&gt;		// 新建分支 --&gt; 自动切换到新分支</span><br><span class="line">git checkout &lt;branch_name&gt;	  	// 切换branch</span><br><span class="line">(master) git merge &lt;branch_name&gt;          // 将分支merge进master中</span><br><span class="line">(master) git merge --squash &lt;branch_name&gt; // combine为新的分支</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>git log –&gt; <kbd>enter</kbd> –&gt;<kbd>Q</kbd> –&gt; git checkout <hashcode> –&gt;新建branch进行更新(update file)</li>
 </ul>
-<h2 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add README.md</span><br><span class="line">git commit -m &quot;add README.md&quot;</span><br><span class="line">git remote add origin git@github.com:Wayne299/xxx.git</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+<h2 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add README.md</span><br><span class="line">git commit -m <span class="string">"add README.md"</span></span><br><span class="line">git remote add origin git@github.com:Wayne299/xxx.git</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -787,8 +788,6 @@
 
 
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-
 
       
     </div>
