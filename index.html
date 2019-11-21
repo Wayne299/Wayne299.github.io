@@ -274,6 +274,78 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-overflow-hidden" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2019/11/21/overflow-hidden/" class="article-date">
+      <time datetime="2019-11-21T13:10:31.000Z" itemprop="datePublished">2019-11-21</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2019/11/21/overflow-hidden/">overflow:hidden</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="overflow-hidden的作用总结"><a href="#overflow-hidden的作用总结" class="headerlink" title="overflow:hidden的作用总结"></a><code>overflow:hidden</code>的作用总结</h2><h3 id="一-溢出隐藏"><a href="#一-溢出隐藏" class="headerlink" title="一. 溢出隐藏"></a>一. 溢出隐藏</h3><ul>
+<li>一般在div中设置后，该元素的内容若超出了给定的宽度和高度属性，那么超出的部分将会被隐藏，不占位。</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">text-overflow</span>: <span class="selector-tag">ellipsis</span>;	<span class="comment">/* 当对象内文本溢出时可显示省略标记（...）*/</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="二-消除浮动"><a href="#二-消除浮动" class="headerlink" title="二. 消除浮动"></a>二. 消除浮动</h3><ul>
+<li>一般而言，父级元素不设置高度时，高度由随内容增加自适应高度。当父级元素内部的子元素全部都设置浮动float之后，子元素会脱离标准流，不占位，父级元素检测不到子元素的高度，父级元素高度为0，下面的元素会顶上去，造成页面的塌陷。</li>
+<li>因此，需要给父级加个<code>overflow: hidden</code>属性，这样父级的高度就随子级容器及子级内容的高度而自适应。</li>
+<li>当使用<code>float: right</code>时，还需要设置<code>width：xxpx</code>之后才能看到父级元素显示出来</li>
+</ul>
+<h3 id="三-解决外边距塌陷"><a href="#三-解决外边距塌陷" class="headerlink" title="三. 解决外边距塌陷"></a>三. 解决外边距塌陷</h3><ul>
+<li>父级元素内部有子元素，如果给子元素添加<code>margin-top</code>样式，那么父级元素也会跟着下来，造成外边距塌陷。</li>
+<li>给父级元素添加<code>overflow:hidden</code>属性，父级元素保持不变，而只会对子元素有影响。</li>
+<li>当使用<code>float: right</code>时，不需要考虑塌陷（在设置父级元素width/height的前提下）。</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-tmall-website" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">

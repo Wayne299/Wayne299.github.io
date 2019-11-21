@@ -7,16 +7,16 @@
   
   
   
-  <title>Inline-block vs Float | Wayne</title>
+  <title>overflow:hidden | Wayne</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="inline-block和float的区别 文档流（Document flow）:浮动元素会脱离文档流，并使得周围元素==环绕这个元素==。而inline-block元素仍在文档流内。因此设置inline-block不需要==清除浮动==。当然，周围元素不会环绕这个元素，你也不可能通过清除inline-block就让一个元素跑到下面去。 水平位置（Horizontal position）：很明显你">
+  <meta name="description" content="overflow:hidden的作用总结一. 溢出隐藏 一般在div中设置后，该元素的内容若超出了给定的宽度和高度属性，那么超出的部分将会被隐藏，不占位。  1text-overflow: ellipsis;	&#x2F;* 当对象内文本溢出时可显示省略标记（...）*&#x2F;  二. 消除浮动 一般而言，父级元素不设置高度时，高度由随内容增加自适应高度。当父级元素内部的子元素全部都设置浮动float之后，子元素">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Inline-block vs Float">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;05&#x2F;inline-block%20vs%20float&#x2F;index.html">
+<meta property="og:title" content="overflow:hidden">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;21&#x2F;overflow-hidden&#x2F;index.html">
 <meta property="og:site_name" content="Wayne">
-<meta property="og:description" content="inline-block和float的区别 文档流（Document flow）:浮动元素会脱离文档流，并使得周围元素==环绕这个元素==。而inline-block元素仍在文档流内。因此设置inline-block不需要==清除浮动==。当然，周围元素不会环绕这个元素，你也不可能通过清除inline-block就让一个元素跑到下面去。 水平位置（Horizontal position）：很明显你">
+<meta property="og:description" content="overflow:hidden的作用总结一. 溢出隐藏 一般在div中设置后，该元素的内容若超出了给定的宽度和高度属性，那么超出的部分将会被隐藏，不占位。  1text-overflow: ellipsis;	&#x2F;* 当对象内文本溢出时可显示省略标记（...）*&#x2F;  二. 消除浮动 一般而言，父级元素不设置高度时，高度由随内容增加自适应高度。当父级元素内部的子元素全部都设置浮动float之后，子元素">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-15T17:12:10.025Z">
+<meta property="og:updated_time" content="2019-11-21T13:26:27.126Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Wayne" type="application/atom+xml">
@@ -270,11 +270,11 @@
         </header>
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-inline-block vs float" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-overflow-hidden" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2019/11/05/inline-block%20vs%20float/" class="article-date">
-      <time datetime="2019-11-04T16:00:00.000Z" itemprop="datePublished">2019-11-05</time>
+      <a  href="/2019/11/21/overflow-hidden/" class="article-date">
+      <time datetime="2019-11-21T13:10:31.000Z" itemprop="datePublished">2019-11-21</time>
 </a>
 
     </div>
@@ -288,7 +288,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Inline-block vs Float
+      overflow:hidden
     </h1>
   
 
@@ -306,14 +306,21 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="inline-block和float的区别"><a href="#inline-block和float的区别" class="headerlink" title="inline-block和float的区别"></a>inline-block和float的区别</h2><ul>
-<li><strong>文档流（Document flow）</strong>:浮动元素会脱离文档流，并使得周围元素==环绕这个元素==。而inline-block元素仍在文档流内。因此设置inline-block不需要==清除浮动==。当然，周围元素不会环绕这个元素，你也不可能通过清除inline-block就让一个元素跑到下面去。</li>
-<li><strong>水平位置（Horizontal position）</strong>：很明显你不能通过给父元素设置<code>text-align:center</code>让浮动元素居中。事实上定位类属性设置到父元素上，均不会影响父元素内浮动的元素。但是父元素内元素如果设置了<code>display：inline-block</code>，则对父元素设置一些定位属性会影响到子元素。（这还是因为浮动元素脱离文档流的关系）。</li>
-<li><strong>垂直对齐（Vertical alignment）</strong>：inline-block元素沿着默认的基线对齐。浮动元素紧贴顶部。你可以通过vertical属性设置这个默认基线，但对浮动元素这种方法就不行了。这也是我(原作者)倾向于inline-block的主要原因。</li>
-<li><strong>空白（Whitespace）</strong>：inline-block包含html==空白节点==。如果你的html中一系列元素每个元素之间都换行了，当你对这些元素设置inline-block时，这些元素之间就会出现空白。而浮动元素会忽略空白节点，互相紧贴</li>
-<li><strong>IE6和IE7</strong>：Ie67对此属性部分支持。</li>
+        <h2 id="overflow-hidden的作用总结"><a href="#overflow-hidden的作用总结" class="headerlink" title="overflow:hidden的作用总结"></a><code>overflow:hidden</code>的作用总结</h2><h3 id="一-溢出隐藏"><a href="#一-溢出隐藏" class="headerlink" title="一. 溢出隐藏"></a>一. 溢出隐藏</h3><ul>
+<li>一般在div中设置后，该元素的内容若超出了给定的宽度和高度属性，那么超出的部分将会被隐藏，不占位。</li>
 </ul>
-<p>原文: <a href="https://www.w3cplus.com/css/inline-blocks.html" target="_blank" rel="noopener">https://www.w3cplus.com/css/inline-blocks.html</a> © w3cplus.com</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">text-overflow</span>: <span class="selector-tag">ellipsis</span>;	<span class="comment">/* 当对象内文本溢出时可显示省略标记（...）*/</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="二-消除浮动"><a href="#二-消除浮动" class="headerlink" title="二. 消除浮动"></a>二. 消除浮动</h3><ul>
+<li>一般而言，父级元素不设置高度时，高度由随内容增加自适应高度。当父级元素内部的子元素全部都设置浮动float之后，子元素会脱离标准流，不占位，父级元素检测不到子元素的高度，父级元素高度为0，下面的元素会顶上去，造成页面的塌陷。</li>
+<li>因此，需要给父级加个<code>overflow: hidden</code>属性，这样父级的高度就随子级容器及子级内容的高度而自适应。</li>
+<li>当使用<code>float: right</code>时，还需要设置<code>width：xxpx</code>之后才能看到父级元素显示出来</li>
+</ul>
+<h3 id="三-解决外边距塌陷"><a href="#三-解决外边距塌陷" class="headerlink" title="三. 解决外边距塌陷"></a>三. 解决外边距塌陷</h3><ul>
+<li>父级元素内部有子元素，如果给子元素添加<code>margin-top</code>样式，那么父级元素也会跟着下来，造成外边距塌陷。</li>
+<li>给父级元素添加<code>overflow:hidden</code>属性，父级元素保持不变，而只会对子元素有影响。</li>
+<li>当使用<code>float: right</code>时，不需要考虑塌陷（在设置父级元素width/height的前提下）。</li>
+</ul>
 
       
     </div>
@@ -322,13 +329,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a  href="/2019/11/05/inline-block%20vs%20float/">Inline-block vs Float</a></p>
+        <p><span>本文标题:</span><a  href="/2019/11/21/overflow-hidden/">overflow:hidden</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 Wayne 的个人博客">Wayne</a></p>
-        <p><span>发布时间:</span>2019年11月05日 - 00时00分</p>
-        <p><span>最后更新:</span>2019年11月16日 - 01时12分</p>
+        <p><span>发布时间:</span>2019年11月21日 - 21时10分</p>
+        <p><span>最后更新:</span>2019年11月21日 - 21时26分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/11/05/inline-block%20vs%20float/" title="Inline-block vs Float">http://yoursite.com/2019/11/05/inline-block%20vs%20float/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/11/05/inline-block%20vs%20float/　　作者: Wayne" title=""></span>
+            <span>原始链接:</span><a class="post-url" href="/2019/11/21/overflow-hidden/" title="overflow:hidden">http://yoursite.com/2019/11/21/overflow-hidden/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/11/21/overflow-hidden/　　作者: Wayne" title=""></span>
         </p>
         <p>
             <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
@@ -339,18 +346,9 @@
 
 <nav id="article-nav">
   
-    <a  href="/2019/11/16/absolute%20vs%20relative/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          absolute vs relative
-        
-      </div>
-    </a>
   
-  
-    <a  href="/2019/08/29/remove/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Remove</div>
+    <a  href="/2019/11/18/tmall-website/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">tmall website</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -362,7 +360,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#inline-block和float的区别"><span class="toc-number">1.</span> <span class="toc-text">inline-block和float的区别</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#overflow-hidden的作用总结"><span class="toc-number">1.</span> <span class="toc-text">overflow:hidden的作用总结</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一-溢出隐藏"><span class="toc-number">1.1.</span> <span class="toc-text">一. 溢出隐藏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二-消除浮动"><span class="toc-number">1.2.</span> <span class="toc-text">二. 消除浮动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三-解决外边距塌陷"><span class="toc-number">1.3.</span> <span class="toc-text">三. 解决外边距塌陷</span></a></li></ol></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -435,13 +433,11 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a  href="/2019/11/16/absolute%20vs%20relative/" title="上一篇: absolute vs relative">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a  href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a  href="/2019/08/29/remove/" title="下一篇: Remove">
+            <a  href="/2019/11/18/tmall-website/" title="下一篇: tmall website">
                 <i class="fa fa-angle-right"></i>
             </a>
         
