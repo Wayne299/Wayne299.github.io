@@ -2,10 +2,6 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="baidu-site-verification" content="L6Lm9d5Crl"/>
-  
-  
-  
   
   <title>Wayne</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -18,13 +14,11 @@
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternative" href="/atom.xml" title="Wayne" type="application/atom+xml">
-  
   
     <link rel="icon" href="/img/favicon.png">
   
   
-  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
   
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
@@ -41,6 +35,7 @@
     <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
   <script>
       var yiliaConfig = {
+          rootUrl: '/',
           fancybox: true,
           animate: true,
           isHome: true,
@@ -53,76 +48,64 @@
   </script>
 </head>
 <body>
+<a href="https://github.com/Wayne299/Wayne299.github.io" target="_blank" rel="noopener" class="github-corner" aria-label="View Source Code on Github">
+    <svg width="80" height="80" viewBox="0 0 250 250"
+         style="fill:#BA68C8; color:#fff; position: fixed; top: 0; border: 0; left: 0; transform: scale(-1, 1);"
+         aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+<style>
+    a.github-corner > svg {
+        z-index: 100;
+    }
+    .github-corner:hover .octo-arm {
+        animation: octocat-wave 560ms ease-in-out
+    }
+    @keyframes octocat-wave {
+        0%, 100% {
+            transform: rotate(0)
+        }
+        20%, 60% {
+            transform: rotate(-25deg)
+        }
+        40%, 80% {
+            transform: rotate(10deg)
+        }
+    }
+    @media (max-width: 500px) {
+        .github-corner:hover .octo-arm {
+            animation: none
+        }
+        .github-corner .octo-arm {
+            animation: octocat-wave 560ms ease-in-out
+        }
+    }
+</style>
+</body>
+<body>
   <div id="container">
     <div class="left-col">
     <div class="overlay"></div>
 <div class="intrude-less">
     <header id="header" class="inner">
-        
-<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
-
         <a href="/" class="profilepic">
             
-            <img lazy-src="/img/avatar.png" class="js-avatar">
+            <img lazy-src="/img/head.jpg" class="js-avatar">
             
         </a>
+
         <hgroup>
-          <h1 class="header-author"><a href="/">Wayne</a></h1>
+          <h1 class="header-author"><a href="/" title="Hi Mate">Wayne</a></h1>
         </hgroup>
+
         
         <p class="header-subtitle">菜鸡前端</p>
         
-        
-            <form>
-                <input type="text" class="st-default-search-input search" id="local-search-input" placeholder="搜索一下" autocomplete="off">
-            </form>
-            <div id="local-search-result"></div>
-        
-        
-            <script type="text/javascript">
-                (function() {
-                    'use strict';
-                    function getMatchData(keyword, data) {
-                        var matchData = [];
-                        for(var i =0;i<data.length;i++){
-                            if(data[i].title.toLowerCase().indexOf(keyword)>=0) 
-                                matchData.push(data[i])
-                        }
-                        return matchData;
-                    }
-                    var $input = $('#local-search-input');
-                    var $resultContent = $('#local-search-result');
-                    $input.keyup(function(){
-                        $.ajax({
-                            url: '/search.json',
-                            dataType: "json",
-                            success: function( json ) {
-                                var str='<ul class=\"search-result-list\">';                
-                                var keyword = $input.val().trim().toLowerCase();
-                                $resultContent.innerHTML = "";
-                                if ($input.val().trim().length <= 0) {
-                                    $resultContent.empty();
-                                    $('#switch-area').show();
-                                    return;
-                                }
-                                var results = getMatchData(keyword, json);
-                                if(results.length === 0){
-                                    $resultContent.empty();
-                                    $('#switch-area').show();
-                                    return;
-                                } 
-                                for(var i =0; i<results.length; i++){
-                                    str += "<li><a href='"+ results[i].url +"' class='search-result-title'>"+ results[i].title +"</a></li>";
-                                }
-                                str += "</ul>";
-                                $resultContent.empty();
-                                $resultContent.append(str);
-                                $('#switch-area').hide();
-                            }
-                        });
-                    });
-                })();
-            </script>
         
         
             <div id="switch-btn" class="switch-btn">
@@ -136,11 +119,6 @@
                             <div class="ribbon"></div>
                         </div>
                         
-                        <div class="icon-wrap icon-link hide" data-idx="2">
-                            <div class="loopback_l"></div>
-                            <div class="loopback_r"></div>
-                        </div>
-                        
                         
                         <div class="icon-wrap icon-me hide" data-idx="3">
                             <div class="user"></div>
@@ -148,14 +126,13 @@
                         </div>
                         
                     </div>
+                    
                 </div>
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
                         <li>菜单</li>
                         <li>标签</li>
-                        
-                        <li>友情链接</li>
                         
                         
                         <li>关于我</li>
@@ -164,34 +141,36 @@
                 </div>
             </div>
         
+
         <div id="switch-area" class="switch-area">
             <div class="switch-wrap">
                 <section class="switch-part switch-part1">
                     <nav class="header-menu">
                         <ul>
                         
-                            <li><a  href="/archives/">所有文章</a></li>
+                            <li><a href="/">博客首页</a></li>
                         
-                            <li><a  href="/categories/%E4%BD%9C%E5%93%81%E6%B1%87%E6%80%BB/">作品汇总</a></li>
+                            <li><a href="/works">作品展示</a></li>
                         
-                            <li><a  href="/categories/algorithm">算法学习</a></li>
+                            <li><a href="/tags/Mac">Mac 系列</a></li>
                         
-                            <li><a  href="/about/">关于我</a></li>
+                            <li><a href="/tags/FreeCodeCamp">算法学习</a></li>
                         
                         </ul>
                     </nav>
                     <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fl github"  target="_blank" href="https://github.com/Wayne299" title="github">github</a>
+                                <a class="fl mail" target="_blank" href="/mailto:zhanghaowei@tju.edu.cn" title="mail">mail</a>
                             
-                                <a class="fl weibo"  target="_blank" href="/xxxxxxxx" title="weibo">weibo</a>
+                                <a class="fl github" target="_blank" href="https://github.com/Wayne299" title="github">github</a>
                             
-                                <a class="fl rss"  target="_blank" href="/xxxxx" title="rss">rss</a>
+                                <a class="fl QQ" target="_blank" href="/tencent:/message/?uin=673156454" title="QQ">QQ</a>
                             
                         </ul>
                     </nav>
                 </section>
+                
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
@@ -200,46 +179,35 @@
                 </section>
                 
                 
+                
+
+                
+                
                 <section class="switch-part switch-part3">
-                    <div id="js-friends">
-                    
-                      <a target="_blank"  class="main-nav-link switch-friends-link" href="/xxx">csdn</a>
-                    
-                      <a target="_blank"  class="main-nav-link switch-friends-link" href="/xxx">segmentfault</a>
-                    
-                      <a target="_blank"  class="main-nav-link switch-friends-link" href="/xxx">简书</a>
-                    
-                    </div>
-                </section>
                 
-                
-                
-                <section class="switch-part switch-part4">
-                
-                    <div id="js-aboutme">Be GOAT💪💪💪</div>
+                    <div id="js-aboutme">GOAT💪💪💪</div>
                 </section>
                 
             </div>
         </div>
-    </header>
+    </header>                
 </div>
-
     </div>
     <div class="mid-col">
       <nav id="mobile-nav">
       <div class="overlay">
           <div class="slider-trigger"></div>
-          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Wayne</a></h1>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">Wayne</a></h1>
       </div>
     <div class="intrude-less">
         <header id="header" class="inner">
             <a href="/" class="profilepic">
                 
-                    <img lazy-src="/img/avatar.png" class="js-avatar">
+                    <img lazy-src="/img/head.jpg" class="js-avatar">
                 
             </a>
             <hgroup>
-              <h1 class="header-author"><a href="/" title="回到主页">Wayne</a></h1>
+              <h1 class="header-author"><a href="/" title="Me">Wayne</a></h1>
             </hgroup>
             
             <p class="header-subtitle">菜鸡前端</p>
@@ -247,13 +215,13 @@
             <nav class="header-menu">
                 <ul>
                 
-                    <li><a href="/archives/">所有文章</a></li>
+                    <li><a href="/">博客首页</a></li>
                 
-                    <li><a href="/categories/%E4%BD%9C%E5%93%81%E6%B1%87%E6%80%BB/">作品汇总</a></li>
+                    <li><a href="/works">作品展示</a></li>
                 
-                    <li><a href="/categories/algorithm">算法学习</a></li>
+                    <li><a href="/tags/Mac">Mac 系列</a></li>
                 
-                    <li><a href="/about/">关于我</a></li>
+                    <li><a href="/tags/FreeCodeCamp">算法学习</a></li>
                 
                 <div class="clearfix"></div>
                 </ul>
@@ -261,15 +229,15 @@
             <nav class="header-nav">
                 <div class="social">
                     
+                        <a class="mail" target="_blank" href="/mailto:zhanghaowei@tju.edu.cn" title="mail">mail</a>
+                    
                         <a class="github" target="_blank" href="https://github.com/Wayne299" title="github">github</a>
                     
-                        <a class="weibo" target="_blank" href="/xxxxxxxx" title="weibo">weibo</a>
-                    
-                        <a class="rss" target="_blank" href="/xxxxx" title="rss">rss</a>
+                        <a class="QQ" target="_blank" href="/tencent:/message/?uin=673156454" title="QQ">QQ</a>
                     
                 </div>
             </nav>
-        </header>
+        </header>                
     </div>
 </nav>
       <div class="body-wrap">
@@ -277,10 +245,9 @@
     <article id="post-overflow-hidden" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2019/11/21/overflow-hidden/" class="article-date">
+      <a href="/2019/11/21/overflow-hidden/" class="article-date">
       <time datetime="2019-11-21T13:10:31.000Z" itemprop="datePublished">2019-11-21</time>
 </a>
-
     </div>
   
   <div class="article-inner">
@@ -292,10 +259,9 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2019/11/21/overflow-hidden/">overflow:hidden</a>
+      <a class="article-title" href="/2019/11/21/overflow-hidden/">overflow:hidden</a>
     </h1>
   
-
 
       </header>
       
@@ -303,22 +269,23 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="overflow-hidden的作用总结"><a href="#overflow-hidden的作用总结" class="headerlink" title="overflow:hidden的作用总结"></a><code>overflow:hidden</code>的作用总结</h2><h3 id="一-溢出隐藏"><a href="#一-溢出隐藏" class="headerlink" title="一. 溢出隐藏"></a>一. 溢出隐藏</h3><ul>
+        <h1 id="overflow-hidden-的作用总结"><a href="#overflow-hidden-的作用总结" class="headerlink" title="overflow:hidden 的作用总结"></a>overflow:hidden 的作用总结</h1><h2 id="一-溢出隐藏"><a href="#一-溢出隐藏" class="headerlink" title="一. 溢出隐藏"></a>一. 溢出隐藏</h2><ul>
 <li>一般在div中设置后，该元素的内容若超出了给定的宽度和高度属性，那么超出的部分将会被隐藏，不占位。</li>
 </ul>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">text-overflow</span>: <span class="selector-tag">ellipsis</span>;	<span class="comment">/* 当对象内文本溢出时可显示省略标记（...）*/</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="二-消除浮动"><a href="#二-消除浮动" class="headerlink" title="二. 消除浮动"></a>二. 消除浮动</h3><ul>
+<h2 id="二-消除浮动"><a href="#二-消除浮动" class="headerlink" title="二. 消除浮动"></a>二. 消除浮动</h2><ul>
 <li>一般而言，父级元素不设置高度时，高度由随内容增加自适应高度。当父级元素内部的子元素全部都设置浮动float之后，子元素会脱离标准流，不占位，父级元素检测不到子元素的高度，父级元素高度为0，下面的元素会顶上去，造成页面的塌陷。</li>
 <li>因此，需要给父级加个<code>overflow: hidden</code>属性，这样父级的高度就随子级容器及子级内容的高度而自适应。</li>
 <li>当使用<code>float: right</code>时，还需要设置<code>width：xxpx</code>之后才能看到父级元素显示出来</li>
 </ul>
-<h3 id="三-解决外边距塌陷"><a href="#三-解决外边距塌陷" class="headerlink" title="三. 解决外边距塌陷"></a>三. 解决外边距塌陷</h3><ul>
+<h2 id="三-解决外边距塌陷"><a href="#三-解决外边距塌陷" class="headerlink" title="三. 解决外边距塌陷"></a>三. 解决外边距塌陷</h2><ul>
 <li>父级元素内部有子元素，如果给子元素添加<code>margin-top</code>样式，那么父级元素也会跟着下来，造成外边距塌陷。</li>
 <li>给父级元素添加<code>overflow:hidden</code>属性，父级元素保持不变，而只会对子元素有影响。</li>
 <li>当使用<code>float: right</code>时，不需要考虑塌陷（在设置父级元素width/height的前提下）。</li>
 </ul>
 
+      
       
     </div>
     
@@ -342,17 +309,13 @@
 
 
 
-
-
-
   
     <article id="post-tmall-website" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2019/11/18/tmall-website/" class="article-date">
+      <a href="/2019/11/18/tmall-website/" class="article-date">
       <time datetime="2019-11-18T13:48:24.000Z" itemprop="datePublished">2019-11-18</time>
 </a>
-
     </div>
   
   <div class="article-inner">
@@ -364,10 +327,9 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2019/11/18/tmall-website/">tmall website</a>
+      <a class="article-title" href="/2019/11/18/tmall-website/">tmall website</a>
     </h1>
   
-
 
       </header>
       
@@ -375,7 +337,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><a href="https://github.com/Wayne299/tmall-website-imitation" target="_blank" rel="noopener">GitHub</a>同步训练，搭建完成前记录效果截图。</p>
+        <h1 id="天猫网站前端设计"><a href="#天猫网站前端设计" class="headerlink" title="天猫网站前端设计"></a>天猫网站前端设计</h1><p><a href="https://github.com/Wayne299/tmall-website-imitation" target="_blank" rel="noopener">GitHub</a>同步训练，搭建完成前记录效果截图。</p>
 <p>当前进度：node+express 搭建，因没有数据库后台，只是功能上的展示</p>
 <h2 id="公共部分"><a href="#公共部分" class="headerlink" title="公共部分"></a>公共部分</h2><p><img src="/2019/11/18/tmall-website/%E5%85%AC%E5%85%B1.png" alt="公共"></p>
 <h3 id="1-置顶导航、页脚"><a href="#1-置顶导航、页脚" class="headerlink" title="1. 置顶导航、页脚"></a>1. 置顶导航、页脚</h3><p><img src="/2019/11/18/tmall-website/1.1.png" alt="置顶导航、页脚"></p>
@@ -423,6 +385,7 @@
 <h2 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h2><p><img src="/2019/11/18/tmall-website/14.png" alt="注册"></p>
 
       
+      
     </div>
     
     <div class="article-info article-info-index">
@@ -437,9 +400,6 @@
   </div>
   
 </article>
-
-
-
 
 
 
@@ -452,10 +412,9 @@
     <article id="post-absolute vs relative" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2019/11/16/absolute%20vs%20relative/" class="article-date">
+      <a href="/2019/11/16/absolute%20vs%20relative/" class="article-date">
       <time datetime="2019-11-15T16:00:00.000Z" itemprop="datePublished">2019-11-16</time>
 </a>
-
     </div>
   
   <div class="article-inner">
@@ -467,10 +426,9 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2019/11/16/absolute%20vs%20relative/">absolute vs relative</a>
+      <a class="article-title" href="/2019/11/16/absolute%20vs%20relative/">absolute vs relative</a>
     </h1>
   
-
 
       </header>
       
@@ -478,31 +436,36 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="div布局中absolute和relative的区别"><a href="#div布局中absolute和relative的区别" class="headerlink" title="div布局中absolute和relative的区别"></a>div布局中absolute和relative的区别</h2><h3 id="在正常流中的位置"><a href="#在正常流中的位置" class="headerlink" title="在正常流中的位置"></a>在正常流中的位置</h3><ul>
-<li>relative</li>
+        <h1 id="div布局中absolute和relative的区别"><a href="#div布局中absolute和relative的区别" class="headerlink" title="div布局中absolute和relative的区别"></a>div布局中absolute和relative的区别</h1><h2 id="在正常流中的位置"><a href="#在正常流中的位置" class="headerlink" title="在正常流中的位置"></a>在正常流中的位置</h2><h3 id="relative"><a href="#relative" class="headerlink" title="relative"></a>relative</h3><ul>
+<li>定位为relative的元素脱离正常的文本流中，但其在文本流中的位置依然存在。如图1：</li>
 </ul>
-<p>定位为relative的元素脱离正常的文本流中，但其在文本流中的位置依然存在。如图1：</p>
 <p><img src="http://images.51cto.com/files/uploadimg/20100909/1528450.jpg" alt="relative定位"></p>
-<p>黄色背景的层定位为relative，红色边框区域为其在正常流中的位置。在通过top、left对其定位后，从灰色背景层(下一个div)的位置可以看出其==正常位置依然存在==。</p>
 <ul>
-<li>absolute</li>
+<li>黄色背景的层定位为relative，红色边框区域为其在正常流中的位置。在通过top、left对其定位后，从灰色背景层(下一个div)的位置可以看出其<strong>正常位置依然存在</strong>。</li>
 </ul>
-<p>定位为absolute的层脱离正常文本流，但与relative的区别是其在正常流中的位置不在存在。如图2：</p>
+<h3 id="absolute"><a href="#absolute" class="headerlink" title="absolute"></a>absolute</h3><ul>
+<li>定位为absolute的层脱离正常文本流，但与relative的区别是其在正常流中的位置不在存在。如图2：</li>
+</ul>
 <p><img src="http://images.51cto.com/files/uploadimg/20100909/1528451.jpg" alt="absolute定位"></p>
-<p>可以看到，在将黄色背景层定位为absolute后，灰色背景层(下一个div)自动补上，==脱离正常文本流==。</p>
-<h3 id="相对于父元素"><a href="#相对于父元素" class="headerlink" title="相对于父元素"></a>相对于父元素</h3><ul>
-<li>relative</li>
-</ul>
-<p>relative定位的层总是相对于其==最近的父元素==，无论其父元素是何种定位方式。如图3：</p>
-<p><img src="http://images.51cto.com/files/uploadimg/20100909/1528452.jpg" alt="relative父元素"></p>
-<p>红色背景层为relative定位，其直接父元素绿色背景层为默认的static定位。红色背景层的位置为相对绿色背景层top、left个20元素。</p>
 <ul>
-<li>absolute</li>
+<li>可以看到，在将黄色背景层定位为absolute后，灰色背景层(下一个div)自动补上，<strong>脱离正常文本流</strong>。</li>
 </ul>
-<p>absolute定位的层总是相对于其==最近的定义为absolute或relative的父层==，而这个父层并==不一定是其直接父层==，如图4:</p>
+<h2 id="相对于父元素"><a href="#相对于父元素" class="headerlink" title="相对于父元素"></a>相对于父元素</h2><h3 id="relative-1"><a href="#relative-1" class="headerlink" title="relative"></a>relative</h3><ul>
+<li>relative定位的层总是相对于其<strong>最近的父元素</strong>，无论其父元素是何种定位方式。如图3：</li>
+</ul>
+<p><img src="http://images.51cto.com/files/uploadimg/20100909/1528452.jpg" alt="relative父元素"></p>
+<ul>
+<li>红色背景层为relative定位，其直接父元素绿色背景层为默认的static定位。红色背景层的位置为相对绿色背景层top、left个20元素。</li>
+</ul>
+<h3 id="absolute-1"><a href="#absolute-1" class="headerlink" title="absolute"></a>absolute</h3><ul>
+<li>absolute定位的层总是相对于其<strong>最近的定义为absolute或relative的父层</strong>，而这个父层并<strong>不一定是其直接父层</strong>，如图4:</li>
+</ul>
 <p><img src="http://images.51cto.com/files/uploadimg/20100909/1528453.jpg" alt="absolute父元素"></p>
-<p>红色背景层相对的元素变为定位方式为absolute或relative的黄色背景层。如果其父层中都未定义absolute或relative，则其将相对body进行定位。</p>
+<ul>
+<li>红色背景层相对的元素变为定位方式为absolute或relative的黄色背景层。如果其父层中都未定义absolute或relative，则其将相对body进行定位。</li>
+</ul>
 
+      
       
     </div>
     
@@ -518,9 +481,6 @@
   </div>
   
 </article>
-
-
-
 
 
 
@@ -533,10 +493,9 @@
     <article id="post-inline-block vs float" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2019/11/05/inline-block%20vs%20float/" class="article-date">
+      <a href="/2019/11/05/inline-block%20vs%20float/" class="article-date">
       <time datetime="2019-11-04T16:00:00.000Z" itemprop="datePublished">2019-11-05</time>
 </a>
-
     </div>
   
   <div class="article-inner">
@@ -548,10 +507,9 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2019/11/05/inline-block%20vs%20float/">Inline-block vs Float</a>
+      <a class="article-title" href="/2019/11/05/inline-block%20vs%20float/">Inline-block vs Float</a>
     </h1>
   
-
 
       </header>
       
@@ -559,15 +517,24 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="inline-block和float的区别"><a href="#inline-block和float的区别" class="headerlink" title="inline-block和float的区别"></a>inline-block和float的区别</h2><ul>
-<li><strong>文档流（Document flow）</strong>:浮动元素会脱离文档流，并使得周围元素==环绕这个元素==。而inline-block元素仍在文档流内。因此设置inline-block不需要==清除浮动==。当然，周围元素不会环绕这个元素，你也不可能通过清除inline-block就让一个元素跑到下面去。</li>
-<li><strong>水平位置（Horizontal position）</strong>：很明显你不能通过给父元素设置<code>text-align:center</code>让浮动元素居中。事实上定位类属性设置到父元素上，均不会影响父元素内浮动的元素。但是父元素内元素如果设置了<code>display：inline-block</code>，则对父元素设置一些定位属性会影响到子元素。（这还是因为浮动元素脱离文档流的关系）。</li>
-<li><strong>垂直对齐（Vertical alignment）</strong>：inline-block元素沿着默认的基线对齐。浮动元素紧贴顶部。你可以通过vertical属性设置这个默认基线，但对浮动元素这种方法就不行了。这也是我(原作者)倾向于inline-block的主要原因。</li>
-<li><strong>空白（Whitespace）</strong>：inline-block包含html==空白节点==。如果你的html中一系列元素每个元素之间都换行了，当你对这些元素设置inline-block时，这些元素之间就会出现空白。而浮动元素会忽略空白节点，互相紧贴</li>
-<li><strong>IE6和IE7</strong>：Ie67对此属性部分支持。</li>
+        <h1 id="inline-block和float的区别"><a href="#inline-block和float的区别" class="headerlink" title="inline-block和float的区别"></a>inline-block和float的区别</h1><h2 id="文档流（Document-flow）"><a href="#文档流（Document-flow）" class="headerlink" title="文档流（Document flow）"></a>文档流（Document flow）</h2><ul>
+<li>浮动元素会脱离文档流，并使得周围元素<strong>环绕这个元素</strong>。而inline-block元素仍在文档流内。因此设置inline-block不需要<strong>清除浮动</strong>。当然，周围元素不会环绕这个元素，你也不可能通过清除inline-block就让一个元素跑到下面去。</li>
+</ul>
+<h2 id="水平位置（Horizontal-position）"><a href="#水平位置（Horizontal-position）" class="headerlink" title="水平位置（Horizontal position）"></a>水平位置（Horizontal position）</h2><ul>
+<li>很明显你不能通过给父元素设置<code>text-align:center</code>让浮动元素居中。事实上定位类属性设置到父元素上，均不会影响父元素内浮动的元素。但是父元素内元素如果设置了<code>display：inline-block</code>，则对父元素设置一些定位属性会影响到子元素。（这还是因为浮动元素脱离文档流的关系）。</li>
+</ul>
+<h2 id="垂直对齐（Vertical-alignment）"><a href="#垂直对齐（Vertical-alignment）" class="headerlink" title="垂直对齐（Vertical alignment）"></a>垂直对齐（Vertical alignment）</h2><ul>
+<li>inline-block元素沿着默认的基线对齐。浮动元素紧贴顶部。你可以通过vertical属性设置这个默认基线，但对浮动元素这种方法就不行了。这也是我(原作者)倾向于inline-block的主要原因。</li>
+</ul>
+<h2 id="空白（Whitespace）"><a href="#空白（Whitespace）" class="headerlink" title="空白（Whitespace）"></a>空白（Whitespace）</h2><ul>
+<li>inline-block包含html<strong>空白节点</strong>。如果你的html中一系列元素每个元素之间都换行了，当你对这些元素设置inline-block时，这些元素之间就会出现空白。而浮动元素会忽略空白节点，互相紧贴。</li>
+</ul>
+<h2 id="IE6和IE7"><a href="#IE6和IE7" class="headerlink" title="IE6和IE7"></a>IE6和IE7</h2><ul>
+<li>Ie67对此属性部分支持。</li>
 </ul>
 <p>原文: <a href="https://www.w3cplus.com/css/inline-blocks.html" target="_blank" rel="noopener">https://www.w3cplus.com/css/inline-blocks.html</a> © w3cplus.com</p>
 
+      
       
     </div>
     
@@ -583,9 +550,6 @@
   </div>
   
 </article>
-
-
-
 
 
 
@@ -598,10 +562,9 @@
     <article id="post-remove" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2019/08/29/remove/" class="article-date">
+      <a href="/2019/08/29/remove/" class="article-date">
       <time datetime="2019-08-28T16:00:00.000Z" itemprop="datePublished">2019-08-29</time>
 </a>
-
     </div>
   
   <div class="article-inner">
@@ -613,10 +576,9 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2019/08/29/remove/">Remove</a>
+      <a class="article-title" href="/2019/08/29/remove/">Remove</a>
     </h1>
   
-
 
       </header>
       
@@ -624,12 +586,13 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h3 id="Push-an-existing-repository-from-the-command-line"><a href="#Push-an-existing-repository-from-the-command-line" class="headerlink" title="Push an existing repository from the command line"></a>Push an existing repository from the command line</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> &lt;file_name&gt;</span><br><span class="line">$ git init</span><br><span class="line">$ git remote add origin git@github.com:Wayne299/x.git</span><br><span class="line">$ git add &lt;file_name&gt;</span><br><span class="line">$ git push -u origin master</span><br></pre></td></tr></table></figure>
+        <h1 id="Git中remove操作"><a href="#Git中remove操作" class="headerlink" title="Git中remove操作"></a>Git中remove操作</h1><h2 id="Push-an-existing-repository-from-the-command-line"><a href="#Push-an-existing-repository-from-the-command-line" class="headerlink" title="Push an existing repository from the command line"></a>Push an existing repository from the command line</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> &lt;file_name&gt;</span><br><span class="line">$ git init</span><br><span class="line">$ git remote add origin git@github.com:Wayne299/x.git</span><br><span class="line">$ git add &lt;file_name&gt;</span><br><span class="line">$ git push -u origin master</span><br></pre></td></tr></table></figure>
 
 
-<h3 id="fatal-远程-origin-已经存在"><a href="#fatal-远程-origin-已经存在" class="headerlink" title="fatal: 远程 origin 已经存在"></a>fatal: 远程 origin 已经存在</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git remote rm origin</span><br><span class="line">$ git remote add origin &lt;SSH_Key&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="fatal-远程-origin-已经存在"><a href="#fatal-远程-origin-已经存在" class="headerlink" title="fatal: 远程 origin 已经存在"></a>fatal: 远程 origin 已经存在</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git remote rm origin</span><br><span class="line">$ git remote add origin &lt;SSH_Key&gt;</span><br></pre></td></tr></table></figure>
 
 
+      
       
     </div>
     
@@ -645,9 +608,6 @@
   </div>
   
 </article>
-
-
-
 
 
 
@@ -660,10 +620,9 @@
     <article id="post-intro-to-git" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2019/08/20/intro-to-git/" class="article-date">
+      <a href="/2019/08/20/intro-to-git/" class="article-date">
       <time datetime="2019-08-19T16:00:00.000Z" itemprop="datePublished">2019-08-20</time>
 </a>
-
     </div>
   
   <div class="article-inner">
@@ -675,10 +634,9 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2019/08/20/intro-to-git/">Intro to Git</a>
+      <a class="article-title" href="/2019/08/20/intro-to-git/">Intro to Git</a>
     </h1>
   
-
 
       </header>
       
@@ -686,19 +644,25 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="Terminal"><a href="#Terminal" class="headerlink" title="Terminal"></a>Terminal</h2><ul>
+        <h1 id="Git入门语法"><a href="#Git入门语法" class="headerlink" title="Git入门语法"></a>Git入门语法</h1><h2 id="Terminal"><a href="#Terminal" class="headerlink" title="Terminal"></a>Terminal</h2><ul>
 <li><kbd>command</kbd> + K ： clear</li>
 <li>mv ：改名 / 移动文件到文件夹</li>
 </ul>
 <h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><h3 id="Add-All"><a href="#Add-All" class="headerlink" title="Add All"></a>Add All</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git add A</span><br></pre></td></tr></table></figure>
 
-<h3 id="取消、修改、恢复"><a href="#取消、修改、恢复" class="headerlink" title="取消、修改、恢复"></a>取消、修改、恢复</h3><p>==取消已经暂存的文件==。即，撤销先前”git add”的操作</p>
+<h3 id="取消、修改、恢复"><a href="#取消、修改、恢复" class="headerlink" title="取消、修改、恢复"></a>取消、修改、恢复</h3><ul>
+<li><strong>取消已经暂存的文件</strong>。即，撤销先前”git add”的操作</li>
+</ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rm --cached &lt;file&gt;...</span><br></pre></td></tr></table></figure>
 
-<p>==取消对文件的修改==。还原到最近的版本，废弃本地做的修改。</p>
+<ul>
+<li><strong>取消对文件的修改</strong>。还原到最近的版本，废弃本地做的修改。</li>
+</ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -- &lt;file&gt;</span><br></pre></td></tr></table></figure>
 
-<p>==修改最后一次提交==。用于修改上一次的提交信息，或漏提交文件等情况。</p>
+<ul>
+<li><strong>修改最后一次提交</strong>。用于修改上一次的提交信息，或漏提交文件等情况。</li>
+</ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit --amend</span><br></pre></td></tr></table></figure>
 
 <h3 id="获取log"><a href="#获取log" class="headerlink" title="获取log"></a>获取log</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span> --oneline </span><br><span class="line">git <span class="built_in">log</span> --oneline --all --graph --decorate</span><br></pre></td></tr></table></figure>
@@ -710,6 +674,7 @@
 </ul>
 <h2 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add README.md</span><br><span class="line">git commit -m <span class="string">"add README.md"</span></span><br><span class="line">git remote add origin git@github.com:Wayne299/xxx.git</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
 
+      
       
     </div>
     
@@ -733,17 +698,13 @@
 
 
 
-
-
-
   
     <article id="post-markdown-intro" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2019/07/30/markdown-intro/" class="article-date">
+      <a href="/2019/07/30/markdown-intro/" class="article-date">
       <time datetime="2019-07-29T16:00:00.000Z" itemprop="datePublished">2019-07-30</time>
 </a>
-
     </div>
   
   <div class="article-inner">
@@ -755,10 +716,9 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2019/07/30/markdown-intro/">MarkDown Syntax Intro</a>
+      <a class="article-title" href="/2019/07/30/markdown-intro/">MarkDown Syntax Intro</a>
     </h1>
   
-
 
       </header>
       
@@ -766,7 +726,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><ul>
+        <h1 id="Markdown-语法入门"><a href="#Markdown-语法入门" class="headerlink" title="Markdown 语法入门"></a>Markdown 语法入门</h1><h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><ul>
 <li>要加粗的文字左右分别用两个*号包起来  </li>
 <li>要倾斜的文字左右分别用一个*号包起来  </li>
 <li>要倾斜和加粗的文字左右分别用三个*号包起来  </li>
@@ -893,6 +853,7 @@
 </ul>
 
       
+      
     </div>
     
     <div class="article-info article-info-index">
@@ -907,9 +868,6 @@
   </div>
   
 </article>
-
-
-
 
 
 
@@ -922,10 +880,9 @@
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2019/07/28/hello-world/" class="article-date">
+      <a href="/2019/07/28/hello-world/" class="article-date">
       <time datetime="2019-07-28T14:24:34.432Z" itemprop="datePublished">2019-07-28</time>
 </a>
-
     </div>
   
   <div class="article-inner">
@@ -937,10 +894,9 @@
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2019/07/28/hello-world/">Hello World</a>
+      <a class="article-title" href="/2019/07/28/hello-world/">Hello World</a>
     </h1>
   
-
 
       </header>
       
@@ -949,17 +905,18 @@
       
           
         <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo s</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+<h1 id="Hexo-语法入门"><a href="#Hexo-语法入门" class="headerlink" title="Hexo 语法入门"></a>Hexo 语法入门</h1><h2 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo s</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
 
 
-<h3 id="Generate-a-static-file"><a href="#Generate-a-static-file" class="headerlink" title="Generate a static file"></a>Generate a static file</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h2 id="Generate-a-static-file"><a href="#Generate-a-static-file" class="headerlink" title="Generate a static file"></a>Generate a static file</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 
 
-<h3 id="Run-on-server"><a href="#Run-on-server" class="headerlink" title="Run on server"></a>Run on server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h2 id="Run-on-server"><a href="#Run-on-server" class="headerlink" title="Run on server"></a>Run on server</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
 
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h2 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
+      
       
     </div>
     
@@ -983,12 +940,8 @@
 
 
 
-
-
-
   
   
-
 </div>
       <footer id="footer">
     <div class="outer">
@@ -997,37 +950,14 @@
                 &copy; 2019 Wayne
             </div>
             <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank">Hexo &nbsp;&nbsp;</a><a href="https://github.com/maochunguang" target="_blank">Blog</a> by wayne
+                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
             </div>
         </div>
-        
-            <div class="visit">
-                
-                    <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" >极客到访数: 
-                            <span id="busuanzi_value_site_uv"></span>
-                        </span>
-                    </span>
-                
-                
-                    <span>, </span>
-                
-                
-                    <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit">本页阅读量: 
-                            <span id="busuanzi_value_page_pv"></span>
-                        </span>
-                    </span>
-                
-            </div>
-        
     </div>
 </footer>
 
     </div>
-    
-<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
-
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
 <script src="/js/main.js"></script>
 
     <script>
@@ -1040,30 +970,6 @@
     </script>
 
 
-<!-- Google Analytics -->
-<script type="text/javascript">
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'xxxxx', 'auto');
-ga('send', 'pageview');
-
-</script>
-<!-- End Google Analytics -->
-
-
-
-	<script>
-	var _hmt = _hmt || [];
-	(function() {
-	  var hm = document.createElement("script");
-	  hm.src = "//hm.baidu.com/hm.js?xxxxxx";
-	  var s = document.getElementsByTagName("script")[0]; 
-	  s.parentNode.insertBefore(hm, s);
-	})();
-	</script>
 
 
 
@@ -1090,6 +996,7 @@ ga('send', 'pageview');
             var title = a.attr('title');
             if (title == undefined || title == "") return;
             a.data('title', title).removeAttr('title').hover(
+
             function() {
                 var offset = a.offset();
                 $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
