@@ -154,6 +154,8 @@
                         
                             <li><a href="/tags/Mac">Mac 系列</a></li>
                         
+                            <li><a href="/tags/%E5%89%8D%E7%AB%AF">前端技术</a></li>
+                        
                             <li><a href="/tags/FreeCodeCamp">算法学习</a></li>
                         
                         </ul>
@@ -174,7 +176,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        
+                        <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 10px;">前端</a>
                     </div>
                 </section>
                 
@@ -220,6 +222,8 @@
                     <li><a href="/works">作品展示</a></li>
                 
                     <li><a href="/tags/Mac">Mac 系列</a></li>
+                
+                    <li><a href="/tags/%E5%89%8D%E7%AB%AF">前端技术</a></li>
                 
                     <li><a href="/tags/FreeCodeCamp">算法学习</a></li>
                 
@@ -269,22 +273,16 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="overflow-hidden-的作用总结"><a href="#overflow-hidden-的作用总结" class="headerlink" title="overflow:hidden 的作用总结"></a>overflow:hidden 的作用总结</h1><h2 id="一-溢出隐藏"><a href="#一-溢出隐藏" class="headerlink" title="一. 溢出隐藏"></a>一. 溢出隐藏</h2><ul>
+              <h1 id="overflow-hidden-的作用总结"><a href="#overflow-hidden-的作用总结" class="headerlink" title="overflow:hidden 的作用总结"></a>overflow:hidden 的作用总结</h1><h2 id="一-溢出隐藏"><a href="#一-溢出隐藏" class="headerlink" title="一. 溢出隐藏"></a>一. 溢出隐藏</h2><ul>
 <li>一般在div中设置后，该元素的内容若超出了给定的宽度和高度属性，那么超出的部分将会被隐藏，不占位。</li>
 </ul>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">text-overflow</span>: <span class="selector-tag">ellipsis</span>;	<span class="comment">/* 当对象内文本溢出时可显示省略标记（...）*/</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="二-消除浮动"><a href="#二-消除浮动" class="headerlink" title="二. 消除浮动"></a>二. 消除浮动</h2><ul>
 <li>一般而言，父级元素不设置高度时，高度由随内容增加自适应高度。当父级元素内部的子元素全部都设置浮动float之后，子元素会脱离标准流，不占位，父级元素检测不到子元素的高度，父级元素高度为0，下面的元素会顶上去，造成页面的塌陷。</li>
-<li>因此，需要给父级加个<code>overflow: hidden</code>属性，这样父级的高度就随子级容器及子级内容的高度而自适应。</li>
-<li>当使用<code>float: right</code>时，还需要设置<code>width：xxpx</code>之后才能看到父级元素显示出来</li>
-</ul>
-<h2 id="三-解决外边距塌陷"><a href="#三-解决外边距塌陷" class="headerlink" title="三. 解决外边距塌陷"></a>三. 解决外边距塌陷</h2><ul>
-<li>父级元素内部有子元素，如果给子元素添加<code>margin-top</code>样式，那么父级元素也会跟着下来，造成外边距塌陷。</li>
-<li>给父级元素添加<code>overflow:hidden</code>属性，父级元素保持不变，而只会对子元素有影响。</li>
-<li>当使用<code>float: right</code>时，不需要考虑塌陷（在设置父级元素width/height的前提下）。</li>
-</ul>
-
+<li>因此，需要给父级加个<code>overflow: hidden</code>属性，这样父级的高度就随子级容器及子级内容的高度而自适应。</li></ul>
+          
+      
       
       
     </div>
@@ -294,6 +292,14 @@
       
 
       
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a  href="/2019/11/21/overflow-hidden/#more">阅读全文>></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -337,53 +343,11 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="天猫网站前端设计"><a href="#天猫网站前端设计" class="headerlink" title="天猫网站前端设计"></a>天猫网站前端设计</h1><p><a href="https://github.com/Wayne299/tmall-website-imitation" target="_blank" rel="noopener">GitHub</a>同步训练，搭建完成前记录效果截图。</p>
+              <h1 id="天猫网站前端设计"><a href="#天猫网站前端设计" class="headerlink" title="天猫网站前端设计"></a>天猫网站前端设计</h1><p><a href="https://github.com/Wayne299/tmall-website-imitation" target="_blank" rel="noopener">GitHub</a>同步训练，搭建完成前记录效果截图。</p>
 <p>当前进度：node+express 搭建，因没有数据库后台，只是功能上的展示</p>
 <h2 id="公共部分"><a href="#公共部分" class="headerlink" title="公共部分"></a>公共部分</h2><p><img src="/2019/11/18/tmall-website/%E5%85%AC%E5%85%B1.png" alt="公共"></p>
-<h3 id="1-置顶导航、页脚"><a href="#1-置顶导航、页脚" class="headerlink" title="1. 置顶导航、页脚"></a>1. 置顶导航、页脚</h3><p><img src="/2019/11/18/tmall-website/1.1.png" alt="置顶导航、页脚"></p>
-<h3 id="2-搜索栏"><a href="#2-搜索栏" class="headerlink" title="2. 搜索栏"></a>2. 搜索栏</h3><p><img src="/2019/11/18/tmall-website/1.2.png" alt="搜索栏"></p>
-<h3 id="3-简易搜索栏"><a href="#3-简易搜索栏" class="headerlink" title="3. 简易搜索栏"></a>3. 简易搜索栏</h3><p><img src="/2019/11/18/tmall-website/1.3.png" alt="简易搜索栏"></p>
-<h2 id="首页"><a href="#首页" class="headerlink" title="首页"></a>首页</h2><h3 id="1-分类、导航轮播"><a href="#1-分类、导航轮播" class="headerlink" title="1. 分类、导航轮播"></a>1. 分类、导航轮播</h3><p><img src="/2019/11/18/tmall-website/%E9%A6%96%E9%A1%B5.png" alt="分类、导航轮播"></p>
-<h3 id="2-交互"><a href="#2-交互" class="headerlink" title="2. 交互"></a>2. 交互</h3><ul>
-<li>显示、隐藏产品列表<br><img src="/2019/11/18/tmall-website/2.2.png" alt="交互"></li>
-</ul>
-<h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><h3 id="1-产品列表"><a href="#1-产品列表" class="headerlink" title="1. 产品列表"></a>1. 产品列表</h3><p><img src="/2019/11/18/tmall-website/%E5%88%86%E7%B1%BB.png" alt="产品列表"></p>
-<h3 id="2-交互-1"><a href="#2-交互-1" class="headerlink" title="2. 交互"></a>2. 交互</h3><ul>
-<li>选择价格<br><img src="/2019/11/18/tmall-website/3.2.png" alt="交互"></li>
-</ul>
-<h2 id="产品"><a href="#产品" class="headerlink" title="产品"></a>产品</h2><h3 id="1-产品图片、基本信息"><a href="#1-产品图片、基本信息" class="headerlink" title="1. 产品图片、基本信息"></a>1. 产品图片、基本信息</h3><p><img src="/2019/11/18/tmall-website/4.1.png" alt="产品图片、基本信息"></p>
-<h3 id="2-产品详情"><a href="#2-产品详情" class="headerlink" title="2. 产品详情"></a>2. 产品详情</h3><p><img src="/2019/11/18/tmall-website/4.2.png" alt="产品详情"></p>
-<h3 id="3-产品评论"><a href="#3-产品评论" class="headerlink" title="3. 产品评论"></a>3. 产品评论</h3><p><img src="/2019/11/18/tmall-website/4.3.png" alt="产品评论"></p>
-<h3 id="4-交互"><a href="#4-交互" class="headerlink" title="4. 交互"></a>4. 交互</h3><ul>
-<li>鼠标移动到小图片，大图片一起变化（图片的预加载）</li>
-<li>产品详情和产品评论的切换</li>
-</ul>
-<h2 id="购物车"><a href="#购物车" class="headerlink" title="购物车"></a>购物车</h2><h3 id="1-结算、订单内容"><a href="#1-结算、订单内容" class="headerlink" title="1. 结算、订单内容"></a>1. 结算、订单内容</h3><p><img src="/2019/11/18/tmall-website/%E8%B4%AD%E7%89%A9%E8%BD%A6.png" alt="结算、订单内容"></p>
-<h3 id="2-交互-2"><a href="#2-交互-2" class="headerlink" title="2. 交互"></a>2. 交互</h3><ul>
-<li>选中物品（结算button和价格的变化）<br><img src="/2019/11/18/tmall-website/5.1.png" alt="交互1"></li>
-<li>全选（直接点击 和 分别选中）<br><img src="/2019/11/18/tmall-website/5.2.png" alt="交互2"></li>
-<li>增加、减少数量及直接修改</li>
-</ul>
-<h2 id="订单"><a href="#订单" class="headerlink" title="订单"></a>订单</h2><h3 id="1-标题、订单内容"><a href="#1-标题、订单内容" class="headerlink" title="1. 标题、订单内容"></a>1. 标题、订单内容</h3><p><img src="/2019/11/18/tmall-website/%E8%AE%A2%E5%8D%95.png" alt="标题、订单内容"></p>
-<h3 id="2-交互-3"><a href="#2-交互-3" class="headerlink" title="2. 交互"></a>2. 交互</h3><ul>
-<li>切换不同类型的订单<br><img src="/2019/11/18/tmall-website/6.png" alt="交互"></li>
-</ul>
-<h2 id="结算"><a href="#结算" class="headerlink" title="结算"></a>结算</h2><h3 id="1-头部、收货地址"><a href="#1-头部、收货地址" class="headerlink" title="1. 头部、收货地址"></a>1. 头部、收货地址</h3><p><img src="/2019/11/18/tmall-website/7.1.png" alt="头部、收货地址"></p>
-<h3 id="2-订单信息"><a href="#2-订单信息" class="headerlink" title="2. 订单信息"></a>2. 订单信息</h3><p><img src="/2019/11/18/tmall-website/7.2.png" alt="订单信息"></p>
-<h3 id="3-交互"><a href="#3-交互" class="headerlink" title="3. 交互"></a>3. 交互</h3><ul>
-<li>点击input，显示textarea。</li>
-<li>同步和限制字数<br><img src="/2019/11/18/tmall-website/7.3.png" alt="交互"></li>
-</ul>
-<h2 id="支付"><a href="#支付" class="headerlink" title="支付"></a>支付</h2><p><img src="/2019/11/18/tmall-website/8.png" alt="支付"></p>
-<h2 id="支付成功"><a href="#支付成功" class="headerlink" title="支付成功"></a>支付成功</h2><p><img src="/2019/11/18/tmall-website/9.png" alt="支付成功"></p>
-<h2 id="确认收货"><a href="#确认收货" class="headerlink" title="确认收货"></a>确认收货</h2><h3 id="1-订单"><a href="#1-订单" class="headerlink" title="1. 订单"></a>1. 订单</h3><p><img src="/2019/11/18/tmall-website/10.1.png" alt="订单"></p>
-<h3 id="2-详情"><a href="#2-详情" class="headerlink" title="2. 详情"></a>2. 详情</h3><p><img src="/2019/11/18/tmall-website/10.2.png" alt="订单"></p>
-<h2 id="收货成功"><a href="#收货成功" class="headerlink" title="收货成功"></a>收货成功</h2><p><img src="/2019/11/18/tmall-website/11.png" alt="收货成功"></p>
-<h2 id="评价"><a href="#评价" class="headerlink" title="评价"></a>评价</h2><h3 id="1-评价商品信息"><a href="#1-评价商品信息" class="headerlink" title="1. 评价商品信息"></a>1. 评价商品信息</h3><p><img src="/2019/11/18/tmall-website/12.1.png" alt="评价商品信息"></p>
-<h3 id="2-商品评价"><a href="#2-商品评价" class="headerlink" title="2. 商品评价"></a>2. 商品评价</h3><p><img src="/2019/11/18/tmall-website/12.2.png" alt="商品评价"></p>
-<h2 id="登陆"><a href="#登陆" class="headerlink" title="登陆"></a>登陆</h2><p><img src="/2019/11/18/tmall-website/13.png" alt="登陆"></p>
-<h2 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h2><p><img src="/2019/11/18/tmall-website/14.png" alt="注册"></p>
-
+          
+      
       
       
     </div>
@@ -393,6 +357,10 @@
       
 
       
+      
+        <p class="article-more-link">
+          <a  href="/2019/11/18/tmall-website/#more">阅读全文>></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -436,35 +404,12 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="div布局中absolute和relative的区别"><a href="#div布局中absolute和relative的区别" class="headerlink" title="div布局中absolute和relative的区别"></a>div布局中absolute和relative的区别</h1><h2 id="在正常流中的位置"><a href="#在正常流中的位置" class="headerlink" title="在正常流中的位置"></a>在正常流中的位置</h2><h3 id="relative"><a href="#relative" class="headerlink" title="relative"></a>relative</h3><ul>
+              <h1 id="div布局中absolute和relative的区别"><a href="#div布局中absolute和relative的区别" class="headerlink" title="div布局中absolute和relative的区别"></a>div布局中absolute和relative的区别</h1><h2 id="在正常流中的位置"><a href="#在正常流中的位置" class="headerlink" title="在正常流中的位置"></a>在正常流中的位置</h2><h3 id="relative"><a href="#relative" class="headerlink" title="relative"></a>relative</h3><ul>
 <li>定位为relative的元素脱离正常的文本流中，但其在文本流中的位置依然存在。如图1：</li>
 </ul>
 <p><img src="http://images.51cto.com/files/uploadimg/20100909/1528450.jpg" alt="relative定位"></p>
-<ul>
-<li>黄色背景的层定位为relative，红色边框区域为其在正常流中的位置。在通过top、left对其定位后，从灰色背景层(下一个div)的位置可以看出其<strong>正常位置依然存在</strong>。</li>
-</ul>
-<h3 id="absolute"><a href="#absolute" class="headerlink" title="absolute"></a>absolute</h3><ul>
-<li>定位为absolute的层脱离正常文本流，但与relative的区别是其在正常流中的位置不在存在。如图2：</li>
-</ul>
-<p><img src="http://images.51cto.com/files/uploadimg/20100909/1528451.jpg" alt="absolute定位"></p>
-<ul>
-<li>可以看到，在将黄色背景层定位为absolute后，灰色背景层(下一个div)自动补上，<strong>脱离正常文本流</strong>。</li>
-</ul>
-<h2 id="相对于父元素"><a href="#相对于父元素" class="headerlink" title="相对于父元素"></a>相对于父元素</h2><h3 id="relative-1"><a href="#relative-1" class="headerlink" title="relative"></a>relative</h3><ul>
-<li>relative定位的层总是相对于其<strong>最近的父元素</strong>，无论其父元素是何种定位方式。如图3：</li>
-</ul>
-<p><img src="http://images.51cto.com/files/uploadimg/20100909/1528452.jpg" alt="relative父元素"></p>
-<ul>
-<li>红色背景层为relative定位，其直接父元素绿色背景层为默认的static定位。红色背景层的位置为相对绿色背景层top、left个20元素。</li>
-</ul>
-<h3 id="absolute-1"><a href="#absolute-1" class="headerlink" title="absolute"></a>absolute</h3><ul>
-<li>absolute定位的层总是相对于其<strong>最近的定义为absolute或relative的父层</strong>，而这个父层并<strong>不一定是其直接父层</strong>，如图4:</li>
-</ul>
-<p><img src="http://images.51cto.com/files/uploadimg/20100909/1528453.jpg" alt="absolute父元素"></p>
-<ul>
-<li>红色背景层相对的元素变为定位方式为absolute或relative的黄色背景层。如果其父层中都未定义absolute或relative，则其将相对body进行定位。</li>
-</ul>
-
+          
+      
       
       
     </div>
@@ -474,6 +419,14 @@
       
 
       
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a  href="/2019/11/16/absolute%20vs%20relative/#more">阅读全文>></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -517,23 +470,13 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="inline-block和float的区别"><a href="#inline-block和float的区别" class="headerlink" title="inline-block和float的区别"></a>inline-block和float的区别</h1><h2 id="文档流（Document-flow）"><a href="#文档流（Document-flow）" class="headerlink" title="文档流（Document flow）"></a>文档流（Document flow）</h2><ul>
+              <h1 id="inline-block和float的区别"><a href="#inline-block和float的区别" class="headerlink" title="inline-block和float的区别"></a>inline-block和float的区别</h1><h2 id="文档流（Document-flow）"><a href="#文档流（Document-flow）" class="headerlink" title="文档流（Document flow）"></a>文档流（Document flow）</h2><ul>
 <li>浮动元素会脱离文档流，并使得周围元素<strong>环绕这个元素</strong>。而inline-block元素仍在文档流内。因此设置inline-block不需要<strong>清除浮动</strong>。当然，周围元素不会环绕这个元素，你也不可能通过清除inline-block就让一个元素跑到下面去。</li>
 </ul>
 <h2 id="水平位置（Horizontal-position）"><a href="#水平位置（Horizontal-position）" class="headerlink" title="水平位置（Horizontal position）"></a>水平位置（Horizontal position）</h2><ul>
-<li>很明显你不能通过给父元素设置<code>text-align:center</code>让浮动元素居中。事实上定位类属性设置到父元素上，均不会影响父元素内浮动的元素。但是父元素内元素如果设置了<code>display：inline-block</code>，则对父元素设置一些定位属性会影响到子元素。（这还是因为浮动元素脱离文档流的关系）。</li>
-</ul>
-<h2 id="垂直对齐（Vertical-alignment）"><a href="#垂直对齐（Vertical-alignment）" class="headerlink" title="垂直对齐（Vertical alignment）"></a>垂直对齐（Vertical alignment）</h2><ul>
-<li>inline-block元素沿着默认的基线对齐。浮动元素紧贴顶部。你可以通过vertical属性设置这个默认基线，但对浮动元素这种方法就不行了。这也是我(原作者)倾向于inline-block的主要原因。</li>
-</ul>
-<h2 id="空白（Whitespace）"><a href="#空白（Whitespace）" class="headerlink" title="空白（Whitespace）"></a>空白（Whitespace）</h2><ul>
-<li>inline-block包含html<strong>空白节点</strong>。如果你的html中一系列元素每个元素之间都换行了，当你对这些元素设置inline-block时，这些元素之间就会出现空白。而浮动元素会忽略空白节点，互相紧贴。</li>
-</ul>
-<h2 id="IE6和IE7"><a href="#IE6和IE7" class="headerlink" title="IE6和IE7"></a>IE6和IE7</h2><ul>
-<li>Ie67对此属性部分支持。</li>
-</ul>
-<p>原文: <a href="https://www.w3cplus.com/css/inline-blocks.html" target="_blank" rel="noopener">https://www.w3cplus.com/css/inline-blocks.html</a> © w3cplus.com</p>
-
+<li>很明显你不能通过给父元素设置<code>text-align:center</code>让浮动元素居中。事实上定位类属性设置到父元素上，均不会影响父元素内浮动的元素。但是父元素内元素如果设置了<code>display：inline-block</code>，则对父元素设置一些定位属性会影响到子元素。（这还是因为浮动元素脱离文档流的关系）。</li></ul>
+          
+      
       
       
     </div>
@@ -543,6 +486,14 @@
       
 
       
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a  href="/2019/11/05/inline-block%20vs%20float/#more">阅读全文>></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -586,12 +537,9 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="Git中remove操作"><a href="#Git中remove操作" class="headerlink" title="Git中remove操作"></a>Git中remove操作</h1><h2 id="Push-an-existing-repository-from-the-command-line"><a href="#Push-an-existing-repository-from-the-command-line" class="headerlink" title="Push an existing repository from the command line"></a>Push an existing repository from the command line</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> &lt;file_name&gt;</span><br><span class="line">$ git init</span><br><span class="line">$ git remote add origin git@github.com:Wayne299/x.git</span><br><span class="line">$ git add &lt;file_name&gt;</span><br><span class="line">$ git push -u origin master</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="fatal-远程-origin-已经存在"><a href="#fatal-远程-origin-已经存在" class="headerlink" title="fatal: 远程 origin 已经存在"></a>fatal: 远程 origin 已经存在</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git remote rm origin</span><br><span class="line">$ git remote add origin &lt;SSH_Key&gt;</span><br></pre></td></tr></table></figure>
-
-
+              <h1 id="Git中remove操作"><a href="#Git中remove操作" class="headerlink" title="Git中remove操作"></a>Git中remove操作</h1><h2 id="Push-an-existing-repository-from-the-command-line"><a href="#Push-an-existing-repository-from-the-command-line" class="headerlink" title="Push an existing repository from the command line"></a>Push an existing repository from the command line</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> &lt;file_name&gt;</span><br><span class="line">$ git init</span><br><span class="line">$ git remote add origin git@github.com:Wayne299/x.git</span><br><span class="line">$ git add &lt;file_name&gt;</span><br><span class="line">$ git push -u origin master</span><br></pre></td></tr></table></figure>
+          
+      
       
       
     </div>
@@ -601,6 +549,10 @@
       
 
       
+      
+        <p class="article-more-link">
+          <a  href="/2019/08/29/remove/#more">阅读全文>></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -644,36 +596,13 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="Git-语法入门"><a href="#Git-语法入门" class="headerlink" title="Git 语法入门"></a>Git 语法入门</h1><h2 id="Terminal"><a href="#Terminal" class="headerlink" title="Terminal"></a>Terminal</h2><ul>
+              <h1 id="Git-语法入门"><a href="#Git-语法入门" class="headerlink" title="Git 语法入门"></a>Git 语法入门</h1><h2 id="Terminal"><a href="#Terminal" class="headerlink" title="Terminal"></a>Terminal</h2><ul>
 <li><kbd>command</kbd> + K ： clear</li>
 <li>mv ：改名 / 移动文件到文件夹</li>
 </ul>
 <h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><h3 id="Add-All"><a href="#Add-All" class="headerlink" title="Add All"></a>Add All</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git add A</span><br></pre></td></tr></table></figure>
-
-<h3 id="取消、修改、恢复"><a href="#取消、修改、恢复" class="headerlink" title="取消、修改、恢复"></a>取消、修改、恢复</h3><ul>
-<li><strong>取消已经暂存的文件</strong>。即，撤销先前”git add”的操作</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rm --cached &lt;file&gt;...</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>取消对文件的修改</strong>。还原到最近的版本，废弃本地做的修改。</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -- &lt;file&gt;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>修改最后一次提交</strong>。用于修改上一次的提交信息，或漏提交文件等情况。</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit --amend</span><br></pre></td></tr></table></figure>
-
-<h3 id="获取log"><a href="#获取log" class="headerlink" title="获取log"></a>获取log</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span> --oneline </span><br><span class="line">git <span class="built_in">log</span> --oneline --all --graph --decorate</span><br></pre></td></tr></table></figure>
-
-<h3 id="Branch"><a href="#Branch" class="headerlink" title="Branch"></a>Branch</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git branch				// 列出有的branch</span><br><span class="line">git branch -d &lt;branch_name&gt;		// 删除分支 (⚠️一般没必要)</span><br><span class="line">git checkout -b &lt;branch_name&gt;		// 新建分支 --&gt; 自动切换到新分支</span><br><span class="line">git checkout &lt;branch_name&gt;	  	// 切换branch</span><br><span class="line">(master) git merge &lt;branch_name&gt;          // 将分支merge进master中</span><br><span class="line">(master) git merge --squash &lt;branch_name&gt; // combine为新的分支</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>git log –&gt; <kbd>enter</kbd> –&gt;<kbd>Q</kbd> –&gt; git checkout <hashcode> –&gt;新建branch进行更新(update file)</hashcode></li>
-</ul>
-<h2 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add README.md</span><br><span class="line">git commit -m <span class="string">"add README.md"</span></span><br><span class="line">git remote add origin git@github.com:Wayne299/xxx.git</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
-
+          
+      
       
       
     </div>
@@ -683,6 +612,10 @@
       
 
       
+      
+        <p class="article-more-link">
+          <a  href="/2019/08/20/intro-to-git/#more">阅读全文>></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -726,132 +659,15 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="Markdown-语法入门"><a href="#Markdown-语法入门" class="headerlink" title="Markdown 语法入门"></a>Markdown 语法入门</h1><h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><ul>
+              <h1 id="Markdown-语法入门"><a href="#Markdown-语法入门" class="headerlink" title="Markdown 语法入门"></a>Markdown 语法入门</h1><h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><ul>
 <li>要加粗的文字左右分别用两个*号包起来  </li>
 <li>要倾斜的文字左右分别用一个*号包起来  </li>
 <li>要倾斜和加粗的文字左右分别用三个*号包起来  </li>
 <li>要加删除线的文字左右分别用两个~号包起来 </li>
 </ul>
 <p>显示结果如下: </p>
-<ul>
-<li><strong>加粗</strong>  </li>
-<li><em>斜体</em>  </li>
-<li><strong><em>斜体加粗</em></strong>  </li>
-<li><del>删除线</del>  </li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Option name</th>
-<th>Markup</th>
-<th align="center">Example</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Intra-word emphasis</td>
-<td>So A*maz*ing</td>
-<td align="center">So A<em>maz</em>ing</td>
-</tr>
-<tr>
-<td>Strikethrough</td>
-<td>~~Much wow~~</td>
-<td align="center"><del>Much wow</del></td>
-</tr>
-<tr>
-<td>Underline</td>
-<td>_So doge_</td>
-<td align="center"><em>So doge</em></td>
-</tr>
-<tr>
-<td>Quote</td>
-<td>&quot;Such editor&quot;</td>
-<td align="center">“Such editor”</td>
-</tr>
-<tr>
-<td>Highlight</td>
-<td>==So good==</td>
-<td align="center">==So good==</td>
-</tr>
-</tbody></table>
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><ul>
-<li>文字前加上 - + * 任何一种都可以变为无序列表，加上 1. 2. 3. 等编号则变为有序列表。</li>
-<li>列表嵌套，上一级和下一级之间敲两个空格即可。</li>
-</ul>
-<p>显示结果如下：  </p>
-<ul>
-<li>无序1<ol>
-<li>有序1</li>
-<li>有序2</li>
-<li>有序3</li>
-</ol>
-</li>
-<li>无序2<ol>
-<li>有序1</li>
-<li>有序2</li>
-<li>有序3</li>
-</ol>
-</li>
-</ul>
-<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><ul>
-<li>引用超链接，[链接文本](链接 URL 地址),如: [Google](<a href="https://www.google.com" target="_blank" rel="noopener">https://www.google.com</a>)</li>
-<li>或者 &lt;链接地址&gt;, 如: &lt;<a href="https://www.google.com&gt;" target="_blank" rel="noopener">https://www.google.com&gt;</a></li>
-<li>或者在文档的<strong>结尾</strong>为变量赋值（网址）</li>
-</ul>
-<p>显示结果如下：</p>
-<ul>
-<li><a href="https://www.google.com" target="_blank" rel="noopener">Google</a> </li>
-<li><a href="https://www.google.com" target="_blank" rel="noopener">https://www.google.com</a> </li>
-</ul>
-<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><ul>
-<li>添加图片语法：![alt 属性文本](图片地址)  ![alt 属性文本](图片地址 “title属性的标题”) </li>
-</ul>
-<p>显示结果如下：<br><img src="https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwif3Yy11NzjAhXaR30KHb4oCf4QjRx6BAgBEAU&url=https%3A%2F%2Fwww.blog.google%2F&psig=AOvVaw016ik8oz3SNvau2l54VeLe&ust=1564576665173064" alt="图标"></p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><ul>
-<li>用` `包裹行内内容</li>
-<li>用 ``` 包裹多行</li>
-</ul>
-<p>显示结果如下：</p>
-<p>这是一段<code>代码</code></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    alert(<span class="string">'Wayne'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><ul>
-<li>三个以上的星号(*)、减号(-)、底线(_)即，但可行内不能有其他东西</li>
-</ul>
-<p>显示结果如下：  </p>
-<hr>
-<hr>
-<hr>
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><ul>
-<li>“-” 有一个就行，为了美观对齐，多加了几个</li>
-<li>文字默认居左 ，“-”两边加：表示文字居中，“-”右边加：表示文字居右。</li>
-</ul>
-<p>显示结果如下：  </p>
-<table>
-<thead>
-<tr>
-<th>表头</th>
-<th align="center">表头</th>
-<th align="right">表头</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>内容</td>
-<td align="center">内容</td>
-<td align="right">内容</td>
-</tr>
-<tr>
-<td>内容</td>
-<td align="center">内容</td>
-<td align="right">内容</td>
-</tr>
-</tbody></table>
-<h2 id="html元素"><a href="#html元素" class="headerlink" title="html元素"></a>html元素</h2><ul>
-<li>包括&lt;kbd&gt; &lt;b&gt; &lt;i&gt; &lt;em&gt; &lt;sup&gt; &lt;sub&gt; &lt;br&gt;等 </li>
-</ul>
-<h2 id="剩余"><a href="#剩余" class="headerlink" title="剩余"></a>剩余</h2><ul>
-<li>流程图 / 数学公式 等</li>
-</ul>
-
+          
+      
       
       
     </div>
@@ -861,6 +677,10 @@
       
 
       
+      
+        <p class="article-more-link">
+          <a  href="/2019/07/30/markdown-intro/#more">阅读全文>></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -904,18 +724,10 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+              <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <h1 id="Hexo-语法入门"><a href="#Hexo-语法入门" class="headerlink" title="Hexo 语法入门"></a>Hexo 语法入门</h1><h2 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo s</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="Generate-a-static-file"><a href="#Generate-a-static-file" class="headerlink" title="Generate a static file"></a>Generate a static file</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="Run-on-server"><a href="#Run-on-server" class="headerlink" title="Run on server"></a>Run on server</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
+          
+      
       
       
     </div>
@@ -925,6 +737,10 @@
       
 
       
+      
+        <p class="article-more-link">
+          <a  href="/2019/07/28/hello-world/#more">阅读全文>></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
