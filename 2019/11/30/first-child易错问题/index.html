@@ -3,16 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Remove | Wayne</title>
+  <title>first-child易错问题 | Wayne</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Git中remove操作Push an existing repository from the command line12345$ cd &amp;lt;file_name&amp;gt;$ git init$ git remote add origin git@github.com:Wayne299&#x2F;x.git$ git add &amp;lt;file_name&amp;gt;$ git push -u origin m">
+  <meta name="description" content="first-child等伪类选择器易错问题E:first-child {} 匹配父元素的第一个子元素E。 要使该属性生效，E元素必须是某个元素的第一个子元素，且是E属性。  123456&amp;lt;div&amp;gt;    &amp;lt;h1&amp;gt;h1&amp;lt;&#x2F;h1&amp;gt;    &amp;lt;p&amp;gt;p1&amp;lt;&#x2F;p&amp;gt;    &amp;lt;p&amp;gt;p2&amp;lt;&#x2F;p&amp;gt;    &amp;lt;p&amp;gt;p3&amp;lt;">
+<meta name="keywords" content="前端">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Remove">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;08&#x2F;29&#x2F;remove&#x2F;index.html">
+<meta property="og:title" content="first-child易错问题">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;30&#x2F;first-child%E6%98%93%E9%94%99%E9%97%AE%E9%A2%98&#x2F;index.html">
 <meta property="og:site_name" content="Wayne">
-<meta property="og:description" content="Git中remove操作Push an existing repository from the command line12345$ cd &amp;lt;file_name&amp;gt;$ git init$ git remote add origin git@github.com:Wayne299&#x2F;x.git$ git add &amp;lt;file_name&amp;gt;$ git push -u origin m">
+<meta property="og:description" content="first-child等伪类选择器易错问题E:first-child {} 匹配父元素的第一个子元素E。 要使该属性生效，E元素必须是某个元素的第一个子元素，且是E属性。  123456&amp;lt;div&amp;gt;    &amp;lt;h1&amp;gt;h1&amp;lt;&#x2F;h1&amp;gt;    &amp;lt;p&amp;gt;p1&amp;lt;&#x2F;p&amp;gt;    &amp;lt;p&amp;gt;p2&amp;lt;&#x2F;p&amp;gt;    &amp;lt;p&amp;gt;p3&amp;lt;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-30T10:22:28.487Z">
+<meta property="og:updated_time" content="2019-11-30T12:41:31.797Z">
 <meta name="twitter:card" content="summary">
   
   
@@ -242,11 +243,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-remove" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-first-child易错问题" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/08/29/remove/" class="article-date">
-      <time datetime="2019-08-28T16:00:00.000Z" itemprop="datePublished">2019-08-29</time>
+      <a href="/2019/11/30/first-child%E6%98%93%E9%94%99%E9%97%AE%E9%A2%98/" class="article-date">
+      <time datetime="2019-11-30T10:42:19.000Z" itemprop="datePublished">2019-11-30</time>
 </a>
     </div>
   
@@ -259,7 +260,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Remove
+      first-child易错问题
     </h1>
   
 
@@ -269,6 +270,10 @@
         
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -276,12 +281,25 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="Git中remove操作"><a href="#Git中remove操作" class="headerlink" title="Git中remove操作"></a>Git中remove操作</h1><h2 id="Push-an-existing-repository-from-the-command-line"><a href="#Push-an-existing-repository-from-the-command-line" class="headerlink" title="Push an existing repository from the command line"></a>Push an existing repository from the command line</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> &lt;file_name&gt;</span><br><span class="line">$ git init</span><br><span class="line">$ git remote add origin git@github.com:Wayne299/x.git</span><br><span class="line">$ git add &lt;file_name&gt;</span><br><span class="line">$ git push -u origin master</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-
-
-<h2 id="fatal-远程-origin-已经存在"><a href="#fatal-远程-origin-已经存在" class="headerlink" title="fatal: 远程 origin 已经存在"></a>fatal: 远程 origin 已经存在</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git remote rm origin</span><br><span class="line">$ git remote add origin &lt;SSH_Key&gt;</span><br></pre></td></tr></table></figure>
-
+        <h1 id="first-child等伪类选择器易错问题"><a href="#first-child等伪类选择器易错问题" class="headerlink" title="first-child等伪类选择器易错问题"></a>first-child等伪类选择器易错问题</h1><h2 id="E-first-child"><a href="#E-first-child" class="headerlink" title="E:first-child {}"></a>E:first-child {}</h2><ul>
+<li>匹配父元素的第一个子元素E。</li>
+<li>要使该属性生效，E元素必须是某个元素的第一个<strong>子元素</strong>，且是<strong>E属性</strong>。</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>h1<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>p1<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>p2<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>p3<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>若在这时选择第一个p元素，使用<code>p:first-child</code>则会出现错误，因为p的父元素是<strong>div</strong>，而对于div来说，它的<strong>第一个子元素是h1</strong>，不是p，所以会出错。</li>
+<li>同理，<code>E:last-child {}</code> <code>E:only-child {}</code> 与上面的一样，E元素必须是其父元素的最后一个子元素或唯一一个子元素才可以。</li>
+</ul>
+<h2 id="E-nth-child-1"><a href="#E-nth-child-1" class="headerlink" title="E:nth-child(1) {}"></a>E:nth-child(1) {}</h2><ul>
+<li>与<code>E:first-child {}</code>等效，E需要是父元素的第一个子元素。</li>
+<li>比如： <code>p:nth-child(2)</code> 才可以选中p1</li>
+</ul>
+<h2 id="nth-child-odd-even"><a href="#nth-child-odd-even" class="headerlink" title=":nth-child(odd/even) {}"></a>:nth-child(odd/even) {}</h2><ul>
+<li>匹配属于其父元素的第N个子元素，不论元素的类型。</li>
+</ul>
+<h2 id="规范"><a href="#规范" class="headerlink" title="规范"></a>规范</h2><ul>
+<li>可写成 <code>div h1:first-child{}</code> 明确父元素，自然能看到是不是第一个E属性子元素，就不容易犯错。</li>
+</ul>
 
       
       
@@ -292,13 +310,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2019/08/29/remove/">Remove</a></p>
+        <p><span>本文标题:</span><a href="/2019/11/30/first-child%E6%98%93%E9%94%99%E9%97%AE%E9%A2%98/">first-child易错问题</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Wayne 的个人博客">Wayne</a></p>
-        <p><span>发布时间:</span>2019年08月29日 - 00时00分</p>
-        <p><span>最后更新:</span>2019年11月30日 - 18时22分</p>
+        <p><span>发布时间:</span>2019年11月30日 - 18时42分</p>
+        <p><span>最后更新:</span>2019年11月30日 - 20时41分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/08/29/remove/" title="Remove">http://yoursite.com/2019/08/29/remove/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/08/29/remove/　　作者: Wayne" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2019/11/30/first-child%E6%98%93%E9%94%99%E9%97%AE%E9%A2%98/" title="first-child易错问题">http://yoursite.com/2019/11/30/first-child%E6%98%93%E9%94%99%E9%97%AE%E9%A2%98/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/11/30/first-child%E6%98%93%E9%94%99%E9%97%AE%E9%A2%98/　　作者: Wayne" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -311,18 +329,18 @@
 
 <nav id="article-nav">
   
-    <a href="/2019/11/05/inline-block%20vs%20float/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/11/30/border%E5%81%9A%E5%80%92%E4%B8%89%E8%A7%92%E5%BD%A2%E5%9B%BE%E6%A0%87/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          Inline-block vs Float
+          border的部分应用
         
       </div>
     </a>
   
   
-    <a href="/2019/08/20/intro-to-git/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Intro to Git</div>
+    <a href="/2019/11/21/overflow-hidden/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">overflow:hidden</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -333,7 +351,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Git中remove操作"><span class="toc-number">1.</span> <span class="toc-text">Git中remove操作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Push-an-existing-repository-from-the-command-line"><span class="toc-number">1.1.</span> <span class="toc-text">Push an existing repository from the command line</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fatal-远程-origin-已经存在"><span class="toc-number">1.2.</span> <span class="toc-text">fatal: 远程 origin 已经存在</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#first-child等伪类选择器易错问题"><span class="toc-number">1.</span> <span class="toc-text">first-child等伪类选择器易错问题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#E-first-child"><span class="toc-number">1.1.</span> <span class="toc-text">E:first-child {}</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#E-nth-child-1"><span class="toc-number">1.2.</span> <span class="toc-text">E:nth-child(1) {}</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#nth-child-odd-even"><span class="toc-number">1.3.</span> <span class="toc-text">:nth-child(odd/even) {}</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#规范"><span class="toc-number">1.4.</span> <span class="toc-text">规范</span></a></li></ol></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -381,13 +399,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/11/05/inline-block%20vs%20float/" title="上一篇: Inline-block vs Float">
+            <a href="/2019/11/30/border%E5%81%9A%E5%80%92%E4%B8%89%E8%A7%92%E5%BD%A2%E5%9B%BE%E6%A0%87/" title="上一篇: border的部分应用">
                 <i class="fa fa-angle-left"></i>
             </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2019/08/20/intro-to-git/" title="下一篇: Intro to Git">
+            <a href="/2019/11/21/overflow-hidden/" title="下一篇: overflow:hidden">
                 <i class="fa fa-angle-right"></i>
             </a>
         
