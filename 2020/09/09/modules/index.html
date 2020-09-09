@@ -3,16 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Remove | Wayne</title>
+  <title>Modules | Wayne</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Git中remove操作Push an existing repository from the command line12345$ cd &amp;lt;file_name&amp;gt;$ git init$ git remote add origin git@github.com:Wayne299&#x2F;x.git$ git add &amp;lt;file_name&amp;gt;$ git push -u origin m">
+  <meta name="description" content="Basicsyntax In index.html, we must tell the browser that a script should be treated as a module, by using the attribute &amp;lt;script type=&amp;quot;module&amp;quot;&amp;gt; Always use strict and Each module has its">
+<meta name="keywords" content="The-modern-javascript-tutorial,js-language">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Remove">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;08&#x2F;29&#x2F;remove&#x2F;index.html">
+<meta property="og:title" content="Modules">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;09&#x2F;09&#x2F;modules&#x2F;index.html">
 <meta property="og:site_name" content="Wayne">
-<meta property="og:description" content="Git中remove操作Push an existing repository from the command line12345$ cd &amp;lt;file_name&amp;gt;$ git init$ git remote add origin git@github.com:Wayne299&#x2F;x.git$ git add &amp;lt;file_name&amp;gt;$ git push -u origin m">
+<meta property="og:description" content="Basicsyntax In index.html, we must tell the browser that a script should be treated as a module, by using the attribute &amp;lt;script type=&amp;quot;module&amp;quot;&amp;gt; Always use strict and Each module has its">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-30T10:22:28.487Z">
+<meta property="og:updated_time" content="2020-09-09T02:18:47.798Z">
 <meta name="twitter:card" content="summary">
   
   
@@ -242,11 +243,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-remove" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-modules" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/08/29/remove/" class="article-date">
-      <time datetime="2019-08-28T16:00:00.000Z" itemprop="datePublished">2019-08-29</time>
+      <a href="/2020/09/09/modules/" class="article-date">
+      <time datetime="2020-09-08T16:20:10.000Z" itemprop="datePublished">2020-09-09</time>
 </a>
     </div>
   
@@ -259,7 +260,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Remove
+      Modules
     </h1>
   
 
@@ -267,8 +268,16 @@
       
       <div class="article-info article-info-post">
         
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+    </div>
+
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/The-modern-javascript-tutorial/" rel="tag">The-modern-javascript-tutorial</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js-language/" rel="tag">js-language</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -276,12 +285,69 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="Git中remove操作"><a href="#Git中remove操作" class="headerlink" title="Git中remove操作"></a>Git中remove操作</h1><h2 id="Push-an-existing-repository-from-the-command-line"><a href="#Push-an-existing-repository-from-the-command-line" class="headerlink" title="Push an existing repository from the command line"></a>Push an existing repository from the command line</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> &lt;file_name&gt;</span><br><span class="line">$ git init</span><br><span class="line">$ git remote add origin git@github.com:Wayne299/x.git</span><br><span class="line">$ git add &lt;file_name&gt;</span><br><span class="line">$ git push -u origin master</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
+        <h1 id="Basic"><a href="#Basic" class="headerlink" title="Basic"></a>Basic</h1><h2 id="syntax"><a href="#syntax" class="headerlink" title="syntax"></a>syntax</h2><ul>
+<li>In index.html, we must tell the browser that a script should be treated as a module, by using the attribute <code>&lt;script type=&quot;module&quot;&gt;</code></li>
+<li>Always <code>use strict</code> and Each module has its own module-level scope. Only <code>export</code> what they want to be accessible from outside and <code>import</code> what they need.</li>
+<li>Modules work only via HTTP(s), not in local files.</li>
+</ul>
+<h2 id="A-module-code-is-evaluated-only-the-first-time-when-imported"><a href="#A-module-code-is-evaluated-only-the-first-time-when-imported" class="headerlink" title="A module code is evaluated only the first time when imported"></a>A module code is evaluated only the first time when imported</h2><ul>
+<li>All importers get exactly the one and only that export, so it’s shared between importers</li>
+</ul>
+<h2 id="import-meta"><a href="#import-meta" class="headerlink" title="import.meta"></a>import.meta</h2><ul>
+<li><code>import.meta</code>: contains the information about the current module.<a id="more"></a>
 
+</li>
+</ul>
+<h2 id="this-is-undefined"><a href="#this-is-undefined" class="headerlink" title="this is undefined"></a><code>this</code> is undefined</h2><h2 id="Module-lt-script-gt-s-are-deferred"><a href="#Module-lt-script-gt-s-are-deferred" class="headerlink" title="Module &lt;script&gt;s are deferred"></a>Module <code>&lt;script&gt;</code>s are deferred</h2><ul>
+<li>Wait until the HTML document is fully ready.</li>
+</ul>
+<h2 id="async-works-on-inline-scripts"><a href="#async-works-on-inline-scripts" class="headerlink" title="async works on inline scripts"></a><code>async</code> works on inline scripts</h2><p><code>&lt;script async type=&quot;module&quot;&gt;</code>: inline script has <code>async</code> doesn’t wait for anything.</p>
+<ul>
+<li>used for counters, ads, document-level event listeners…</li>
+</ul>
+<h1 id="Export-and-Import"><a href="#Export-and-Import" class="headerlink" title="Export and Import"></a>Export and Import</h1><ul>
+<li><code>import/export</code> statements don’t work if inside <code>{...}</code>. As for importing conditionally, look at the <strong>Dynamic Imports</strong> part.</li>
+</ul>
+<h2 id="import"><a href="#import" class="headerlink" title="import"></a>import</h2><h3 id="import-1"><a href="#import-1" class="headerlink" title="import *"></a>import *</h3><ul>
+<li>We can import everything as an object using <code>import * as &lt;obj&gt; from src</code>.</li>
+</ul>
+<h3 id="import-“as”"><a href="#import-“as”" class="headerlink" title="import “as”"></a>import “as”</h3><p><code>import {sayHi as hi, sayBye as bye} from &#39;./say.js&#39;</code> for brevity.</p>
+<h2 id="Export"><a href="#Export" class="headerlink" title="Export"></a>Export</h2><ul>
+<li>No semicolons after <code>export class/function</code> </li>
+<li>Technically we could put <code>export</code> above functions declarations as well. <code>export {sayHi, sayBye}; // a list of exported variables</code></li>
+</ul>
+<h3 id="export-“as”"><a href="#export-“as”" class="headerlink" title="export “as”"></a>export “as”</h3><p><code>export {sayHi as hi, sayBye as bye}</code></p>
+<h3 id="export-default"><a href="#export-default" class="headerlink" title="export default"></a>export default</h3><p><code>export default class User {}</code> then we can import without curly braces, <code>import User form &#39;./user.js&#39;</code></p>
+<ul>
+<li>We can choose the name <code>User</code> or <code>myUser</code> when importing. But there is the convention that imported variables should correspond to file names.</li>
+<li>At most one <code>default export</code> per file, so no name is fine because we don’t need to <code>{name}</code>. Import without curly braces knows what to import.</li>
+</ul>
+<h2 id="The-“default”-name"><a href="#The-“default”-name" class="headerlink" title="The “default” name"></a>The “default” name</h2><ul>
+<li><code>export {sayHi as default}</code> is the same as <code>export default sayHi</code></li>
+<li><code>import {default as User, sayHi} from &#39;./user.js&#39;</code>: import the default export along with a named one</li>
+<li><code>import * as user from &#39;./user.js&#39;</code>: if import everthing <code>*</code>, then the <code>default</code> property is exactly the default export <code>let User = user.default</code></li>
+</ul>
+<h2 id="Re-export"><a href="#Re-export" class="headerlink" title="Re-export"></a>Re-export</h2><p><code>export...from...</code>: allows to import things and immediately export them (possibly under another name)</p>
+<ul>
+<li>only named exports (not )</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// import login/logout and immediately export them</span></span><br><span class="line"><span class="keyword">import</span> &#123;login, logout&#125; <span class="keyword">from</span> <span class="string">'./helpers.js'</span>;</span><br><span class="line"><span class="keyword">export</span> &#123;login, logout&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// shorter notation for such import-export</span></span><br><span class="line"><span class="keyword">export</span> &#123;login, logout&#125; <span class="keyword">from</span> <span class="string">'./helpers.js'</span>;</span><br></pre></td></tr></table></figure>
 
-<h2 id="fatal-远程-origin-已经存在"><a href="#fatal-远程-origin-已经存在" class="headerlink" title="fatal: 远程 origin 已经存在"></a>fatal: 远程 origin 已经存在</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git remote rm origin</span><br><span class="line">$ git remote add origin &lt;SSH_Key&gt;</span><br></pre></td></tr></table></figure>
-
+<h3 id="Re-exporting-the-default-export"><a href="#Re-exporting-the-default-export" class="headerlink" title="Re-exporting the default export"></a>Re-exporting the default export</h3><p>We have to write <code>export {default} from ...</code>, for no named default.</p>
+<ul>
+<li>If we’d like to re-export both named and the default export, then two statements are needed:<ol>
+<li><code>export * from ...</code></li>
+<li><code>export {default} from ...</code></li>
+</ol>
+</li>
+</ul>
+<h1 id="Dynamic-Imports"><a href="#Dynamic-Imports" class="headerlink" title="Dynamic Imports"></a>Dynamic Imports</h1><ul>
+<li>Dynamic imports work in regular scripts.</li>
+</ul>
+<h2 id="The-import-module-expression"><a href="#The-import-module-expression" class="headerlink" title="The import(module) expression"></a>The <code>import(module)</code> expression</h2><p>It can be like <code>let {hi, bye} = await import(&#39;./say.js&#39;)</code> or <code>let {default: say} = await import(&#39;./say.js&#39;)</code> if inside a async function.</p>
+<ul>
+<li>It’s not a function call, it’s a special syntax that just happens to use parentheses.</li>
+</ul>
 
       
       
@@ -292,13 +358,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2019/08/29/remove/">Remove</a></p>
+        <p><span>本文标题:</span><a href="/2020/09/09/modules/">Modules</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Wayne 的个人博客">Wayne</a></p>
-        <p><span>发布时间:</span>2019年08月29日 - 00时00分</p>
-        <p><span>最后更新:</span>2019年11月30日 - 18时22分</p>
+        <p><span>发布时间:</span>2020年09月09日 - 00时20分</p>
+        <p><span>最后更新:</span>2020年09月09日 - 10时18分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/08/29/remove/" title="Remove">http://yoursite.com/2019/08/29/remove/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/08/29/remove/　　作者: Wayne" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2020/09/09/modules/" title="Modules">http://yoursite.com/2020/09/09/modules/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2020/09/09/modules/　　作者: Wayne" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -311,18 +377,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2019/11/05/inline-block%20vs%20float/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Inline-block vs Float
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/08/20/intro-to-git/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Intro to Git</div>
+    <a href="/2020/09/08/generators-advanced-iteration/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Generators &amp; Advanced iteration</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -333,7 +390,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Git中remove操作"><span class="toc-number">1.</span> <span class="toc-text">Git中remove操作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Push-an-existing-repository-from-the-command-line"><span class="toc-number">1.1.</span> <span class="toc-text">Push an existing repository from the command line</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fatal-远程-origin-已经存在"><span class="toc-number">1.2.</span> <span class="toc-text">fatal: 远程 origin 已经存在</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Basic"><span class="toc-number">1.</span> <span class="toc-text">Basic</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#syntax"><span class="toc-number">1.1.</span> <span class="toc-text">syntax</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#A-module-code-is-evaluated-only-the-first-time-when-imported"><span class="toc-number">1.2.</span> <span class="toc-text">A module code is evaluated only the first time when imported</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#import-meta"><span class="toc-number">1.3.</span> <span class="toc-text">import.meta</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#this-is-undefined"><span class="toc-number">1.4.</span> <span class="toc-text">this is undefined</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Module-lt-script-gt-s-are-deferred"><span class="toc-number">1.5.</span> <span class="toc-text">Module &lt;script&gt;s are deferred</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#async-works-on-inline-scripts"><span class="toc-number">1.6.</span> <span class="toc-text">async works on inline scripts</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Export-and-Import"><span class="toc-number">2.</span> <span class="toc-text">Export and Import</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#import"><span class="toc-number">2.1.</span> <span class="toc-text">import</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#import-1"><span class="toc-number">2.1.1.</span> <span class="toc-text">import *</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#import-“as”"><span class="toc-number">2.1.2.</span> <span class="toc-text">import “as”</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Export"><span class="toc-number">2.2.</span> <span class="toc-text">Export</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#export-“as”"><span class="toc-number">2.2.1.</span> <span class="toc-text">export “as”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#export-default"><span class="toc-number">2.2.2.</span> <span class="toc-text">export default</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-“default”-name"><span class="toc-number">2.3.</span> <span class="toc-text">The “default” name</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Re-export"><span class="toc-number">2.4.</span> <span class="toc-text">Re-export</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Re-exporting-the-default-export"><span class="toc-number">2.4.1.</span> <span class="toc-text">Re-exporting the default export</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Dynamic-Imports"><span class="toc-number">3.</span> <span class="toc-text">Dynamic Imports</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#The-import-module-expression"><span class="toc-number">3.1.</span> <span class="toc-text">The import(module) expression</span></a></li></ol></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -381,18 +438,16 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/11/05/inline-block%20vs%20float/" title="上一篇: Inline-block vs Float">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2019/08/20/intro-to-git/" title="下一篇: Intro to Git">
+            <a href="/2020/09/08/generators-advanced-iteration/" title="下一篇: Generators &amp; Advanced iteration">
                 <i class="fa fa-angle-right"></i>
             </a>
         
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/09/08/generators-advanced-iteration/">Generators, advanced iteration</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/09/07/promises-async-await/">Promises and async/await</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/09/js-jquery-uci/">UCI js-jquery 学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/30/border%E5%81%9A%E5%80%92%E4%B8%89%E8%A7%92%E5%BD%A2%E5%9B%BE%E6%A0%87/">border的部分应用</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/30/first-child%E6%98%93%E9%94%99%E9%97%AE%E9%A2%98/">first-child易错问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/21/overflow-hidden/">overflow:hidden</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/18/tmall-website/">tmall website</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/16/absolute%20vs%20relative/">absolute vs relative</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/05/inline-block%20vs%20float/">Inline-block vs Float</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/29/remove/">Remove</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/20/intro-to-git/">Intro to Git</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/30/markdown-intro/">MarkDown Syntax Intro</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/28/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/09/09/modules/">Modules</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/09/08/generators-advanced-iteration/">Generators & Advanced iteration</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/09/07/promises-async-await/">Promises & async/await</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/09/js-jquery-uci/">UCI js-jquery 学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/30/border%E5%81%9A%E5%80%92%E4%B8%89%E8%A7%92%E5%BD%A2%E5%9B%BE%E6%A0%87/">border的部分应用</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/30/first-child/">first-child易错问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/21/overflow-hidden/">overflow:hidden</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/18/tmall-website/">tmall website</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/16/absolute-vs-relative/">absolute vs relative</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/05/inline-block-vs-float/">Inline-block vs Float</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/29/git-remove/">Remove</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/20/intro-to-git/">Intro to Git</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/30/markdown-intro/">MarkDown Syntax Intro</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/28/hello-world/">Hello World</a></li></ul>
     <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
     <script>
         $(".post-list").addClass("toc-article");

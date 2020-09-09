@@ -246,6 +246,82 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-modules" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2020/09/09/modules/" class="article-date">
+      <time datetime="2020-09-08T16:20:10.000Z" itemprop="datePublished">2020-09-09</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name" class="article-title">
+      <a href="/2020/09/09/modules/">Modules</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h1 id="Basic"><a href="#Basic" class="headerlink" title="Basic"></a>Basic</h1><h2 id="syntax"><a href="#syntax" class="headerlink" title="syntax"></a>syntax</h2><ul>
+<li>In index.html, we must tell the browser that a script should be treated as a module, by using the attribute <code>&lt;script type=&quot;module&quot;&gt;</code></li>
+<li>Always <code>use strict</code> and Each module has its own module-level scope. Only <code>export</code> what they want to be accessible from outside and <code>import</code> what they need.</li>
+<li>Modules work only via HTTP(s), not in local files.</li>
+</ul>
+<h2 id="A-module-code-is-evaluated-only-the-first-time-when-imported"><a href="#A-module-code-is-evaluated-only-the-first-time-when-imported" class="headerlink" title="A module code is evaluated only the first time when imported"></a>A module code is evaluated only the first time when imported</h2><ul>
+<li>All importers get exactly the one and only that export, so it’s shared between importers</li>
+</ul>
+<h2 id="import-meta"><a href="#import-meta" class="headerlink" title="import.meta"></a>import.meta</h2><ul>
+<li><code>import.meta</code>: contains the information about the current module.</li></ul>
+          
+      
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/The-modern-javascript-tutorial/" rel="tag">The-modern-javascript-tutorial</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js-language/" rel="tag">js-language</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a  href="/2020/09/09/modules/#more">阅读全文>></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-generators-advanced-iteration" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -262,8 +338,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/08/generators-advanced-iteration/">Generators, advanced iteration</a>
+    <h1 itemprop="name" class="article-title">
+      <a href="/2020/09/08/generators-advanced-iteration/">Generators &amp; Advanced iteration</a>
     </h1>
   
 
@@ -273,11 +349,11 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <h1 id="Generators-amp-Advanced-iteration"><a href="#Generators-amp-Advanced-iteration" class="headerlink" title="Generators &amp; Advanced iteration"></a>Generators &amp; Advanced iteration</h1><h2 id="Generators"><a href="#Generators" class="headerlink" title="Generators"></a>Generators</h2><ul>
+              <h1 id="Generators"><a href="#Generators" class="headerlink" title="Generators"></a>Generators</h1><ul>
 <li>Can return (“yield”) multiple values, one after another, on-demand. </li>
 <li>They work great with <code>iterables</code>, allowing to create data streams with ease.</li>
 </ul>
-<h3 id="generator-functions-function"><a href="#generator-functions-function" class="headerlink" title="generator functions, function*"></a>generator functions, <code>function*</code></h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span>* <span class="title">generateSequence</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">yield</span> <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">yield</span> <span class="number">2</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">3</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="generator-functions-function"><a href="#generator-functions-function" class="headerlink" title="generator functions, function*"></a>generator functions, <code>function*</code></h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span>* <span class="title">generateSequence</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">yield</span> <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">yield</span> <span class="number">2</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">3</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>When it (<code>generateSequence()</code>) is called, it doesn’t run its code. Instead it returns a “generator object” (<code>[object Generator]</code>), to manage the execution.</li></ul>
@@ -336,8 +412,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/07/promises-async-await/">Promises and async/await</a>
+    <h1 itemprop="name" class="article-title">
+      <a href="/2020/09/07/promises-async-await/">Promises &amp; async/await</a>
     </h1>
   
 
@@ -347,7 +423,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <h1 id="Promises-and-async-await"><a href="#Promises-and-async-await" class="headerlink" title="Promises and async/await"></a>Promises and async/await</h1><h2 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h2><h3 id="Syntax"><a href="#Syntax" class="headerlink" title="Syntax"></a>Syntax</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> promise = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve, reject</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// executor (the producing code, `resolve()` / `reject()`)</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+              <h1 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h1><h2 id="Syntax"><a href="#Syntax" class="headerlink" title="Syntax"></a>Syntax</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> promise = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve, reject</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// executor (the producing code, `resolve()` / `reject()`)</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li><p>callbacks: There can be only one result or one error</p>
@@ -409,8 +485,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/09/js-jquery-uci/">UCI js-jquery 学习笔记</a>
+    <h1 itemprop="name" class="article-title">
+      <a href="/2020/07/09/js-jquery-uci/">UCI js-jquery 学习笔记</a>
     </h1>
   
 
@@ -420,7 +496,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <h1 id="UCI-js-jquery-学习笔记"><a href="#UCI-js-jquery-学习笔记" class="headerlink" title="UCI js-jquery 学习笔记"></a>UCI js-jquery 学习笔记</h1><h2 id="Functions-Methods-amp-Objects"><a href="#Functions-Methods-amp-Objects" class="headerlink" title="Functions, Methods &amp; Objects"></a>Functions, Methods &amp; Objects</h2><h3 id="Function-Expressions"><a href="#Function-Expressions" class="headerlink" title="Function Expressions"></a>Function Expressions</h3><ul>
+              <h1 id="Javascript-amp-jQuery-学习笔记"><a href="#Javascript-amp-jQuery-学习笔记" class="headerlink" title="Javascript &amp; jQuery 学习笔记"></a>Javascript &amp; jQuery 学习笔记</h1><p>Book: <em>Interactive Front-End Web Development</em> Jon Duckett 1st edition</p>
+<h2 id="Functions-Methods-amp-Objects"><a href="#Functions-Methods-amp-Objects" class="headerlink" title="Functions, Methods &amp; Objects"></a>Functions, Methods &amp; Objects</h2><h3 id="Function-Expressions"><a href="#Function-Expressions" class="headerlink" title="Function Expressions"></a>Function Expressions</h3><ul>
 <li><p>Function Declaration</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">area</span>(<span class="params">width, height</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> width*height;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ul>
           
@@ -478,8 +555,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/30/border%E5%81%9A%E5%80%92%E4%B8%89%E8%A7%92%E5%BD%A2%E5%9B%BE%E6%A0%87/">border的部分应用</a>
+    <h1 itemprop="name" class="article-title">
+      <a href="/2019/11/30/border%E5%81%9A%E5%80%92%E4%B8%89%E8%A7%92%E5%BD%A2%E5%9B%BE%E6%A0%87/">border的部分应用</a>
     </h1>
   
 
@@ -529,10 +606,10 @@
 
 
   
-    <article id="post-first-child易错问题" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-first-child" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/11/30/first-child%E6%98%93%E9%94%99%E9%97%AE%E9%A2%98/" class="article-date">
+      <a href="/2019/11/30/first-child/" class="article-date">
       <time datetime="2019-11-30T10:42:19.000Z" itemprop="datePublished">2019-11-30</time>
 </a>
     </div>
@@ -545,8 +622,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/30/first-child%E6%98%93%E9%94%99%E9%97%AE%E9%A2%98/">first-child易错问题</a>
+    <h1 itemprop="name" class="article-title">
+      <a href="/2019/11/30/first-child/">first-child易错问题</a>
     </h1>
   
 
@@ -626,8 +703,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/21/overflow-hidden/">overflow:hidden</a>
+    <h1 itemprop="name" class="article-title">
+      <a href="/2019/11/21/overflow-hidden/">overflow:hidden</a>
     </h1>
   
 
@@ -637,7 +714,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <h1 id="overflow-hidden-的作用总结"><a href="#overflow-hidden-的作用总结" class="headerlink" title="overflow:hidden 的作用总结"></a>overflow:hidden 的作用总结</h1><h2 id="一-溢出隐藏"><a href="#一-溢出隐藏" class="headerlink" title="一. 溢出隐藏"></a>一. 溢出隐藏</h2><ul>
+              <h1 id="overflow-hidden-的作用总结"><a href="#overflow-hidden-的作用总结" class="headerlink" title="overflow:hidden 的作用总结"></a><code>overflow:hidden</code> 的作用总结</h1><h2 id="一-溢出隐藏"><a href="#一-溢出隐藏" class="headerlink" title="一. 溢出隐藏"></a>一. 溢出隐藏</h2><ul>
 <li>一般在div中设置后，该元素的内容若超出了给定的宽度和高度属性，那么超出的部分将会被隐藏，不占位。</li>
 </ul>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">text-overflow</span>: <span class="selector-tag">ellipsis</span>;	<span class="comment">/* 当对象内文本溢出时可显示省略标记（...）*/</span></span><br></pre></td></tr></table></figure>
@@ -701,8 +778,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/18/tmall-website/">tmall website</a>
+    <h1 itemprop="name" class="article-title">
+      <a href="/2019/11/18/tmall-website/">tmall website</a>
     </h1>
   
 
@@ -754,10 +831,10 @@
 
 
   
-    <article id="post-absolute vs relative" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-absolute-vs-relative" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/11/16/absolute%20vs%20relative/" class="article-date">
+      <a href="/2019/11/16/absolute-vs-relative/" class="article-date">
       <time datetime="2019-11-15T16:00:00.000Z" itemprop="datePublished">2019-11-16</time>
 </a>
     </div>
@@ -770,8 +847,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/16/absolute%20vs%20relative/">absolute vs relative</a>
+    <h1 itemprop="name" class="article-title">
+      <a href="/2019/11/16/absolute-vs-relative/">absolute vs relative</a>
     </h1>
   
 
@@ -806,7 +883,7 @@
 
       
         <p class="article-more-link">
-          <a  href="/2019/11/16/absolute%20vs%20relative/#more">阅读全文>></a>
+          <a  href="/2019/11/16/absolute-vs-relative/#more">阅读全文>></a>
         </p>
       
       <div class="clearfix"></div>
@@ -824,10 +901,10 @@
 
 
   
-    <article id="post-inline-block vs float" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-inline-block-vs-float" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/11/05/inline-block%20vs%20float/" class="article-date">
+      <a href="/2019/11/05/inline-block-vs-float/" class="article-date">
       <time datetime="2019-11-04T16:00:00.000Z" itemprop="datePublished">2019-11-05</time>
 </a>
     </div>
@@ -840,8 +917,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/05/inline-block%20vs%20float/">Inline-block vs Float</a>
+    <h1 itemprop="name" class="article-title">
+      <a href="/2019/11/05/inline-block-vs-float/">Inline-block vs Float</a>
     </h1>
   
 
@@ -877,66 +954,7 @@
 
       
         <p class="article-more-link">
-          <a  href="/2019/11/05/inline-block%20vs%20float/#more">阅读全文>></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-remove" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/08/29/remove/" class="article-date">
-      <time datetime="2019-08-28T16:00:00.000Z" itemprop="datePublished">2019-08-29</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/29/remove/">Remove</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="Git中remove操作"><a href="#Git中remove操作" class="headerlink" title="Git中remove操作"></a>Git中remove操作</h1><h2 id="Push-an-existing-repository-from-the-command-line"><a href="#Push-an-existing-repository-from-the-command-line" class="headerlink" title="Push an existing repository from the command line"></a>Push an existing repository from the command line</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> &lt;file_name&gt;</span><br><span class="line">$ git init</span><br><span class="line">$ git remote add origin git@github.com:Wayne299/x.git</span><br><span class="line">$ git add &lt;file_name&gt;</span><br><span class="line">$ git push -u origin master</span><br></pre></td></tr></table></figure>
-          
-      
-      
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-        <p class="article-more-link">
-          <a  href="/2019/08/29/remove/#more">阅读全文>></a>
+          <a  href="/2019/11/05/inline-block-vs-float/#more">阅读全文>></a>
         </p>
       
       <div class="clearfix"></div>
@@ -956,7 +974,7 @@
   
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &gt;</a>
     </nav>
   
 </div>

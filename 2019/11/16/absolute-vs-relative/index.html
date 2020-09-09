@@ -3,18 +3,23 @@
 <head>
   <meta charset="utf-8">
   
-  <title>first-child易错问题 | Wayne</title>
+  <title>absolute vs relative | Wayne</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="first-child等伪类选择器易错问题E:first-child {} 匹配父元素的第一个子元素E。 要使该属性生效，E元素必须是某个元素的第一个子元素，且是E属性。  123456&amp;lt;div&amp;gt;    &amp;lt;h1&amp;gt;h1&amp;lt;&#x2F;h1&amp;gt;    &amp;lt;p&amp;gt;p1&amp;lt;&#x2F;p&amp;gt;    &amp;lt;p&amp;gt;p2&amp;lt;&#x2F;p&amp;gt;    &amp;lt;p&amp;gt;p3&amp;lt;">
+  <meta name="description" content="div布局中absolute和relative的区别在正常流中的位置relative 定位为relative的元素脱离正常的文本流中，但其在文本流中的位置依然存在。如图1：">
 <meta name="keywords" content="css">
 <meta property="og:type" content="article">
-<meta property="og:title" content="first-child易错问题">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;30&#x2F;first-child%E6%98%93%E9%94%99%E9%97%AE%E9%A2%98&#x2F;index.html">
+<meta property="og:title" content="absolute vs relative">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;16&#x2F;absolute-vs-relative&#x2F;index.html">
 <meta property="og:site_name" content="Wayne">
-<meta property="og:description" content="first-child等伪类选择器易错问题E:first-child {} 匹配父元素的第一个子元素E。 要使该属性生效，E元素必须是某个元素的第一个子元素，且是E属性。  123456&amp;lt;div&amp;gt;    &amp;lt;h1&amp;gt;h1&amp;lt;&#x2F;h1&amp;gt;    &amp;lt;p&amp;gt;p1&amp;lt;&#x2F;p&amp;gt;    &amp;lt;p&amp;gt;p2&amp;lt;&#x2F;p&amp;gt;    &amp;lt;p&amp;gt;p3&amp;lt;">
+<meta property="og:description" content="div布局中absolute和relative的区别在正常流中的位置relative 定位为relative的元素脱离正常的文本流中，但其在文本流中的位置依然存在。如图1：">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-09-07T16:35:25.373Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;images.51cto.com&#x2F;files&#x2F;uploadimg&#x2F;20100909&#x2F;1528450.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;images.51cto.com&#x2F;files&#x2F;uploadimg&#x2F;20100909&#x2F;1528451.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;images.51cto.com&#x2F;files&#x2F;uploadimg&#x2F;20100909&#x2F;1528452.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;images.51cto.com&#x2F;files&#x2F;uploadimg&#x2F;20100909&#x2F;1528453.jpg">
+<meta property="og:updated_time" content="2020-09-07T16:34:03.280Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;images.51cto.com&#x2F;files&#x2F;uploadimg&#x2F;20100909&#x2F;1528450.jpg">
   
   
     <link rel="icon" href="/img/favicon.png">
@@ -243,11 +248,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-first-child易错问题" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-absolute-vs-relative" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/11/30/first-child%E6%98%93%E9%94%99%E9%97%AE%E9%A2%98/" class="article-date">
-      <time datetime="2019-11-30T10:42:19.000Z" itemprop="datePublished">2019-11-30</time>
+      <a href="/2019/11/16/absolute-vs-relative/" class="article-date">
+      <time datetime="2019-11-15T16:00:00.000Z" itemprop="datePublished">2019-11-16</time>
 </a>
     </div>
   
@@ -260,7 +265,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      first-child易错问题
+      absolute vs relative
     </h1>
   
 
@@ -285,24 +290,35 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="first-child等伪类选择器易错问题"><a href="#first-child等伪类选择器易错问题" class="headerlink" title="first-child等伪类选择器易错问题"></a>first-child等伪类选择器易错问题</h1><h2 id="E-first-child"><a href="#E-first-child" class="headerlink" title="E:first-child {}"></a>E:first-child {}</h2><ul>
-<li>匹配父元素的第一个子元素E。</li>
-<li>要使该属性生效，E元素必须是某个元素的第一个<strong>子元素</strong>，且是<strong>E属性</strong>。</li>
+        <h1 id="div布局中absolute和relative的区别"><a href="#div布局中absolute和relative的区别" class="headerlink" title="div布局中absolute和relative的区别"></a>div布局中absolute和relative的区别</h1><h2 id="在正常流中的位置"><a href="#在正常流中的位置" class="headerlink" title="在正常流中的位置"></a>在正常流中的位置</h2><h3 id="relative"><a href="#relative" class="headerlink" title="relative"></a>relative</h3><ul>
+<li>定位为relative的元素脱离正常的文本流中，但其在文本流中的位置依然存在。如图1：</li>
 </ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>h1<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>p1<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>p2<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>p3<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img src="http://images.51cto.com/files/uploadimg/20100909/1528450.jpg" alt="relative定位"></p>
+<a id="more"></a>
+
 <ul>
-<li>若在这时选择第一个p元素，使用<code>p:first-child</code>则会出现错误，因为p的父元素是<strong>div</strong>，而对于div来说，它的<strong>第一个子元素是h1</strong>，不是p，所以会出错。</li>
-<li>同理，<code>E:last-child {}</code> <code>E:only-child {}</code> 与上面的一样，E元素必须是其父元素的最后一个子元素或唯一一个子元素才可以。</li>
+<li>黄色背景的层定位为relative，红色边框区域为其在正常流中的位置。在通过top、left对其定位后，从灰色背景层(下一个div)的位置可以看出其<strong>正常位置依然存在</strong>。</li>
 </ul>
-<h2 id="E-nth-child-1"><a href="#E-nth-child-1" class="headerlink" title="E:nth-child(1) {}"></a>E:nth-child(1) {}</h2><ul>
-<li>与<code>E:first-child {}</code>等效，E需要是父元素的第一个子元素。</li>
-<li>比如： <code>p:nth-child(2)</code> 才可以选中p1</li>
+<h3 id="absolute"><a href="#absolute" class="headerlink" title="absolute"></a>absolute</h3><ul>
+<li>定位为absolute的层脱离正常文本流，但与relative的区别是其在正常流中的位置不在存在。如图2：</li>
 </ul>
-<h2 id="nth-child-odd-even"><a href="#nth-child-odd-even" class="headerlink" title=":nth-child(odd/even) {}"></a>:nth-child(odd/even) {}</h2><ul>
-<li>匹配属于其父元素的第N个子元素，不论元素的类型。</li>
+<p><img src="http://images.51cto.com/files/uploadimg/20100909/1528451.jpg" alt="absolute定位"></p>
+<ul>
+<li>可以看到，在将黄色背景层定位为absolute后，灰色背景层(下一个div)自动补上，<strong>脱离正常文本流</strong>。</li>
 </ul>
-<h2 id="规范"><a href="#规范" class="headerlink" title="规范"></a>规范</h2><ul>
-<li>可写成 <code>div h1:first-child{}</code> 明确父元素，自然能看到是不是第一个E属性子元素，就不容易犯错。</li>
+<h2 id="相对于父元素"><a href="#相对于父元素" class="headerlink" title="相对于父元素"></a>相对于父元素</h2><h3 id="relative-1"><a href="#relative-1" class="headerlink" title="relative"></a>relative</h3><ul>
+<li>relative定位的层总是相对于其<strong>最近的父元素</strong>，无论其父元素是何种定位方式。如图3：</li>
+</ul>
+<p><img src="http://images.51cto.com/files/uploadimg/20100909/1528452.jpg" alt="relative父元素"></p>
+<ul>
+<li>红色背景层为relative定位，其直接父元素绿色背景层为默认的static定位。红色背景层的位置为相对绿色背景层top、left个20元素。</li>
+</ul>
+<h3 id="absolute-1"><a href="#absolute-1" class="headerlink" title="absolute"></a>absolute</h3><ul>
+<li>absolute定位的层总是相对于其<strong>最近的定义为absolute或relative的父层</strong>，而这个父层并<strong>不一定是其直接父层</strong>，如图4:</li>
+</ul>
+<p><img src="http://images.51cto.com/files/uploadimg/20100909/1528453.jpg" alt="absolute父元素"></p>
+<ul>
+<li>红色背景层相对的元素变为定位方式为absolute或relative的黄色背景层。如果其父层中都未定义absolute或relative，则其将相对body进行定位。</li>
 </ul>
 
       
@@ -314,13 +330,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2019/11/30/first-child%E6%98%93%E9%94%99%E9%97%AE%E9%A2%98/">first-child易错问题</a></p>
+        <p><span>本文标题:</span><a href="/2019/11/16/absolute-vs-relative/">absolute vs relative</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Wayne 的个人博客">Wayne</a></p>
-        <p><span>发布时间:</span>2019年11月30日 - 18时42分</p>
-        <p><span>最后更新:</span>2020年09月08日 - 00时35分</p>
+        <p><span>发布时间:</span>2019年11月16日 - 00时00分</p>
+        <p><span>最后更新:</span>2020年09月08日 - 00时34分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/11/30/first-child%E6%98%93%E9%94%99%E9%97%AE%E9%A2%98/" title="first-child易错问题">http://yoursite.com/2019/11/30/first-child%E6%98%93%E9%94%99%E9%97%AE%E9%A2%98/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/11/30/first-child%E6%98%93%E9%94%99%E9%97%AE%E9%A2%98/　　作者: Wayne" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2019/11/16/absolute-vs-relative/" title="absolute vs relative">http://yoursite.com/2019/11/16/absolute-vs-relative/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/11/16/absolute-vs-relative/　　作者: Wayne" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -333,18 +349,18 @@
 
 <nav id="article-nav">
   
-    <a href="/2019/11/30/border%E5%81%9A%E5%80%92%E4%B8%89%E8%A7%92%E5%BD%A2%E5%9B%BE%E6%A0%87/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/11/18/tmall-website/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          border的部分应用
+          tmall website
         
       </div>
     </a>
   
   
-    <a href="/2019/11/21/overflow-hidden/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">overflow:hidden</div>
+    <a href="/2019/11/05/inline-block-vs-float/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Inline-block vs Float</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -355,7 +371,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#first-child等伪类选择器易错问题"><span class="toc-number">1.</span> <span class="toc-text">first-child等伪类选择器易错问题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#E-first-child"><span class="toc-number">1.1.</span> <span class="toc-text">E:first-child {}</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#E-nth-child-1"><span class="toc-number">1.2.</span> <span class="toc-text">E:nth-child(1) {}</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#nth-child-odd-even"><span class="toc-number">1.3.</span> <span class="toc-text">:nth-child(odd/even) {}</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#规范"><span class="toc-number">1.4.</span> <span class="toc-text">规范</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#div布局中absolute和relative的区别"><span class="toc-number">1.</span> <span class="toc-text">div布局中absolute和relative的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#在正常流中的位置"><span class="toc-number">1.1.</span> <span class="toc-text">在正常流中的位置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#relative"><span class="toc-number">1.1.1.</span> <span class="toc-text">relative</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#absolute"><span class="toc-number">1.1.2.</span> <span class="toc-text">absolute</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#相对于父元素"><span class="toc-number">1.2.</span> <span class="toc-text">相对于父元素</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#relative-1"><span class="toc-number">1.2.1.</span> <span class="toc-text">relative</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#absolute-1"><span class="toc-number">1.2.2.</span> <span class="toc-text">absolute</span></a></li></ol></li></ol></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -403,18 +419,18 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/11/30/border%E5%81%9A%E5%80%92%E4%B8%89%E8%A7%92%E5%BD%A2%E5%9B%BE%E6%A0%87/" title="上一篇: border的部分应用">
+            <a href="/2019/11/18/tmall-website/" title="上一篇: tmall website">
                 <i class="fa fa-angle-left"></i>
             </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2019/11/21/overflow-hidden/" title="下一篇: overflow:hidden">
+            <a href="/2019/11/05/inline-block-vs-float/" title="下一篇: Inline-block vs Float">
                 <i class="fa fa-angle-right"></i>
             </a>
         
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/09/08/generators-advanced-iteration/">Generators, advanced iteration</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/09/07/promises-async-await/">Promises and async/await</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/09/js-jquery-uci/">UCI js-jquery 学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/30/border%E5%81%9A%E5%80%92%E4%B8%89%E8%A7%92%E5%BD%A2%E5%9B%BE%E6%A0%87/">border的部分应用</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/30/first-child%E6%98%93%E9%94%99%E9%97%AE%E9%A2%98/">first-child易错问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/21/overflow-hidden/">overflow:hidden</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/18/tmall-website/">tmall website</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/16/absolute%20vs%20relative/">absolute vs relative</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/05/inline-block%20vs%20float/">Inline-block vs Float</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/29/remove/">Remove</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/20/intro-to-git/">Intro to Git</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/30/markdown-intro/">MarkDown Syntax Intro</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/28/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/09/09/modules/">Modules</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/09/08/generators-advanced-iteration/">Generators & Advanced iteration</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/09/07/promises-async-await/">Promises & async/await</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/09/js-jquery-uci/">UCI js-jquery 学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/30/border%E5%81%9A%E5%80%92%E4%B8%89%E8%A7%92%E5%BD%A2%E5%9B%BE%E6%A0%87/">border的部分应用</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/30/first-child/">first-child易错问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/21/overflow-hidden/">overflow:hidden</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/18/tmall-website/">tmall website</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/16/absolute-vs-relative/">absolute vs relative</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/05/inline-block-vs-float/">Inline-block vs Float</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/29/git-remove/">Remove</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/20/intro-to-git/">Intro to Git</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/30/markdown-intro/">MarkDown Syntax Intro</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/28/hello-world/">Hello World</a></li></ul>
     <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
     <script>
         $(".post-list").addClass("toc-article");

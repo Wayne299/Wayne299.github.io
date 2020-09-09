@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Generators, advanced iteration | Wayne</title>
+  <title>Generators &amp; Advanced iteration | Wayne</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Generators &amp;amp; Advanced iterationGenerators Can return (“yield”) multiple values, one after another, on-demand.  They work great with iterables, allowing to create data streams with ease.  generator">
+  <meta name="description" content="Generators Can return (“yield”) multiple values, one after another, on-demand.  They work great with iterables, allowing to create data streams with ease.  generator functions, function*12345function*">
 <meta name="keywords" content="The-modern-javascript-tutorial,js-language">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Generators, advanced iteration">
+<meta property="og:title" content="Generators &amp; Advanced iteration">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;09&#x2F;08&#x2F;generators-advanced-iteration&#x2F;index.html">
 <meta property="og:site_name" content="Wayne">
-<meta property="og:description" content="Generators &amp;amp; Advanced iterationGenerators Can return (“yield”) multiple values, one after another, on-demand.  They work great with iterables, allowing to create data streams with ease.  generator">
+<meta property="og:description" content="Generators Can return (“yield”) multiple values, one after another, on-demand.  They work great with iterables, allowing to create data streams with ease.  generator functions, function*12345function*">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-09-08T11:09:17.563Z">
+<meta property="og:updated_time" content="2020-09-09T02:18:16.854Z">
 <meta name="twitter:card" content="summary">
   
   
@@ -260,7 +260,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Generators, advanced iteration
+      Generators &amp; Advanced iteration
     </h1>
   
 
@@ -285,18 +285,18 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="Generators-amp-Advanced-iteration"><a href="#Generators-amp-Advanced-iteration" class="headerlink" title="Generators &amp; Advanced iteration"></a>Generators &amp; Advanced iteration</h1><h2 id="Generators"><a href="#Generators" class="headerlink" title="Generators"></a>Generators</h2><ul>
+        <h1 id="Generators"><a href="#Generators" class="headerlink" title="Generators"></a>Generators</h1><ul>
 <li>Can return (“yield”) multiple values, one after another, on-demand. </li>
 <li>They work great with <code>iterables</code>, allowing to create data streams with ease.</li>
 </ul>
-<h3 id="generator-functions-function"><a href="#generator-functions-function" class="headerlink" title="generator functions, function*"></a>generator functions, <code>function*</code></h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span>* <span class="title">generateSequence</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">yield</span> <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">yield</span> <span class="number">2</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">3</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="generator-functions-function"><a href="#generator-functions-function" class="headerlink" title="generator functions, function*"></a>generator functions, <code>function*</code></h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span>* <span class="title">generateSequence</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">yield</span> <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">yield</span> <span class="number">2</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">3</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>When it (<code>generateSequence()</code>) is called, it doesn’t run its code. Instead it returns a “generator object” (<code>[object Generator]</code>), to manage the execution.<a id="more"></a>
 
 </li>
 </ul>
-<h4 id="next"><a href="#next" class="headerlink" title="next()"></a><code>next()</code></h4><ul>
+<h3 id="next"><a href="#next" class="headerlink" title="next()"></a><code>next()</code></h3><ul>
 <li>The main method of a generator is <code>next()</code>. When called, it runs the execution until the nearest <code>yield &lt;value&gt;</code> statement (<code>&lt;value&gt;</code> can be omitted), then the yielded <code>&lt;value&gt;</code> is returned to the outer code.</li>
 <li>The result of <code>next()</code> is an object with two properties: <ol>
 <li><code>value</code>: the yielded value.</li>
@@ -304,21 +304,21 @@
 </ol>
 </li>
 </ul>
-<h3 id="generator-are-iterable"><a href="#generator-are-iterable" class="headerlink" title="generator are iterable"></a>generator are <code>iterable</code></h3><h4 id="for-of"><a href="#for-of" class="headerlink" title="for...of"></a><code>for...of</code></h4><ul>
+<h2 id="generator-are-iterable"><a href="#generator-are-iterable" class="headerlink" title="generator are iterable"></a>generator are <code>iterable</code></h2><h3 id="for-of"><a href="#for-of" class="headerlink" title="for...of"></a><code>for...of</code></h3><ul>
 <li>We can loop over using <code>for...of</code></li>
 <li>but it IGNOREs the last value, when <code>done: true</code>. So we must return them with <code>yield</code> not <code>return</code>.</li>
 </ul>
-<h4 id="spread-syntax"><a href="#spread-syntax" class="headerlink" title="... spread syntax"></a><code>...</code> spread syntax</h4><p><code>let sequence = [0, ...generateSequence()] // 0, 1, 2, 3</code></p>
+<h3 id="spread-syntax"><a href="#spread-syntax" class="headerlink" title="... spread syntax"></a><code>...</code> spread syntax</h3><p><code>let sequence = [0, ...generateSequence()] // 0, 1, 2, 3</code></p>
 <ul>
 <li>It turns the iterable generator object into an array of items.</li>
 <li>we can call all related functionality, as generators are iterable.</li>
 </ul>
-<h3 id="Using-generators-for-iterables"><a href="#Using-generators-for-iterables" class="headerlink" title="Using generators for iterables"></a>Using generators for iterables</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> range = &#123;</span><br><span class="line">  <span class="keyword">from</span>: <span class="number">1</span>,</span><br><span class="line">  to: <span class="number">5</span>,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// a shorthand for [Symbol.iterator]: function*() which returns a generator</span></span><br><span class="line">  *[<span class="built_in">Symbol</span>.iterator]() &#123; </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> value = <span class="keyword">this</span>.from; value &lt;= <span class="keyword">this</span>.to; value++) &#123;</span><br><span class="line">      <span class="keyword">yield</span> value;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">alert( [...range] ); <span class="comment">// 1,2,3,4,5</span></span><br></pre></td></tr></table></figure>
+<h2 id="Using-generators-for-iterables"><a href="#Using-generators-for-iterables" class="headerlink" title="Using generators for iterables"></a>Using generators for iterables</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> range = &#123;</span><br><span class="line">  <span class="keyword">from</span>: <span class="number">1</span>,</span><br><span class="line">  to: <span class="number">5</span>,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// a shorthand for [Symbol.iterator]: function*() which returns a generator</span></span><br><span class="line">  *[<span class="built_in">Symbol</span>.iterator]() &#123; </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> value = <span class="keyword">this</span>.from; value &lt;= <span class="keyword">this</span>.to; value++) &#123;</span><br><span class="line">      <span class="keyword">yield</span> value;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">alert( [...range] ); <span class="comment">// 1,2,3,4,5</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="Generator-composition-yield"><a href="#Generator-composition-yield" class="headerlink" title="Generator composition, yield*"></a>Generator composition, <code>yield*</code></h3><ul>
+<h2 id="Generator-composition-yield"><a href="#Generator-composition-yield" class="headerlink" title="Generator composition, yield*"></a>Generator composition, <code>yield*</code></h2><ul>
 <li>“embed” (compose) one generator into another.</li>
 </ul>
-<h3 id="yield-is-a-two-way-street-generator-next-arg"><a href="#yield-is-a-two-way-street-generator-next-arg" class="headerlink" title="yield is a two-way street, generator.next(arg)"></a><code>yield</code> is a two-way street, <code>generator.next(arg)</code></h3><ul>
+<h2 id="yield-is-a-two-way-street-generator-next-arg"><a href="#yield-is-a-two-way-street-generator-next-arg" class="headerlink" title="yield is a two-way street, generator.next(arg)"></a><code>yield</code> is a two-way street, <code>generator.next(arg)</code></h2><ul>
 <li>it also can pass the value inside the generator. And <code>arg</code> becomes the result of yield.</li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span>* <span class="title">gen</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// Pass a question to the outer code and WAIT for an answer</span></span><br><span class="line">  <span class="keyword">let</span> result = <span class="keyword">yield</span> <span class="string">"2 + 2 = ?"</span>;  <span class="comment">// (*)</span></span><br><span class="line"></span><br><span class="line">  alert(result);  <span class="comment">// onces (**) called, then stop wait and return value</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> generator = gen();</span><br><span class="line"><span class="keyword">let</span> question = generator.next().value; <span class="comment">// "2 + 2 = ?" &lt;-- yield returns the value</span></span><br><span class="line"></span><br><span class="line">generator.next(<span class="number">4</span>); <span class="comment">// (**) result = 4 --&gt; pass the result into the generator</span></span><br></pre></td></tr></table></figure>
@@ -332,16 +332,16 @@
 <li>It’s like a “ping-pong” game. Each <code>next(value)</code> (excluding the first one) passes a value into the generator, that becomes the result of the current <code>yield</code></li>
 <li>then gets back the result of the next yield.</li>
 </ul>
-<h3 id="pass-an-error-into-yield-generator-throw"><a href="#pass-an-error-into-yield-generator-throw" class="headerlink" title="pass an error into yield, generator.throw"></a>pass an error into <code>yield</code>, <code>generator.throw</code></h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> generator = gen();</span><br><span class="line"><span class="keyword">let</span> question = generator.next().value;</span><br><span class="line"></span><br><span class="line">generator.throw(<span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">"Error!!"</span>));</span><br></pre></td></tr></table></figure>
+<h2 id="pass-an-error-into-yield-generator-throw"><a href="#pass-an-error-into-yield-generator-throw" class="headerlink" title="pass an error into yield, generator.throw"></a>pass an error into <code>yield</code>, <code>generator.throw</code></h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> generator = gen();</span><br><span class="line"><span class="keyword">let</span> question = generator.next().value;</span><br><span class="line"></span><br><span class="line">generator.throw(<span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">"Error!!"</span>));</span><br></pre></td></tr></table></figure>
 
-<h2 id="Async-iterators-and-generators"><a href="#Async-iterators-and-generators" class="headerlink" title="Async iterators and generators"></a>Async iterators and generators</h2><h3 id="Async-generators"><a href="#Async-generators" class="headerlink" title="Async generators"></a>Async generators</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span>* <span class="title">generateSequence</span>(<span class="params">start, end</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = start; i &lt;= end; i++) &#123;</span><br><span class="line">    <span class="comment">// values comes with a delay of 1 second between them</span></span><br><span class="line">    <span class="keyword">await</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="params">resolve</span> =&gt;</span> setTimeout(resolve, <span class="number">1000</span>));</span><br><span class="line"></span><br><span class="line">    <span class="keyword">yield</span> i;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">(<span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">  <span class="keyword">let</span> generator = generateSequence(<span class="number">1</span>, <span class="number">5</span>);</span><br><span class="line">  <span class="keyword">let</span> result = <span class="keyword">await</span> generator.next(); <span class="comment">// add await</span></span><br><span class="line">  <span class="comment">// or</span></span><br><span class="line">  <span class="keyword">for</span> <span class="keyword">await</span> (<span class="keyword">let</span> value <span class="keyword">of</span> generator) &#123;</span><br><span class="line">    alert(value); <span class="comment">// 1, then 2, then 3, then 4, then 5</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+<h1 id="Async-iterators-and-generators"><a href="#Async-iterators-and-generators" class="headerlink" title="Async iterators and generators"></a>Async iterators and generators</h1><h2 id="Async-generators"><a href="#Async-generators" class="headerlink" title="Async generators"></a>Async generators</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span>* <span class="title">generateSequence</span>(<span class="params">start, end</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = start; i &lt;= end; i++) &#123;</span><br><span class="line">    <span class="comment">// values comes with a delay of 1 second between them</span></span><br><span class="line">    <span class="keyword">await</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="params">resolve</span> =&gt;</span> setTimeout(resolve, <span class="number">1000</span>));</span><br><span class="line"></span><br><span class="line">    <span class="keyword">yield</span> i;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">(<span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">  <span class="keyword">let</span> generator = generateSequence(<span class="number">1</span>, <span class="number">5</span>);</span><br><span class="line">  <span class="keyword">let</span> result = <span class="keyword">await</span> generator.next(); <span class="comment">// add await</span></span><br><span class="line">  <span class="comment">// or</span></span><br><span class="line">  <span class="keyword">for</span> <span class="keyword">await</span> (<span class="keyword">let</span> value <span class="keyword">of</span> generator) &#123;</span><br><span class="line">    alert(value); <span class="comment">// 1, then 2, then 3, then 4, then 5</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
 
-<h3 id="Async-iterables"><a href="#Async-iterables" class="headerlink" title="Async iterables"></a>Async iterables</h3><p>To make the “regular” iterable object iterable asynchronously:</p>
+<h2 id="Async-iterables"><a href="#Async-iterables" class="headerlink" title="Async iterables"></a>Async iterables</h2><p>To make the “regular” iterable object iterable asynchronously:</p>
 <ul>
 <li>we need to use <code>Symbol.asyncIterator</code> and <code>for await (let item of iterable)</code> and turn a <code>promise</code> </li>
 <li>and spread snytax <code>...</code> doesn’t work saynchronously.</li>
 </ul>
-<h3 id="Real-life-example"><a href="#Real-life-example" class="headerlink" title="Real-life example"></a>Real-life example</h3><ul>
+<h2 id="Real-life-example"><a href="#Real-life-example" class="headerlink" title="Real-life example"></a>Real-life example</h2><ul>
 <li>paginated requests: async generator that returns values.</li>
 <li>when we meet streams of data, we can use <strong>async generators</strong> to process such data. In browsers, there’s also another API called Streams.</li>
 </ul>
@@ -355,12 +355,12 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2020/09/08/generators-advanced-iteration/">Generators, advanced iteration</a></p>
+        <p><span>本文标题:</span><a href="/2020/09/08/generators-advanced-iteration/">Generators &amp; Advanced iteration</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Wayne 的个人博客">Wayne</a></p>
         <p><span>发布时间:</span>2020年09月08日 - 12时53分</p>
-        <p><span>最后更新:</span>2020年09月08日 - 19时09分</p>
+        <p><span>最后更新:</span>2020年09月09日 - 10时18分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2020/09/08/generators-advanced-iteration/" title="Generators, advanced iteration">http://yoursite.com/2020/09/08/generators-advanced-iteration/</a>
+            <span>原始链接:</span><a class="post-url" href="/2020/09/08/generators-advanced-iteration/" title="Generators &amp; Advanced iteration">http://yoursite.com/2020/09/08/generators-advanced-iteration/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2020/09/08/generators-advanced-iteration/　　作者: Wayne" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
@@ -374,9 +374,18 @@
 
 <nav id="article-nav">
   
+    <a href="/2020/09/09/modules/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Modules
+        
+      </div>
+    </a>
+  
   
     <a href="/2020/09/07/promises-async-await/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Promises and async/await</div>
+      <div class="article-nav-title">Promises &amp; async/await</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -387,7 +396,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Generators-amp-Advanced-iteration"><span class="toc-number">1.</span> <span class="toc-text">Generators &amp; Advanced iteration</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Generators"><span class="toc-number">1.1.</span> <span class="toc-text">Generators</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#generator-functions-function"><span class="toc-number">1.1.1.</span> <span class="toc-text">generator functions, function*</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#next"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">next()</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#generator-are-iterable"><span class="toc-number">1.1.2.</span> <span class="toc-text">generator are iterable</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#for-of"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">for...of</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#spread-syntax"><span class="toc-number">1.1.2.2.</span> <span class="toc-text">... spread syntax</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Using-generators-for-iterables"><span class="toc-number">1.1.3.</span> <span class="toc-text">Using generators for iterables</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generator-composition-yield"><span class="toc-number">1.1.4.</span> <span class="toc-text">Generator composition, yield*</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#yield-is-a-two-way-street-generator-next-arg"><span class="toc-number">1.1.5.</span> <span class="toc-text">yield is a two-way street, generator.next(arg)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pass-an-error-into-yield-generator-throw"><span class="toc-number">1.1.6.</span> <span class="toc-text">pass an error into yield, generator.throw</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Async-iterators-and-generators"><span class="toc-number">1.2.</span> <span class="toc-text">Async iterators and generators</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Async-generators"><span class="toc-number">1.2.1.</span> <span class="toc-text">Async generators</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Async-iterables"><span class="toc-number">1.2.2.</span> <span class="toc-text">Async iterables</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Real-life-example"><span class="toc-number">1.2.3.</span> <span class="toc-text">Real-life example</span></a></li></ol></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Generators"><span class="toc-number">1.</span> <span class="toc-text">Generators</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#generator-functions-function"><span class="toc-number">1.1.</span> <span class="toc-text">generator functions, function*</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#next"><span class="toc-number">1.1.1.</span> <span class="toc-text">next()</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#generator-are-iterable"><span class="toc-number">1.2.</span> <span class="toc-text">generator are iterable</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#for-of"><span class="toc-number">1.2.1.</span> <span class="toc-text">for...of</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#spread-syntax"><span class="toc-number">1.2.2.</span> <span class="toc-text">... spread syntax</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Using-generators-for-iterables"><span class="toc-number">1.3.</span> <span class="toc-text">Using generators for iterables</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Generator-composition-yield"><span class="toc-number">1.4.</span> <span class="toc-text">Generator composition, yield*</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#yield-is-a-two-way-street-generator-next-arg"><span class="toc-number">1.5.</span> <span class="toc-text">yield is a two-way street, generator.next(arg)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pass-an-error-into-yield-generator-throw"><span class="toc-number">1.6.</span> <span class="toc-text">pass an error into yield, generator.throw</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Async-iterators-and-generators"><span class="toc-number">2.</span> <span class="toc-text">Async iterators and generators</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Async-generators"><span class="toc-number">2.1.</span> <span class="toc-text">Async generators</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Async-iterables"><span class="toc-number">2.2.</span> <span class="toc-text">Async iterables</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Real-life-example"><span class="toc-number">2.3.</span> <span class="toc-text">Real-life example</span></a></li></ol></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -435,16 +444,18 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2020/09/09/modules/" title="上一篇: Modules">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2020/09/07/promises-async-await/" title="下一篇: Promises and async/await">
+            <a href="/2020/09/07/promises-async-await/" title="下一篇: Promises &amp; async/await">
                 <i class="fa fa-angle-right"></i>
             </a>
         
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/09/08/generators-advanced-iteration/">Generators, advanced iteration</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/09/07/promises-async-await/">Promises and async/await</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/09/js-jquery-uci/">UCI js-jquery 学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/30/border%E5%81%9A%E5%80%92%E4%B8%89%E8%A7%92%E5%BD%A2%E5%9B%BE%E6%A0%87/">border的部分应用</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/30/first-child%E6%98%93%E9%94%99%E9%97%AE%E9%A2%98/">first-child易错问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/21/overflow-hidden/">overflow:hidden</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/18/tmall-website/">tmall website</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/16/absolute%20vs%20relative/">absolute vs relative</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/05/inline-block%20vs%20float/">Inline-block vs Float</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/29/remove/">Remove</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/20/intro-to-git/">Intro to Git</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/30/markdown-intro/">MarkDown Syntax Intro</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/28/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/09/09/modules/">Modules</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/09/08/generators-advanced-iteration/">Generators & Advanced iteration</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/09/07/promises-async-await/">Promises & async/await</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/07/09/js-jquery-uci/">UCI js-jquery 学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/30/border%E5%81%9A%E5%80%92%E4%B8%89%E8%A7%92%E5%BD%A2%E5%9B%BE%E6%A0%87/">border的部分应用</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/30/first-child/">first-child易错问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/21/overflow-hidden/">overflow:hidden</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/18/tmall-website/">tmall website</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/16/absolute-vs-relative/">absolute vs relative</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/05/inline-block-vs-float/">Inline-block vs Float</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/29/git-remove/">Remove</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/20/intro-to-git/">Intro to Git</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/30/markdown-intro/">MarkDown Syntax Intro</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/28/hello-world/">Hello World</a></li></ul>
     <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
     <script>
         $(".post-list").addClass("toc-article");

@@ -3,19 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>MarkDown Syntax Intro | Wayne</title>
+  <title>Inline-block vs Float | Wayne</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Markdown 语法入门字体 要加粗的文字左右分别用两个*号包起来   要倾斜的文字左右分别用一个*号包起来   要倾斜和加粗的文字左右分别用三个*号包起来   要加删除线的文字左右分别用两个~号包起来   显示结果如下:">
+  <meta name="description" content="inline-block和float的区别文档流（Document flow） 浮动元素会脱离文档流，并使得周围元素环绕这个元素。而inline-block元素仍在文档流内。因此设置inline-block不需要清除浮动。当然，周围元素不会环绕这个元素，你也不可能通过清除inline-block就让一个元素跑到下面去。  水平位置（Horizontal position） 很明显你不能通过给父元素">
+<meta name="keywords" content="css">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MarkDown Syntax Intro">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;07&#x2F;30&#x2F;markdown-intro&#x2F;index.html">
+<meta property="og:title" content="Inline-block vs Float">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;05&#x2F;inline-block-vs-float&#x2F;index.html">
 <meta property="og:site_name" content="Wayne">
-<meta property="og:description" content="Markdown 语法入门字体 要加粗的文字左右分别用两个*号包起来   要倾斜的文字左右分别用一个*号包起来   要倾斜和加粗的文字左右分别用三个*号包起来   要加删除线的文字左右分别用两个~号包起来   显示结果如下:">
+<meta property="og:description" content="inline-block和float的区别文档流（Document flow） 浮动元素会脱离文档流，并使得周围元素环绕这个元素。而inline-block元素仍在文档流内。因此设置inline-block不需要清除浮动。当然，周围元素不会环绕这个元素，你也不可能通过清除inline-block就让一个元素跑到下面去。  水平位置（Horizontal position） 很明显你不能通过给父元素">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https:&#x2F;&#x2F;www.google.com&#x2F;url?sa=i&amp;source=images&amp;cd=&amp;ved=2ahUKEwif3Yy11NzjAhXaR30KHb4oCf4QjRx6BAgBEAU&amp;url=https%3A%2F%2Fwww.blog.google%2F&amp;psig=AOvVaw016ik8oz3SNvau2l54VeLe&amp;ust=1564576665173064">
-<meta property="og:updated_time" content="2019-11-30T10:22:37.399Z">
+<meta property="og:updated_time" content="2020-09-07T16:34:29.735Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https:&#x2F;&#x2F;www.google.com&#x2F;url?sa=i&amp;source=images&amp;cd=&amp;ved=2ahUKEwif3Yy11NzjAhXaR30KHb4oCf4QjRx6BAgBEAU&amp;url=https%3A%2F%2Fwww.blog.google%2F&amp;psig=AOvVaw016ik8oz3SNvau2l54VeLe&amp;ust=1564576665173064">
   
   
     <link rel="icon" href="/img/favicon.png">
@@ -244,11 +243,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-markdown-intro" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-inline-block-vs-float" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/07/30/markdown-intro/" class="article-date">
-      <time datetime="2019-07-29T16:00:00.000Z" itemprop="datePublished">2019-07-30</time>
+      <a href="/2019/11/05/inline-block-vs-float/" class="article-date">
+      <time datetime="2019-11-04T16:00:00.000Z" itemprop="datePublished">2019-11-05</time>
 </a>
     </div>
   
@@ -261,7 +260,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      MarkDown Syntax Intro
+      Inline-block vs Float
     </h1>
   
 
@@ -269,8 +268,16 @@
       
       <div class="article-info article-info-post">
         
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+    </div>
+
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -278,132 +285,24 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="Markdown-语法入门"><a href="#Markdown-语法入门" class="headerlink" title="Markdown 语法入门"></a>Markdown 语法入门</h1><h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><ul>
-<li>要加粗的文字左右分别用两个*号包起来  </li>
-<li>要倾斜的文字左右分别用一个*号包起来  </li>
-<li>要倾斜和加粗的文字左右分别用三个*号包起来  </li>
-<li>要加删除线的文字左右分别用两个~号包起来 </li>
+        <h1 id="inline-block和float的区别"><a href="#inline-block和float的区别" class="headerlink" title="inline-block和float的区别"></a>inline-block和float的区别</h1><h2 id="文档流（Document-flow）"><a href="#文档流（Document-flow）" class="headerlink" title="文档流（Document flow）"></a>文档流（Document flow）</h2><ul>
+<li>浮动元素会脱离文档流，并使得周围元素<strong>环绕这个元素</strong>。而inline-block元素仍在文档流内。因此设置inline-block不需要<strong>清除浮动</strong>。当然，周围元素不会环绕这个元素，你也不可能通过清除inline-block就让一个元素跑到下面去。</li>
 </ul>
-<p>显示结果如下: </p>
-<a id="more"></a>
-<ul>
-<li><strong>加粗</strong>  </li>
-<li><em>斜体</em>  </li>
-<li><strong><em>斜体加粗</em></strong>  </li>
-<li><del>删除线</del>  </li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Option name</th>
-<th>Markup</th>
-<th align="center">Example</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Intra-word emphasis</td>
-<td>So A*maz*ing</td>
-<td align="center">So A<em>maz</em>ing</td>
-</tr>
-<tr>
-<td>Strikethrough</td>
-<td>~~Much wow~~</td>
-<td align="center"><del>Much wow</del></td>
-</tr>
-<tr>
-<td>Underline</td>
-<td>_So doge_</td>
-<td align="center"><em>So doge</em></td>
-</tr>
-<tr>
-<td>Quote</td>
-<td>&quot;Such editor&quot;</td>
-<td align="center">“Such editor”</td>
-</tr>
-<tr>
-<td>Highlight</td>
-<td>==So good==</td>
-<td align="center">==So good==</td>
-</tr>
-</tbody></table>
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><ul>
-<li>文字前加上 - + * 任何一种都可以变为无序列表，加上 1. 2. 3. 等编号则变为有序列表。</li>
-<li>列表嵌套，上一级和下一级之间敲两个空格即可。</li>
-</ul>
-<p>显示结果如下：  </p>
-<ul>
-<li>无序1<ol>
-<li>有序1</li>
-<li>有序2</li>
-<li>有序3</li>
-</ol>
-</li>
-<li>无序2<ol>
-<li>有序1</li>
-<li>有序2</li>
-<li>有序3</li>
-</ol>
-</li>
-</ul>
-<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><ul>
-<li>引用超链接，[链接文本](链接 URL 地址),如: [Google](<a href="https://www.google.com" target="_blank" rel="noopener">https://www.google.com</a>)</li>
-<li>或者 &lt;链接地址&gt;, 如: &lt;<a href="https://www.google.com&gt;" target="_blank" rel="noopener">https://www.google.com&gt;</a></li>
-<li>或者在文档的<strong>结尾</strong>为变量赋值（网址）</li>
-</ul>
-<p>显示结果如下：</p>
-<ul>
-<li><a href="https://www.google.com" target="_blank" rel="noopener">Google</a> </li>
-<li><a href="https://www.google.com" target="_blank" rel="noopener">https://www.google.com</a> </li>
-</ul>
-<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><ul>
-<li>添加图片语法：![alt 属性文本](图片地址)  ![alt 属性文本](图片地址 “title属性的标题”) </li>
-</ul>
-<p>显示结果如下：<br><img src="https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwif3Yy11NzjAhXaR30KHb4oCf4QjRx6BAgBEAU&url=https%3A%2F%2Fwww.blog.google%2F&psig=AOvVaw016ik8oz3SNvau2l54VeLe&ust=1564576665173064" alt="图标"></p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><ul>
-<li>用` `包裹行内内容</li>
-<li>用 ``` 包裹多行</li>
-</ul>
-<p>显示结果如下：</p>
-<p>这是一段<code>代码</code></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    alert(<span class="string">'Wayne'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="水平位置（Horizontal-position）"><a href="#水平位置（Horizontal-position）" class="headerlink" title="水平位置（Horizontal position）"></a>水平位置（Horizontal position）</h2><ul>
+<li>很明显你不能通过给父元素设置<code>text-align:center</code>让浮动元素居中。事实上定位类属性设置到父元素上，均不会影响父元素内浮动的元素。但是父元素内元素如果设置了<code>display：inline-block</code>，则对父元素设置一些定位属性会影响到子元素。（这还是因为浮动元素脱离文档流的关系）。<a id="more"></a>
 
-<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><ul>
-<li>三个以上的星号(*)、减号(-)、底线(_)即，但可行内不能有其他东西</li>
+</li>
 </ul>
-<p>显示结果如下：  </p>
-<hr>
-<hr>
-<hr>
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><ul>
-<li>“-” 有一个就行，为了美观对齐，多加了几个</li>
-<li>文字默认居左 ，“-”两边加：表示文字居中，“-”右边加：表示文字居右。</li>
+<h2 id="垂直对齐（Vertical-alignment）"><a href="#垂直对齐（Vertical-alignment）" class="headerlink" title="垂直对齐（Vertical alignment）"></a>垂直对齐（Vertical alignment）</h2><ul>
+<li>inline-block元素沿着默认的基线对齐。浮动元素紧贴顶部。你可以通过vertical属性设置这个默认基线，但对浮动元素这种方法就不行了。这也是我(原作者)倾向于inline-block的主要原因。</li>
 </ul>
-<p>显示结果如下：  </p>
-<table>
-<thead>
-<tr>
-<th>表头</th>
-<th align="center">表头</th>
-<th align="right">表头</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>内容</td>
-<td align="center">内容</td>
-<td align="right">内容</td>
-</tr>
-<tr>
-<td>内容</td>
-<td align="center">内容</td>
-<td align="right">内容</td>
-</tr>
-</tbody></table>
-<h2 id="html元素"><a href="#html元素" class="headerlink" title="html元素"></a>html元素</h2><ul>
-<li>包括&lt;kbd&gt; &lt;b&gt; &lt;i&gt; &lt;em&gt; &lt;sup&gt; &lt;sub&gt; &lt;br&gt;等 </li>
+<h2 id="空白（Whitespace）"><a href="#空白（Whitespace）" class="headerlink" title="空白（Whitespace）"></a>空白（Whitespace）</h2><ul>
+<li>inline-block包含html<strong>空白节点</strong>。如果你的html中一系列元素每个元素之间都换行了，当你对这些元素设置inline-block时，这些元素之间就会出现空白。而浮动元素会忽略空白节点，互相紧贴。</li>
 </ul>
-<h2 id="剩余"><a href="#剩余" class="headerlink" title="剩余"></a>剩余</h2><ul>
-<li>流程图 / 数学公式 等</li>
+<h2 id="IE6和IE7"><a href="#IE6和IE7" class="headerlink" title="IE6和IE7"></a>IE6和IE7</h2><ul>
+<li>Ie67对此属性部分支持。</li>
 </ul>
+<p>原文: <a href="https://www.w3cplus.com/css/inline-blocks.html" target="_blank" rel="noopener">https://www.w3cplus.com/css/inline-blocks.html</a> © w3cplus.com</p>
 
       
       
@@ -414,13 +313,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2019/07/30/markdown-intro/">MarkDown Syntax Intro</a></p>
+        <p><span>本文标题:</span><a href="/2019/11/05/inline-block-vs-float/">Inline-block vs Float</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Wayne 的个人博客">Wayne</a></p>
-        <p><span>发布时间:</span>2019年07月30日 - 00时00分</p>
-        <p><span>最后更新:</span>2019年11月30日 - 18时22分</p>
+        <p><span>发布时间:</span>2019年11月05日 - 00时00分</p>
+        <p><span>最后更新:</span>2020年09月08日 - 00时34分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/07/30/markdown-intro/" title="MarkDown Syntax Intro">http://yoursite.com/2019/07/30/markdown-intro/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/07/30/markdown-intro/　　作者: Wayne" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2019/11/05/inline-block-vs-float/" title="Inline-block vs Float">http://yoursite.com/2019/11/05/inline-block-vs-float/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/11/05/inline-block-vs-float/　　作者: Wayne" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -433,18 +332,18 @@
 
 <nav id="article-nav">
   
-    <a href="/2019/08/20/intro-to-git/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/11/16/absolute-vs-relative/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          Intro to Git
+          absolute vs relative
         
       </div>
     </a>
   
   
-    <a href="/2019/07/28/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2019/08/29/git-remove/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Remove</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -455,7 +354,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Markdown-语法入门"><span class="toc-number">1.</span> <span class="toc-text">Markdown 语法入门</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#字体"><span class="toc-number">1.1.</span> <span class="toc-text">字体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#列表"><span class="toc-number">1.2.</span> <span class="toc-text">列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#引用"><span class="toc-number">1.3.</span> <span class="toc-text">引用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#图片"><span class="toc-number">1.4.</span> <span class="toc-text">图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码"><span class="toc-number">1.5.</span> <span class="toc-text">代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分割线"><span class="toc-number">1.6.</span> <span class="toc-text">分割线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#表格"><span class="toc-number">1.7.</span> <span class="toc-text">表格</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#html元素"><span class="toc-number">1.8.</span> <span class="toc-text">html元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#剩余"><span class="toc-number">1.9.</span> <span class="toc-text">剩余</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#inline-block和float的区别"><span class="toc-number">1.</span> <span class="toc-text">inline-block和float的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#文档流（Document-flow）"><span class="toc-number">1.1.</span> <span class="toc-text">文档流（Document flow）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#水平位置（Horizontal-position）"><span class="toc-number">1.2.</span> <span class="toc-text">水平位置（Horizontal position）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#垂直对齐（Vertical-alignment）"><span class="toc-number">1.3.</span> <span class="toc-text">垂直对齐（Vertical alignment）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#空白（Whitespace）"><span class="toc-number">1.4.</span> <span class="toc-text">空白（Whitespace）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IE6和IE7"><span class="toc-number">1.5.</span> <span class="toc-text">IE6和IE7</span></a></li></ol></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -503,13 +402,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/08/20/intro-to-git/" title="上一篇: Intro to Git">
+            <a href="/2019/11/16/absolute-vs-relative/" title="上一篇: absolute vs relative">
                 <i class="fa fa-angle-left"></i>
             </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2019/07/28/hello-world/" title="下一篇: Hello World">
+            <a href="/2019/08/29/git-remove/" title="下一篇: Remove">
                 <i class="fa fa-angle-right"></i>
             </a>
         
