@@ -3,23 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>absolute vs relative | Wayne</title>
+  <title>Error Handling | Wayne</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="div布局中absolute和relative的区别在正常流中的位置relative 定位为relative的元素脱离正常的文本流中，但其在文本流中的位置依然存在。如图1：">
-<meta name="keywords" content="css">
+  <meta name="description" content="throw operatorstandard errors12345&#x2F;&#x2F; built-in constructors for standard errorslet error = new Error(message);let error = new SyntaxError(message);let error = new ReferenceError(message);&#x2F;&#x2F; ...  syntax">
+<meta name="keywords" content="The-modern-javascript-tutorial,js-language">
 <meta property="og:type" content="article">
-<meta property="og:title" content="absolute vs relative">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;16&#x2F;absolute-vs-relative&#x2F;index.html">
+<meta property="og:title" content="Error Handling">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;08&#x2F;31&#x2F;error-handling&#x2F;index.html">
 <meta property="og:site_name" content="Wayne">
-<meta property="og:description" content="div布局中absolute和relative的区别在正常流中的位置relative 定位为relative的元素脱离正常的文本流中，但其在文本流中的位置依然存在。如图1：">
+<meta property="og:description" content="throw operatorstandard errors12345&#x2F;&#x2F; built-in constructors for standard errorslet error = new Error(message);let error = new SyntaxError(message);let error = new ReferenceError(message);&#x2F;&#x2F; ...  syntax">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http:&#x2F;&#x2F;images.51cto.com&#x2F;files&#x2F;uploadimg&#x2F;20100909&#x2F;1528450.jpg">
-<meta property="og:image" content="http:&#x2F;&#x2F;images.51cto.com&#x2F;files&#x2F;uploadimg&#x2F;20100909&#x2F;1528451.jpg">
-<meta property="og:image" content="http:&#x2F;&#x2F;images.51cto.com&#x2F;files&#x2F;uploadimg&#x2F;20100909&#x2F;1528452.jpg">
-<meta property="og:image" content="http:&#x2F;&#x2F;images.51cto.com&#x2F;files&#x2F;uploadimg&#x2F;20100909&#x2F;1528453.jpg">
-<meta property="og:updated_time" content="2020-09-07T16:34:03.280Z">
+<meta property="og:updated_time" content="2020-09-12T16:21:02.942Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http:&#x2F;&#x2F;images.51cto.com&#x2F;files&#x2F;uploadimg&#x2F;20100909&#x2F;1528450.jpg">
   
   
     <link rel="icon" href="/img/favicon.png">
@@ -248,11 +243,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-absolute-vs-relative" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-error-handling" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/11/16/absolute-vs-relative/" class="article-date">
-      <time datetime="2019-11-15T16:00:00.000Z" itemprop="datePublished">2019-11-16</time>
+      <a href="/2020/08/31/error-handling/" class="article-date">
+      <time datetime="2020-08-31T03:12:43.000Z" itemprop="datePublished">2020-08-31</time>
 </a>
     </div>
   
@@ -265,7 +260,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      absolute vs relative
+      Error Handling
     </h1>
   
 
@@ -280,7 +275,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/The-modern-javascript-tutorial/" rel="tag">The-modern-javascript-tutorial</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js-language/" rel="tag">js-language</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -290,35 +285,30 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="div布局中absolute和relative的区别"><a href="#div布局中absolute和relative的区别" class="headerlink" title="div布局中absolute和relative的区别"></a>div布局中absolute和relative的区别</h1><h2 id="在正常流中的位置"><a href="#在正常流中的位置" class="headerlink" title="在正常流中的位置"></a>在正常流中的位置</h2><h3 id="relative"><a href="#relative" class="headerlink" title="relative"></a>relative</h3><ul>
-<li>定位为relative的元素脱离正常的文本流中，但其在文本流中的位置依然存在。如图1：</li>
-</ul>
-<p><img src="http://images.51cto.com/files/uploadimg/20100909/1528450.jpg" alt="relative定位"></p>
-<a id="more"></a>
+        <h1 id="throw-operator"><a href="#throw-operator" class="headerlink" title="throw operator"></a><code>throw</code> operator</h1><h2 id="standard-errors"><a href="#standard-errors" class="headerlink" title="standard errors"></a>standard errors</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// built-in constructors for standard errors</span></span><br><span class="line"><span class="keyword">let</span> error = <span class="keyword">new</span> <span class="built_in">Error</span>(message);</span><br><span class="line"><span class="keyword">let</span> error = <span class="keyword">new</span> <span class="built_in">SyntaxError</span>(message);</span><br><span class="line"><span class="keyword">let</span> error = <span class="keyword">new</span> <span class="built_in">ReferenceError</span>(message);</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>黄色背景的层定位为relative，红色边框区域为其在正常流中的位置。在通过top、left对其定位后，从灰色背景层(下一个div)的位置可以看出其<strong>正常位置依然存在</strong>。</li>
+<h2 id="syntax"><a href="#syntax" class="headerlink" title="syntax"></a>syntax</h2><a id="more"></a>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> json = <span class="string">'&#123; "age": 30 &#125;'</span>; <span class="comment">// incomplete data</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> user = <span class="built_in">JSON</span>.parse(json); <span class="comment">// &lt;-- no errors</span></span><br><span class="line">  <span class="keyword">if</span> (!user.name) &#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">SyntaxError</span>(<span class="string">"Incomplete data: no name"</span>); <span class="comment">// (*)</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125; <span class="keyword">catch</span>(e) &#123;</span><br><span class="line">  alert( <span class="string">"JSON Error: "</span> + e.message ); <span class="comment">// JSON Error: Incomplete data: no name</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Rethrowing"><a href="#Rethrowing" class="headerlink" title="Rethrowing"></a>Rethrowing</h2><ul>
+<li><code>catch</code> should only process errors that it knows and “rethrow” all others (use <code>instanceof</code>)</li>
 </ul>
-<h3 id="absolute"><a href="#absolute" class="headerlink" title="absolute"></a>absolute</h3><ul>
-<li>定位为absolute的层脱离正常文本流，但与relative的区别是其在正常流中的位置不在存在。如图2：</li>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> json = <span class="string">'&#123; "age": 30 &#125;'</span>; <span class="comment">// incomplete data</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> user = <span class="built_in">JSON</span>.parse(json);</span><br><span class="line">  <span class="keyword">if</span> (!user.name) &#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">SyntaxError</span>(<span class="string">"Incomplete data: no name"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  blabla();           <span class="comment">// unexpected error</span></span><br><span class="line">&#125; <span class="keyword">catch</span>(e) &#123;</span><br><span class="line">  <span class="keyword">if</span> (e <span class="keyword">instanceof</span> <span class="built_in">SyntaxError</span>) &#123; </span><br><span class="line">    alert( <span class="string">"JSON Error: "</span> + e.message );</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">throw</span> e;          <span class="comment">// rethrow (*)</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="try-catch-finally"><a href="#try-catch-finally" class="headerlink" title="try...catch...finally"></a><code>try...catch...finally</code></h2><ul>
+<li><code>finally</code> is executed even with an explicit <code>return</code>.</li>
+<li><code>finally</code>  is executed just before returns to the outer code. </li>
 </ul>
-<p><img src="http://images.51cto.com/files/uploadimg/20100909/1528451.jpg" alt="absolute定位"></p>
-<ul>
-<li>可以看到，在将黄色背景层定位为absolute后，灰色背景层(下一个div)自动补上，<strong>脱离正常文本流</strong>。</li>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">   ... try to execute the code ...</span><br><span class="line">&#125; <span class="keyword">catch</span>(e) &#123;</span><br><span class="line">   ... handle errors ...</span><br><span class="line">&#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">   ... execute always ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="try-finally"><a href="#try-finally" class="headerlink" title="try...finally"></a><code>try...finally</code></h3><ul>
+<li>Don’t want to handle errors.</li>
+<li>But want to be sure that processes are finalized.</li>
 </ul>
-<h2 id="相对于父元素"><a href="#相对于父元素" class="headerlink" title="相对于父元素"></a>相对于父元素</h2><h3 id="relative-1"><a href="#relative-1" class="headerlink" title="relative"></a>relative</h3><ul>
-<li>relative定位的层总是相对于其<strong>最近的父元素</strong>，无论其父元素是何种定位方式。如图3：</li>
-</ul>
-<p><img src="http://images.51cto.com/files/uploadimg/20100909/1528452.jpg" alt="relative父元素"></p>
-<ul>
-<li>红色背景层为relative定位，其直接父元素绿色背景层为默认的static定位。红色背景层的位置为相对绿色背景层top、left个20元素。</li>
-</ul>
-<h3 id="absolute-1"><a href="#absolute-1" class="headerlink" title="absolute"></a>absolute</h3><ul>
-<li>absolute定位的层总是相对于其<strong>最近的定义为absolute或relative的父层</strong>，而这个父层并<strong>不一定是其直接父层</strong>，如图4:</li>
-</ul>
-<p><img src="http://images.51cto.com/files/uploadimg/20100909/1528453.jpg" alt="absolute父元素"></p>
-<ul>
-<li>红色背景层相对的元素变为定位方式为absolute或relative的黄色背景层。如果其父层中都未定义absolute或relative，则其将相对body进行定位。</li>
+<h1 id="custom-errors-extending-Error"><a href="#custom-errors-extending-Error" class="headerlink" title="custom errors, extending Error"></a>custom errors, extending <code>Error</code></h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ValidationError</span> <span class="keyword">extends</span> <span class="title">Error</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(message) &#123;</span><br><span class="line">    <span class="keyword">super</span>(message);</span><br><span class="line">    <span class="keyword">this</span>.name = <span class="string">"ValidationError"</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Wrapping-exceptions"><a href="#Wrapping-exceptions" class="headerlink" title="Wrapping exceptions"></a>Wrapping exceptions</h2><ul>
+<li>a function handles low-level exceptions (<code>PropertyRequiredError(&quot;age&quot;)</code>),  and creates higher-level errors (<code>ReadError</code>) instead of various low-level ones.</li>
 </ul>
 
       
@@ -330,13 +320,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2019/11/16/absolute-vs-relative/">absolute vs relative</a></p>
+        <p><span>本文标题:</span><a href="/2020/08/31/error-handling/">Error Handling</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Wayne 的个人博客">Wayne</a></p>
-        <p><span>发布时间:</span>2019年11月16日 - 00时00分</p>
-        <p><span>最后更新:</span>2020年09月08日 - 00时34分</p>
+        <p><span>发布时间:</span>2020年08月31日 - 11时12分</p>
+        <p><span>最后更新:</span>2020年09月13日 - 00时21分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/11/16/absolute-vs-relative/" title="absolute vs relative">http://yoursite.com/2019/11/16/absolute-vs-relative/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/11/16/absolute-vs-relative/　　作者: Wayne" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2020/08/31/error-handling/" title="Error Handling">http://yoursite.com/2020/08/31/error-handling/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2020/08/31/error-handling/　　作者: Wayne" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -349,18 +339,18 @@
 
 <nav id="article-nav">
   
-    <a href="/2019/11/18/tmall-website/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/09/07/promises-async-await/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          tmall website
+          Promises &amp; async/await
         
       </div>
     </a>
   
   
-    <a href="/2019/11/05/inline-block-vs-float/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Inline-block vs Float</div>
+    <a href="/2020/08/30/classes/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Classes</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -371,7 +361,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#div布局中absolute和relative的区别"><span class="toc-number">1.</span> <span class="toc-text">div布局中absolute和relative的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#在正常流中的位置"><span class="toc-number">1.1.</span> <span class="toc-text">在正常流中的位置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#relative"><span class="toc-number">1.1.1.</span> <span class="toc-text">relative</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#absolute"><span class="toc-number">1.1.2.</span> <span class="toc-text">absolute</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#相对于父元素"><span class="toc-number">1.2.</span> <span class="toc-text">相对于父元素</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#relative-1"><span class="toc-number">1.2.1.</span> <span class="toc-text">relative</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#absolute-1"><span class="toc-number">1.2.2.</span> <span class="toc-text">absolute</span></a></li></ol></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#throw-operator"><span class="toc-number">1.</span> <span class="toc-text">throw operator</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#standard-errors"><span class="toc-number">1.1.</span> <span class="toc-text">standard errors</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#syntax"><span class="toc-number">1.2.</span> <span class="toc-text">syntax</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Rethrowing"><span class="toc-number">1.3.</span> <span class="toc-text">Rethrowing</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#try-catch-finally"><span class="toc-number">1.4.</span> <span class="toc-text">try...catch...finally</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#try-finally"><span class="toc-number">1.4.1.</span> <span class="toc-text">try...finally</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#custom-errors-extending-Error"><span class="toc-number">2.</span> <span class="toc-text">custom errors, extending Error</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Wrapping-exceptions"><span class="toc-number">2.1.</span> <span class="toc-text">Wrapping exceptions</span></a></li></ol></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -419,13 +409,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/11/18/tmall-website/" title="上一篇: tmall website">
+            <a href="/2020/09/07/promises-async-await/" title="上一篇: Promises &amp; async/await">
                 <i class="fa fa-angle-left"></i>
             </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2019/11/05/inline-block-vs-float/" title="下一篇: Inline-block vs Float">
+            <a href="/2020/08/30/classes/" title="下一篇: Classes">
                 <i class="fa fa-angle-right"></i>
             </a>
         
