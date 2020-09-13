@@ -545,6 +545,75 @@
 
 
   
+    <article id="post-functions" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2020/09/01/functions/" class="article-date">
+      <time datetime="2020-09-01T13:20:12.000Z" itemprop="datePublished">2020-09-01</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name" >
+      <a class="article-title" href="/2020/09/01/functions/">Functions</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h1 id="Rest-parameters-amp-spread-syntax"><a href="#Rest-parameters-amp-spread-syntax" class="headerlink" title="Rest parameters &amp; spread syntax"></a>Rest parameters &amp; spread syntax</h1><h2 id="Rest-parameters"><a href="#Rest-parameters" class="headerlink" title="Rest parameters, ..."></a>Rest parameters, <code>...</code></h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sumAll</span>(<span class="params">...args</span>) </span>&#123; <span class="comment">// args is the name for the array</span></span><br><span class="line">  <span class="keyword">let</span> sum = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> arg <span class="keyword">of</span> args) &#123;</span><br><span class="line">  	sum += arg;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">alert( sumAll(<span class="number">1</span>) ); <span class="comment">// 1</span></span><br><span class="line">alert( sumAll(<span class="number">1</span>, <span class="number">2</span>) ); <span class="comment">// 3</span></span><br><span class="line">alert( sumAll(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>) ); <span class="comment">// 6</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="arguments-variable-–old-version"><a href="#arguments-variable-–old-version" class="headerlink" title="arguments variable –old version"></a><code>arguments</code> variable –old version</h2>
+          
+      
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/The-modern-javascript-tutorial/" rel="tag">The-modern-javascript-tutorial</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js-language/" rel="tag">js-language</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a  href="/2020/09/01/functions/#more">阅读全文>></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-error-handling" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -854,87 +923,6 @@
 <ul>
 <li><code>:after</code> 选择器是在a后插入内容</li>
 <li>因为<strong>边框是楔形</strong>，所以当内容为空白,<strong>只显示边框</strong>时，形成<strong>美人尖</strong>。</li>
-</ul>
-
-      
-      
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-first-child" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/11/30/first-child/" class="article-date">
-      <time datetime="2019-11-30T10:42:19.000Z" itemprop="datePublished">2019-11-30</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name" >
-      <a class="article-title" href="/2019/11/30/first-child/">first-child易错问题</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h1 id="first-child等伪类选择器易错问题"><a href="#first-child等伪类选择器易错问题" class="headerlink" title="first-child等伪类选择器易错问题"></a>first-child等伪类选择器易错问题</h1><h2 id="E-first-child"><a href="#E-first-child" class="headerlink" title="E:first-child {}"></a>E:first-child {}</h2><ul>
-<li>匹配父元素的第一个子元素E。</li>
-<li>要使该属性生效，E元素必须是某个元素的第一个<strong>子元素</strong>，且是<strong>E属性</strong>。</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>h1<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>p1<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>p2<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>p3<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>若在这时选择第一个p元素，使用<code>p:first-child</code>则会出现错误，因为p的父元素是<strong>div</strong>，而对于div来说，它的<strong>第一个子元素是h1</strong>，不是p，所以会出错。</li>
-<li>同理，<code>E:last-child {}</code> <code>E:only-child {}</code> 与上面的一样，E元素必须是其父元素的最后一个子元素或唯一一个子元素才可以。</li>
-</ul>
-<h2 id="E-nth-child-1"><a href="#E-nth-child-1" class="headerlink" title="E:nth-child(1) {}"></a>E:nth-child(1) {}</h2><ul>
-<li>与<code>E:first-child {}</code>等效，E需要是父元素的第一个子元素。</li>
-<li>比如： <code>p:nth-child(2)</code> 才可以选中p1</li>
-</ul>
-<h2 id="nth-child-odd-even"><a href="#nth-child-odd-even" class="headerlink" title=":nth-child(odd/even) {}"></a>:nth-child(odd/even) {}</h2><ul>
-<li>匹配属于其父元素的第N个子元素，不论元素的类型。</li>
-</ul>
-<h2 id="规范"><a href="#规范" class="headerlink" title="规范"></a>规范</h2><ul>
-<li>可写成 <code>div h1:first-child{}</code> 明确父元素，自然能看到是不是第一个E属性子元素，就不容易犯错。</li>
 </ul>
 
       
