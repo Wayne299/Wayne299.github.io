@@ -3,16 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Remove | Wayne</title>
+  <title>Object Properties Configuration | Wayne</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Git中remove操作Push an existing repository from the command line12345$ cd &amp;lt;file_name&amp;gt;$ git init$ git remote add origin git@github.com:Wayne299&#x2F;x.git$ git add &amp;lt;file_name&amp;gt;$ git push -u origin m">
+  <meta name="description" content="Accessor Propertygetters and setters get:  a function without arguments, that works when a property is read, set: a function with one argument, that is called when the property is set, enumerable: sam">
+<meta name="keywords" content="The-modern-javascript-tutorial,js-language">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Remove">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;08&#x2F;29&#x2F;git-remove&#x2F;index.html">
+<meta property="og:title" content="Object Properties Configuration">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;09&#x2F;02&#x2F;object-properties-config&#x2F;index.html">
 <meta property="og:site_name" content="Wayne">
-<meta property="og:description" content="Git中remove操作Push an existing repository from the command line12345$ cd &amp;lt;file_name&amp;gt;$ git init$ git remote add origin git@github.com:Wayne299&#x2F;x.git$ git add &amp;lt;file_name&amp;gt;$ git push -u origin m">
+<meta property="og:description" content="Accessor Propertygetters and setters get:  a function without arguments, that works when a property is read, set: a function with one argument, that is called when the property is set, enumerable: sam">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-30T10:22:28.487Z">
+<meta property="og:updated_time" content="2020-09-14T16:34:06.886Z">
 <meta name="twitter:card" content="summary">
   
   
@@ -242,11 +243,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-git-remove" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-object-properties-config" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/08/29/git-remove/" class="article-date">
-      <time datetime="2019-08-28T16:00:00.000Z" itemprop="datePublished">2019-08-29</time>
+      <a href="/2020/09/02/object-properties-config/" class="article-date">
+      <time datetime="2020-09-02T02:34:41.000Z" itemprop="datePublished">2020-09-02</time>
 </a>
     </div>
   
@@ -259,7 +260,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Remove
+      Object Properties Configuration
     </h1>
   
 
@@ -267,8 +268,16 @@
       
       <div class="article-info article-info-post">
         
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+    </div>
+
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/The-modern-javascript-tutorial/" rel="tag">The-modern-javascript-tutorial</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js-language/" rel="tag">js-language</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -276,12 +285,20 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="Git中remove操作"><a href="#Git中remove操作" class="headerlink" title="Git中remove操作"></a>Git中remove操作</h1><h2 id="Push-an-existing-repository-from-the-command-line"><a href="#Push-an-existing-repository-from-the-command-line" class="headerlink" title="Push an existing repository from the command line"></a>Push an existing repository from the command line</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> &lt;file_name&gt;</span><br><span class="line">$ git init</span><br><span class="line">$ git remote add origin git@github.com:Wayne299/x.git</span><br><span class="line">$ git add &lt;file_name&gt;</span><br><span class="line">$ git push -u origin master</span><br></pre></td></tr></table></figure>
+        <h1 id="Accessor-Property"><a href="#Accessor-Property" class="headerlink" title="Accessor Property"></a>Accessor Property</h1><h2 id="getters-and-setters"><a href="#getters-and-setters" class="headerlink" title="getters and setters"></a>getters and setters</h2><ul>
+<li><code>get</code>:  a function without arguments, that works when a property is read,</li>
+<li><code>set</code>: a function with one argument, that is called when the property is set,</li>
+<li><code>enumerable</code>: same as for data properties,</li>
+<li><code>configurable</code>: same as for data properties.</li>
+</ul>
 <a id="more"></a>
 
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> user = &#123;</span><br><span class="line">  name: <span class="string">"John"</span>,</span><br><span class="line">  surname: <span class="string">"Smith"</span>,</span><br><span class="line"></span><br><span class="line">  <span class="keyword">get</span> fullName() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">`<span class="subst">$&#123;<span class="keyword">this</span>.name&#125;</span> <span class="subst">$&#123;<span class="keyword">this</span>.surname&#125;</span>`</span>;</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="keyword">set</span> fullName(value) &#123;</span><br><span class="line">    [<span class="keyword">this</span>.name, <span class="keyword">this</span>.surname] = value.split(<span class="string">" "</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">alert(user.fullName); <span class="comment">// John Smith</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="fatal-远程-origin-已经存在"><a href="#fatal-远程-origin-已经存在" class="headerlink" title="fatal: 远程 origin 已经存在"></a>fatal: 远程 origin 已经存在</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git remote rm origin</span><br><span class="line">$ git remote add origin &lt;SSH_Key&gt;</span><br></pre></td></tr></table></figure>
-
+<ul>
+<li>We don’t call <code>user.fullName</code> as a function, we read it normally.</li>
+<li>e.g. <code>user.fullName</code> and <code>user.fullName = &quot;Wayne Zhang&quot;</code></li>
+</ul>
 
       
       
@@ -292,13 +309,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2019/08/29/git-remove/">Remove</a></p>
+        <p><span>本文标题:</span><a href="/2020/09/02/object-properties-config/">Object Properties Configuration</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Wayne 的个人博客">Wayne</a></p>
-        <p><span>发布时间:</span>2019年08月29日 - 00时00分</p>
-        <p><span>最后更新:</span>2019年11月30日 - 18时22分</p>
+        <p><span>发布时间:</span>2020年09月02日 - 10时34分</p>
+        <p><span>最后更新:</span>2020年09月15日 - 00时34分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/08/29/git-remove/" title="Remove">http://yoursite.com/2019/08/29/git-remove/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/08/29/git-remove/　　作者: Wayne" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2020/09/02/object-properties-config/" title="Object Properties Configuration">http://yoursite.com/2020/09/02/object-properties-config/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2020/09/02/object-properties-config/　　作者: Wayne" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -311,18 +328,18 @@
 
 <nav id="article-nav">
   
-    <a href="/2019/11/05/inline-block-vs-float/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/09/07/promises-async-await/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          Inline-block vs Float
+          Promises &amp; async/await
         
       </div>
     </a>
   
   
-    <a href="/2019/08/20/intro-to-git/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Intro to Git</div>
+    <a href="/2020/09/01/functions/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Functions</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -333,7 +350,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Git中remove操作"><span class="toc-number">1.</span> <span class="toc-text">Git中remove操作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Push-an-existing-repository-from-the-command-line"><span class="toc-number">1.1.</span> <span class="toc-text">Push an existing repository from the command line</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fatal-远程-origin-已经存在"><span class="toc-number">1.2.</span> <span class="toc-text">fatal: 远程 origin 已经存在</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Accessor-Property"><span class="toc-number">1.</span> <span class="toc-text">Accessor Property</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#getters-and-setters"><span class="toc-number">1.1.</span> <span class="toc-text">getters and setters</span></a></li></ol></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -381,13 +398,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/11/05/inline-block-vs-float/" title="上一篇: Inline-block vs Float">
+            <a href="/2020/09/07/promises-async-await/" title="上一篇: Promises &amp; async/await">
                 <i class="fa fa-angle-left"></i>
             </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2019/08/20/intro-to-git/" title="下一篇: Intro to Git">
+            <a href="/2020/09/01/functions/" title="下一篇: Functions">
                 <i class="fa fa-angle-right"></i>
             </a>
         
