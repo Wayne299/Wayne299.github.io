@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>overflow:hidden | Wayne</title>
+  <title>Prototypes / Inheritance | Wayne</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="overflow:hidden 的作用总结一. 溢出隐藏 一般在div中设置后，该元素的内容若超出了给定的宽度和高度属性，那么超出的部分将会被隐藏，不占位。  1text-overflow: ellipsis;	&#x2F;* 当对象内文本溢出时可显示省略标记（...）*&#x2F;  二. 消除浮动 一般而言，父级元素不设置高度时，高度由随内容增加自适应高度。当父级元素内部的子元素全部都设置浮动float之后，子元">
-<meta name="keywords" content="css">
+  <meta name="description" content="Prototypal inheritanceobj.__proto__  – old verison to access objects’ hidden [[Protptype]] property, either another object or null.  Writing doesn’t use prototype Write &#x2F; delete operator work directly">
+<meta name="keywords" content="The-modern-javascript-tutorial,js-language">
 <meta property="og:type" content="article">
-<meta property="og:title" content="overflow:hidden">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;21&#x2F;overflow-hidden&#x2F;index.html">
+<meta property="og:title" content="Prototypes &#x2F; Inheritance">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;09&#x2F;03&#x2F;prototypes-inheritance&#x2F;index.html">
 <meta property="og:site_name" content="Wayne">
-<meta property="og:description" content="overflow:hidden 的作用总结一. 溢出隐藏 一般在div中设置后，该元素的内容若超出了给定的宽度和高度属性，那么超出的部分将会被隐藏，不占位。  1text-overflow: ellipsis;	&#x2F;* 当对象内文本溢出时可显示省略标记（...）*&#x2F;  二. 消除浮动 一般而言，父级元素不设置高度时，高度由随内容增加自适应高度。当父级元素内部的子元素全部都设置浮动float之后，子元">
+<meta property="og:description" content="Prototypal inheritanceobj.__proto__  – old verison to access objects’ hidden [[Protptype]] property, either another object or null.  Writing doesn’t use prototype Write &#x2F; delete operator work directly">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-09-09T02:12:58.407Z">
+<meta property="og:updated_time" content="2020-09-14T16:37:08.365Z">
 <meta name="twitter:card" content="summary">
   
   
@@ -243,11 +243,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-overflow-hidden" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-prototypes-inheritance" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/11/21/overflow-hidden/" class="article-date">
-      <time datetime="2019-11-21T13:10:31.000Z" itemprop="datePublished">2019-11-21</time>
+      <a href="/2020/09/03/prototypes-inheritance/" class="article-date">
+      <time datetime="2020-09-03T04:11:20.000Z" itemprop="datePublished">2020-09-03</time>
 </a>
     </div>
   
@@ -260,7 +260,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      overflow:hidden
+      Prototypes / Inheritance
     </h1>
   
 
@@ -275,7 +275,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/" rel="tag">css</a></li></ul>
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/The-modern-javascript-tutorial/" rel="tag">The-modern-javascript-tutorial</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js-language/" rel="tag">js-language</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -285,25 +285,54 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="overflow-hidden-的作用总结"><a href="#overflow-hidden-的作用总结" class="headerlink" title="overflow:hidden 的作用总结"></a><code>overflow:hidden</code> 的作用总结</h1><h2 id="一-溢出隐藏"><a href="#一-溢出隐藏" class="headerlink" title="一. 溢出隐藏"></a>一. 溢出隐藏</h2><ul>
-<li>一般在div中设置后，该元素的内容若超出了给定的宽度和高度属性，那么超出的部分将会被隐藏，不占位。</li>
+        <h1 id="Prototypal-inheritance"><a href="#Prototypal-inheritance" class="headerlink" title="Prototypal inheritance"></a>Prototypal inheritance</h1><h2 id="obj-proto-–-old-verison"><a href="#obj-proto-–-old-verison" class="headerlink" title="obj.__proto__  – old verison"></a><code>obj.__proto__</code>  – old verison</h2><ul>
+<li>to access objects’ hidden <code>[[Protptype]]</code> property, either another object or <code>null</code>.</li>
 </ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">text-overflow</span>: <span class="selector-tag">ellipsis</span>;	<span class="comment">/* 当对象内文本溢出时可显示省略标记（...）*/</span></span><br></pre></td></tr></table></figure>
+<h2 id="Writing-doesn’t-use-prototype"><a href="#Writing-doesn’t-use-prototype" class="headerlink" title="Writing doesn’t use prototype"></a>Writing doesn’t use prototype</h2><ul>
+<li>Write / delete operator work directly with the object. Not use to change the prototype.</li>
+<li>The prototype is only used for reading properties</li>
+</ul>
+<h2 id="iterate-properties"><a href="#iterate-properties" class="headerlink" title="iterate properties"></a>iterate properties</h2><ul>
+<li><code>for...in</code> loop iterates over inherited properties.</li>
+<li><code>Object.keys()</code> only returns own keys. (almost all key/value-getting methods)<a id="more"></a>
 
-<h2 id="二-消除浮动"><a href="#二-消除浮动" class="headerlink" title="二. 消除浮动"></a>二. 消除浮动</h2><ul>
-<li>一般而言，父级元素不设置高度时，高度由随内容增加自适应高度。当父级元素内部的子元素全部都设置浮动float之后，子元素会脱离标准流，不占位，父级元素检测不到子元素的高度，父级元素高度为0，下面的元素会顶上去，造成页面的塌陷。</li>
+</li>
 </ul>
-<h3 id="方法一：给父级加overflow-hidden属性"><a href="#方法一：给父级加overflow-hidden属性" class="headerlink" title="方法一：给父级加overflow: hidden属性"></a>方法一：给父级加<code>overflow: hidden</code>属性</h3><h3 id="方法二：给父级加-after"><a href="#方法二：给父级加-after" class="headerlink" title="方法二：给父级加::after"></a>方法二：给父级加<code>::after</code></h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.outDiv</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">    <span class="attribute">clear</span>: both;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
+<h2 id="F-prototype-constructor-property"><a href="#F-prototype-constructor-property" class="headerlink" title="F.prototype, constructor property"></a><code>F.prototype</code>, constructor property</h2><h3 id="F-prototype"><a href="#F-prototype" class="headerlink" title="F.prototype"></a><code>F.prototype</code></h3><ul>
+<li>Every function has the “prototype” property even if we don’t supply it.</li>
+<li>On regular objects the <code>prototype</code> is nothing special.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> animal = &#123;           <span class="comment">// Object</span></span><br><span class="line">  eats: <span class="literal">true</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Rabbit</span>(<span class="params">name</span>) </span>&#123;  <span class="comment">// Function</span></span><br><span class="line">  <span class="keyword">this</span>.name = name;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Rabbit.prototype = animal;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> rabbit = <span class="keyword">new</span> Rabbit(<span class="string">"White Rabbit"</span>); <span class="comment">//  rabbit.__proto__ == animal</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="方法三：设置width：xxpx"><a href="#方法三：设置width：xxpx" class="headerlink" title="方法三：设置width：xxpx"></a>方法三：设置<code>width：xxpx</code></h3><ul>
-<li>这样父级的高度就随子级容器及子级内容的高度而自适应。</li>
+<h3 id="constructor-property"><a href="#constructor-property" class="headerlink" title="constructor property"></a>constructor property</h3><ul>
+<li>The default <code>prototype</code> of function is an <code>object</code> with the only property <code>constructor</code> that points back to the function itself.</li>
+<li><code>F.prototype.constructor == F</code></li>
 </ul>
-<h2 id="三-解决外边距塌陷"><a href="#三-解决外边距塌陷" class="headerlink" title="三. 解决外边距塌陷"></a>三. 解决外边距塌陷</h2><ul>
-<li>父级元素内部有子元素，如果给子元素添加<code>margin-top</code>样式，那么父级元素也会跟着下来，造成外边距塌陷。</li>
-<li>给父级元素添加<code>overflow:hidden</code>属性，父级元素保持不变，而只会对子元素有影响。</li>
-<li>当使用<code>float: right</code>时，不需要考虑塌陷（在设置父级元素width/height的前提下）。</li>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Rabbit</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">Rabbit.prototype = &#123;   <span class="comment">// default</span></span><br><span class="line"> 	<span class="keyword">constructor</span>: Rabbit</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Rabbit.prototype.jumps = true </span><br><span class="line">// Not overwrite F.prototype totally, keep the defualt Rabbit.prototype.<span class="keyword">constructor</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>We can use <code>let rabbit2 = new rabbit.constructor(&quot;Black Rabbit&quot;)</code> when we don’t know which constructor was used for it.</li>
 </ul>
+<h2 id="null-and-undefined-have-no-object-wrappers"><a href="#null-and-undefined-have-no-object-wrappers" class="headerlink" title="null and undefined have no object wrappers"></a><code>null</code> and <code>undefined</code> have no object wrappers</h2><ul>
+<li>There are no corresponding prototypes either.</li>
+</ul>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example ??"></a>Example ??</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Function</span>.prototype.defer = <span class="function"><span class="keyword">function</span>(<span class="params">ms</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// `this` is passed to the original method</span></span><br><span class="line">  <span class="keyword">let</span> f = <span class="keyword">this</span>;      </span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">...args</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// `this` to make decoration work for object methods</span></span><br><span class="line">    setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> f.apply(<span class="keyword">this</span>, args), ms);  </span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> user = &#123;</span><br><span class="line">  name: <span class="string">"John"</span>,</span><br><span class="line">  sayHi() &#123;</span><br><span class="line">    alert(<span class="keyword">this</span>.name);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">user.sayHi = user.sayHi.defer(<span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line">user.sayHi();</span><br></pre></td></tr></table></figure>
+
+<h1 id="Property-methods"><a href="#Property-methods" class="headerlink" title="Property methods"></a>Property methods</h1><ul>
+<li><code>Object.create(proto, descriptors)</code>: creates an empty object with given <code>proto</code> as <code>[[Prototype]]</code> and optional property descriptors. (descriptors are in the same format as Object property flags and descriptors).</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> animal = &#123;</span><br><span class="line">  eats: <span class="literal">true</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> rabbit = <span class="built_in">Object</span>.create(animal, &#123;</span><br><span class="line">  jumps: &#123;</span><br><span class="line">    value: <span class="literal">true</span>,</span><br><span class="line">    <span class="comment">// enumberable: true,</span></span><br><span class="line">    <span class="comment">// writable: true,</span></span><br><span class="line">    <span class="comment">// configuarable: true,</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">alert(rabbit.jumps); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>Object.getPrototypeOf(obj)</code>: returns the <code>[[Prototype]]</code> of obj.</li>
+<li><code>Object.setPrototypeOf(obj, proto)</code>: sets the <code>[[Prototype]]</code> of obj to <code>proto</code>.</li>
+</ul>
+<h2 id="“Very-plain”-objects"><a href="#“Very-plain”-objects" class="headerlink" title="“Very plain” objects"></a>“Very plain” objects</h2><ul>
+<li><code>let obj = Object.create(null)</code>: with no build-in methods and without a prototype.</li>
+<li>have no issues with <code>__proto__</code> as the key.</li>
+</ul>
+<h1 id="Example-1"><a href="#Example-1" class="headerlink" title="Example"></a>Example</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Rabbit</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.name = name;</span><br><span class="line">&#125;</span><br><span class="line">Rabbit.prototype.sayHi = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  alert(<span class="keyword">this</span>.name);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> rabbit = <span class="keyword">new</span> Rabbit(<span class="string">"Wayne"</span>);</span><br><span class="line">rabbit.sayHi();            <span class="comment">// Wayne (this = rabbit)</span></span><br><span class="line">Rabbit.sayHi();            <span class="comment">// undefined (this = Rabbit.prototype)</span></span><br><span class="line">Rabbit.prototype.sayHi();  <span class="comment">// undefined</span></span><br><span class="line">rabbit.__proto__.sayHi();  <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
+<p>- </p>
 
       
       
@@ -314,13 +343,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2019/11/21/overflow-hidden/">overflow:hidden</a></p>
+        <p><span>本文标题:</span><a href="/2020/09/03/prototypes-inheritance/">Prototypes / Inheritance</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Wayne 的个人博客">Wayne</a></p>
-        <p><span>发布时间:</span>2019年11月21日 - 21时10分</p>
-        <p><span>最后更新:</span>2020年09月09日 - 10时12分</p>
+        <p><span>发布时间:</span>2020年09月03日 - 12时11分</p>
+        <p><span>最后更新:</span>2020年09月15日 - 00时37分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/11/21/overflow-hidden/" title="overflow:hidden">http://yoursite.com/2019/11/21/overflow-hidden/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2019/11/21/overflow-hidden/　　作者: Wayne" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2020/09/03/prototypes-inheritance/" title="Prototypes / Inheritance">http://yoursite.com/2020/09/03/prototypes-inheritance/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2020/09/03/prototypes-inheritance/　　作者: Wayne" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -333,18 +362,18 @@
 
 <nav id="article-nav">
   
-    <a href="/2019/11/30/first-child/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/09/07/promises-async-await/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          first-child易错问题
+          Promises &amp; async/await
         
       </div>
     </a>
   
   
-    <a href="/2019/11/18/tmall-website/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">tmall website</div>
+    <a href="/2020/09/02/object-properties-config/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Object Properties Configuration</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -355,7 +384,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#overflow-hidden-的作用总结"><span class="toc-number">1.</span> <span class="toc-text">overflow:hidden 的作用总结</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一-溢出隐藏"><span class="toc-number">1.1.</span> <span class="toc-text">一. 溢出隐藏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二-消除浮动"><span class="toc-number">1.2.</span> <span class="toc-text">二. 消除浮动</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#方法一：给父级加overflow-hidden属性"><span class="toc-number">1.2.1.</span> <span class="toc-text">方法一：给父级加overflow: hidden属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法二：给父级加-after"><span class="toc-number">1.2.2.</span> <span class="toc-text">方法二：给父级加::after</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法三：设置width：xxpx"><span class="toc-number">1.2.3.</span> <span class="toc-text">方法三：设置width：xxpx</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三-解决外边距塌陷"><span class="toc-number">1.3.</span> <span class="toc-text">三. 解决外边距塌陷</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Prototypal-inheritance"><span class="toc-number">1.</span> <span class="toc-text">Prototypal inheritance</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#obj-proto-–-old-verison"><span class="toc-number">1.1.</span> <span class="toc-text">obj.__proto__  – old verison</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Writing-doesn’t-use-prototype"><span class="toc-number">1.2.</span> <span class="toc-text">Writing doesn’t use prototype</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#iterate-properties"><span class="toc-number">1.3.</span> <span class="toc-text">iterate properties</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#F-prototype-constructor-property"><span class="toc-number">1.4.</span> <span class="toc-text">F.prototype, constructor property</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#F-prototype"><span class="toc-number">1.4.1.</span> <span class="toc-text">F.prototype</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#constructor-property"><span class="toc-number">1.4.2.</span> <span class="toc-text">constructor property</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null-and-undefined-have-no-object-wrappers"><span class="toc-number">1.5.</span> <span class="toc-text">null and undefined have no object wrappers</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Example"><span class="toc-number">1.6.</span> <span class="toc-text">Example ??</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Property-methods"><span class="toc-number">2.</span> <span class="toc-text">Property methods</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#“Very-plain”-objects"><span class="toc-number">2.1.</span> <span class="toc-text">“Very plain” objects</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Example-1"><span class="toc-number">3.</span> <span class="toc-text">Example</span></a></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -403,13 +432,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/11/30/first-child/" title="上一篇: first-child易错问题">
+            <a href="/2020/09/07/promises-async-await/" title="上一篇: Promises &amp; async/await">
                 <i class="fa fa-angle-left"></i>
             </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2019/11/18/tmall-website/" title="下一篇: tmall website">
+            <a href="/2020/09/02/object-properties-config/" title="下一篇: Object Properties Configuration">
                 <i class="fa fa-angle-right"></i>
             </a>
         
