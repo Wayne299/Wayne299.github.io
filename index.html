@@ -246,6 +246,77 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-miscellaneous" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2020/09/09/miscellaneous/" class="article-date">
+      <time datetime="2020-09-09T02:39:21.000Z" itemprop="datePublished">2020-09-09</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name" >
+      <a class="article-title" href="/2020/09/09/miscellaneous/">JavaScript Miscellaneous</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h1 id="Currying"><a href="#Currying" class="headerlink" title="Currying"></a>Currying</h1><p>Translates a function from callable as <code>f(a, b, c)</code> into callable as <code>f(a)(b)(c)</code>.</p>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">log(<span class="keyword">new</span> <span class="built_in">Date</span>(), <span class="string">"DEBUG"</span>, <span class="string">"some debug"</span>); <span class="comment">// log(a, b, c)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// can make a convenience function</span></span><br><span class="line"><span class="keyword">let</span> logNow = log(<span class="keyword">new</span> <span class="built_in">Date</span>()); <span class="comment">// [HH:mm]</span></span><br><span class="line"></span><br><span class="line">logNow(<span class="string">"INFO"</span>, <span class="string">"message"</span>); <span class="comment">// [HH:mm] INFO message</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>logNow</code> is <code>log</code> with fixed first argument, in other words “partially applied function” or “partial” for short.</li></ul>
+          
+      
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/The-modern-javascript-tutorial/" rel="tag">The-modern-javascript-tutorial</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js-language/" rel="tag">js-language</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a  href="/2020/09/09/miscellaneous/#more">阅读全文>></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-proxy-reflect" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -305,77 +376,6 @@
       
         <p class="article-more-link">
           <a  href="/2020/09/09/proxy-reflect/#more">阅读全文>></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-miscellaneous" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2020/09/09/miscellaneous/" class="article-date">
-      <time datetime="2020-09-09T02:39:21.000Z" itemprop="datePublished">2020-09-09</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name" >
-      <a class="article-title" href="/2020/09/09/miscellaneous/">JavaScript Miscellaneous</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="Currying"><a href="#Currying" class="headerlink" title="Currying"></a>Currying</h1><p>Translates a function from callable as <code>f(a, b, c)</code> into callable as <code>f(a)(b)(c)</code>.</p>
-<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">log(<span class="keyword">new</span> <span class="built_in">Date</span>(), <span class="string">"DEBUG"</span>, <span class="string">"some debug"</span>); <span class="comment">// log(a, b, c)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// can make a convenience function</span></span><br><span class="line"><span class="keyword">let</span> logNow = log(<span class="keyword">new</span> <span class="built_in">Date</span>()); <span class="comment">// [HH:mm]</span></span><br><span class="line"></span><br><span class="line">logNow(<span class="string">"INFO"</span>, <span class="string">"message"</span>); <span class="comment">// [HH:mm] INFO message</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><code>logNow</code> is <code>log</code> with fixed first argument, in other words “partially applied function” or “partial” for short.</li></ul>
-          
-      
-      
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/The-modern-javascript-tutorial/" rel="tag">The-modern-javascript-tutorial</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js-language/" rel="tag">js-language</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/2020/09/09/miscellaneous/#more">阅读全文>></a>
         </p>
       
       <div class="clearfix"></div>
